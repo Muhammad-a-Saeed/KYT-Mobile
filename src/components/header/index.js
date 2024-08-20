@@ -17,9 +17,11 @@ const Header = ({title, leftIcon, mainLogo, hintLogo}) => {
       <View>
         <View style={styles.rowCenter}>
           {leftIcon && (
-            <TouchableOpacity onPress={() => navigation.goBack()}>
-              <Image style={styles.iconStyle} source={appIcons.arrowBack} />
-            </TouchableOpacity>
+            <View style={[styles.goBack]}>
+              <TouchableOpacity onPress={() => navigation.goBack()}>
+                <Image style={styles.iconStyle} source={appIcons.arrowback} />
+              </TouchableOpacity>
+            </View>
           )}
         </View>
         <View>
@@ -42,28 +44,36 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   container: {
-    flex:1,
-    height: heightPixel(100),
+    // flex:1,
+    height: heightPixel(120),
     width: wp(100),
-    alignContent:'center',
-    justifyContent:'center'
-
-    
+    alignContent: 'center',
+    justifyContent: 'center',
+  },
+  goBack: {
+    height: heightPixel(30),
+    width: widthPixel(30),
+    backgroundColor: colors.white,
+    borderRadius: 100,
+    justifyContent: 'center',
+    alignContent: 'center',
+    marginHorizontal: 8,
+    elevation: 1,
+    position:'absolute',
   },
   iconStyle: {
-    width: widthPixel(24),
-    marginRight: widthPixel(16),
-    marginTop: widthPixel(25),
-    height: widthPixel(24),
+    width: widthPixel(25),
+    height: widthPixel(25),
     resizeMode: 'contain',
   },
   logo: {
     alignSelf: 'center',
     width: widthPixel(100),
     height: widthPixel(90),
-    marginTop: 70,
+    // marginTop: 70,
     resizeMode: 'contain',
-
+    position:'absolute'
+    // backgroundColor:'red'
   },
   textlogin: {
     color: colors.lightBlack,

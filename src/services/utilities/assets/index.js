@@ -13,6 +13,14 @@ const appIcons = {
     Message: require(`${iconUrl}/Message.png`),
     Lock: require(`${iconUrl}/Lock.png`),
     Show: require(`${iconUrl}/Show.png`),
+    profileTab: require(`${iconUrl}/profileTab.png`),
+    hideeye: require(`${iconUrl}/hideeye.png`),
+    dollar: require(`${iconUrl}/dollar.png`),
+    arrowback: require(`${iconUrl}/arrowback.png`),
+
+
+
+
 
 
 

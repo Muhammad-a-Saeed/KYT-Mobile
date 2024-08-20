@@ -57,7 +57,7 @@ const Signin = ({navigation}) => {
         <View style={styles.forgetcontainer}>
         <View style={styles.rightmain}> 
         <Image source={appIcons.rectangle} style={styles.rectangle}/>
-           <Text style={styles.remtext}>Remember</Text></View>
+           <Text style={styles.remtext}>Remember me</Text></View>
            <View style={styles.forget}>
           <Text
             style={styles.forgetText}
@@ -68,7 +68,7 @@ const Signin = ({navigation}) => {
         </View>
 
         <View style={styles.pv30}>
-          <Button onPress={() => navigation.navigate()}>Login</Button>
+          <Button onPress={() => navigation.navigate()}>CONTINUE</Button>
         </View>
 
         <View style={styles.ormain}>

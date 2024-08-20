@@ -16,6 +16,7 @@ export const routes = {
     selectAccount: 'selectAccount',
     signin: 'signin',
     signup: 'signup',
+    forgetpasword:'forgetpasword',
     // dashboard: 'dashboard',
     // report: 'report',
     // notification: 'notification',

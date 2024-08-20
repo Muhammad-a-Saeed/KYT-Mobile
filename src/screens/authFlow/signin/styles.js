@@ -49,6 +49,7 @@ export const styles = StyleSheet.create({
   },
   rightmain:{
     flexDirection:'row',
+    alignItems:'center'
 
   },
   rectangle: {
@@ -59,22 +60,22 @@ export const styles = StyleSheet.create({
 
   },
   remtext:{
-    color: colors.darktext,
+    color: colors.lightText,
     fontSize: 14,
-    marginLeft:-20,
+    marginLeft:-12,
     
   },
   forget:{
 
   },
   forgetText: {
-    color: colors.darktext,
+    color: colors.theme,
     fontSize: 14,
     
   },
   pv30: {
     // paddingVertical: heightPixel(80),
-    marginVertical:20,
+    marginVertical:30,
     justifyContent:'center',
     alignItems:'center'
 },

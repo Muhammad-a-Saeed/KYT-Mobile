@@ -20,6 +20,7 @@ import {
 export const CustomInput = ({
   dropDownShow,
   leftIcon,
+  righteye,
   onPressValue,
   dropdownArray,
   eyeValue,
@@ -53,6 +54,7 @@ export const CustomInput = ({
           elevation: elevation,
         }}>
         <Image source={leftIcon} style={styles.leftIcon} />
+        
         <TouchableOpacity
           style={{flex: 1}}
           onPress={() => rightIcon && onPressIcon()}>
@@ -72,6 +74,11 @@ export const CustomInput = ({
         {rightIcon && (
           <TouchableOpacity>
             <Image source={appIcons.Show} style={styles.eyeshow} />
+          </TouchableOpacity>
+        )}
+        {righteye && (
+          <TouchableOpacity>
+            <Image source={righteye} style={styles.eyeshow} />
           </TouchableOpacity>
         )}
         {rightloc && (

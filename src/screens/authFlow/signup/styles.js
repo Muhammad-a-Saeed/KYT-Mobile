@@ -1,78 +1,103 @@
-import {StyleSheet} from 'react-native';
+import {StatusBar, StyleSheet} from 'react-native';
 import {colors, fontFamily, heightPixel, widthPixel} from '../../../services';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.background,
+    backgroundColor: colors.white,
+    alignContent:'center',
   },
   fg1: {
     flexGrow: 1,
+    padding: widthPixel(20),
   },
   wrapper: {
-    
-    paddingHorizontal: widthPixel(20),
-    paddingBottom: heightPixel(20),
-    backgroundColor:colors.background,
-    marginTop: 50,
+    flex:1,
+    marginTop: StatusBar.currentHeight,
+    marginTop:-10,
+    // marginVertical: -35,
   },
   title: {
-    // marginTop: heightPixel(90),
-    paddingBottom: heightPixel(28),
-    fontSize: 22,
+    fontSize: 20,
     color: colors.lightBlack,
     fontFamily: fontFamily.appTextBold,
+    // marginTop: 30,
+
+  },
+  title2: {
+    width:widthPixel(388),
+    fontSize: 16,
+    color: colors.lightBlack,
+    fontFamily:fontFamily.appTextRegular,
+  
   },
   custominput: {
-    marginTop: -30,
-    gap: 20,
+    // marginTop: -30,
+    gap: 8,
   },
   pv30: {
-    paddingVertical: heightPixel(50),
+    paddingVertical: heightPixel(30),
+    justifyContent:'center',
+    alignItems:'center'
   },
-  texthead: {
-    alignItems: 'center',
-    flex: 1,
-    marginTop: -115,
-    lineHeight: responsiveFontSize(3),
+  
+  ormain:{
+    justifyContent:'center',
+       alignItems:'center',
+    flexDirection:'row',
+    // paddingBottom:10,
+    gap:10,
+   
+    // backgroundColor: colors.errorColor,
+   
+
   },
-  dontHaveText: {
-    color: colors.black,
-    fontFamily: fontFamily.appTextRegular,
-    fontSize: 14,
-    textAlign: 'center',
-// marginVertical:-30,
-    // marginTop: -40,
-  },
-  spanedit: {
-    color: colors.lightBackground,
-    textDecorationLine: 'underline',
+  line1:{
+    width:widthPixel(110),
+    borderBottomWidth:1,
+borderColor:colors.dividerColor2,
+
   },
   ortext: {
-    color: colors.lightBlack,
-    fontSize: 17,
-    // lineHeight: 1,
-    paddingTop: heightPixel(45),
+    color: colors.black,
+    fontFamily: fontFamily.appTextRegular,
+    fontSize: 13,
+   
   },
   rowEvenly: {
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    marginVertical:35,
-    marginHorizontal: 80,
+    justifyContent:'center',
+    justifyContent: 'space-around',
+    marginHorizontal:90,
+    marginTop:35,
+    backgroundColor: colors.white,
   },
   socialView: {
-    width: widthPixel(50),
-    height: heightPixel(50),
-    backgroundColor: colors.background,
+    width: widthPixel(60),
+    height: heightPixel(40),
+    backgroundColor: colors.white,
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 100,
-    padding: 18,
-    elevation: 6,
+    borderRadius: 10,
+    elevation: 3,
   },
   socialIcon: {
     width: widthPixel(32),
     height: widthPixel(32),
+  },
+  texthead: {
+    alignItems: 'center',
+    
+  },
+  dontHaveText: {
+    color: colors.black,
+    fontFamily: fontFamily.appTextRegular,
+    fontSize: 16,
+    marginTop: 50,
+  },
+  spanedit: {
+    color: colors.theme,
+    fontFamily:fontFamily.appTextSemiBold
   },
 });

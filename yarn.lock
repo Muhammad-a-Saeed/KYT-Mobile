@@ -3007,6 +3007,7 @@ __metadata:
     react-native: 0.72.3
     react-native-device-info: ^10.9.0
     react-native-gesture-handler: ^2.16.2
+    react-native-inset-shadow: ^1.0.3
     react-native-keyboard-aware-scroll-view: ^0.9.5
     react-native-linear-gradient: ^2.8.3
     react-native-phone-number-input: ^2.1.0
@@ -8592,6 +8593,18 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 49b5b9a232fc60ddc38124a804410150070af5b20efbba1550831221560d71df704b7a7edfa2fb70d84fde32faf8675ad6118aea8b40f50c2a9d80eb7a08eb1c
+  languageName: node
+  linkType: hard
+
+"react-native-inset-shadow@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "react-native-inset-shadow@npm:1.0.3"
+  dependencies:
+    prop-types: ^15.7.2
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: b2aaf2a6841d85a0245dc0e2fa24f7fce3dff78dd06f7cf91f110b29f180ded083abe663dc7f6a2ab7f0a4dc2a4e88a748204cf8d4c272980d25836bd8c5ef58
   languageName: node
   linkType: hard
 

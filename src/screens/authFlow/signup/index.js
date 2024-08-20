@@ -20,73 +20,92 @@ const SignupScreen = ({navigation}) => {
     {
       id: 1,
       title: 'Continue with FaceBook',
-      icon: appIcons.facebook,
-      onPress: () => facebookLogin(),
+      icon: appIcons.google,
+      onPress: () => googlelogin(),
     },
     {
       id: 2,
       title: 'Continue with Google',
-      icon: appIcons.google,
+      icon: appIcons.ios,
       onPress: () => appleLogin(),
     },
   ];
   return (
     <View style={[styles.container]}>
       <StatusBar backgroundColor={colors.background} barStyle="dark-content" />
-      <Header leftIcon={true} mainLogo={true} />
+      <Header  mainLogo={true} />
       <KeyboardAwareScrollView
         keyboardShouldPersistTaps="always"
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.fg1}>
         <View style={[styles.wrapper]}>
-          <Text style={styles.title}>SIGN UP</Text>
+          <Text style={styles.title}>Sign Up</Text>
+        <Text style={[styles.title2]}>Create new account</Text>
+
           <View style={styles.custominput}>
             <CustomInput
               errorText={nameValue}
               onChangeText={text => setName(text)}
               placeholder={'Full Name'}
-              leftIcon={appIcons.profile}
+              leftIcon={appIcons.profileTab}
             />
             <CustomInput
               onChangeText={text => setEmail(text)}
               placeholder={'Email ID'}
-              leftIcon={appIcons.attherate}
+              leftIcon={appIcons.Message}
             />
             <CustomInput
-              placeholder={'Password'}
-              leftIcon={appIcons.lock}
+              placeholder={'New password'}
+              leftIcon={appIcons.Lock}
+              righteye={appIcons.hideeye}
               onChangeText={text => setPassword(text)}
             />
             <CustomInput
               placeholder={'Confirm Password'}
-              leftIcon={appIcons.lock}
+              leftIcon={appIcons.Lock}
+              rightIcon={appIcons.Show}
+              onChangeText={text => setConfirmPassword(text)}
+            />
+             <CustomInput
+              placeholder={'Ref Code '}
+              leftIcon={appIcons.dollar}
               onChangeText={text => setConfirmPassword(text)}
             />
           </View>
           <View style={styles.pv30}>
             <Button onPress={() => navigation.navigate(routes.accountsetup)}>
-              SIGN UP
+              CONTINUE
             </Button>
           </View>
-          <View style={styles.texthead}>
-            <Text
-              onPress={() => navigation.navigate(routes.login)}
-              style={styles.dontHaveText}>
-              Already have an account?{' '}
-              <Text style={styles.spanedit}>SIGN IN</Text>
-            </Text>
-            <Text style={styles.ortext}>OR</Text>
-          </View>
-          <View style={styles.rowEvenly}>
-            {socialArray.map((item, index) => (
-              <TouchableOpacity
-                onPress={item.onPress}
-                key={index}
-                style={styles.socialView}>
-                <Image source={item.icon} style={styles.socialIcon} />
-              </TouchableOpacity>
-            ))}
-          </View>
+          <View style={styles.ormain}>
+          <View style={styles.line1}></View>
+          <View>
+        <Text style={styles.ortext}>OR LOGIN WITH</Text>
+        </View>
+        <View style={styles.line1}></View>
+
+        </View>
+
+        <View style={styles.rowEvenly}>
+       
+          {socialArray.map((item, index) => (
+            <TouchableOpacity
+              onPress={item.onPress}
+              key={index}
+              style={styles.socialView}>
+              <Image source={item.icon} style={styles.socialIcon} />
+            </TouchableOpacity>
+          ))}
+        </View>
+
+        <View style={styles.texthead}>
+          <Text
+            onPress={() => navigation.navigate(routes.signup)}
+            style={styles.dontHaveText}>
+            Already have an account? <Text style={styles.spanedit}>Sign In</Text>
+          </Text>
+
+        </View>
         </View>
       </KeyboardAwareScrollView>
     </View>

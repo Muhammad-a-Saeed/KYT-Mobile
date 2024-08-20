@@ -5,34 +5,39 @@ import LinearGradient from 'react-native-linear-gradient';
 const Button = props => {
   const {style, disable, onPress, children} = props;
   return (
-    <LinearGradient start={{x: 0, y: 10}} end={{x: 1, y: -13}} colors={['#D1AA66']} style={styles.topContainer}>
+  
+      <LinearGradient style={[styles.topContainer]}
+      start={{x: 0, y: 0}} end={{x: 0, y: 1}} colors={['#6D6010','#D1AA66','#6D6010',]}
+      >
       <TouchableOpacity
         style={styles.container}
         onPress={onPress}>
         <Text style={styles.label}>{children}</Text>
       </TouchableOpacity>
-    </LinearGradient>
+      </LinearGradient>
+    
   );
 };
 const styles = StyleSheet.create({
   topContainer: {
-    width: widthPixel(390),
+    width:widthPixel(350),
     height: 60,
     marginBottom: 5,
+    borderRadius:18,
     
   },
   container: {
-    width:'90%',
+    // width:'90%',
     height: 60,
-   
-    borderRadius: 18,
     alignItems: 'center',
     alignSelf: 'center',
     // flexDirection: 'row',
     justifyContent: 'center',
+    // borderWidth:1,
+    // borderRadius:18,
   },
   label: {
-    color: colors.black,
+    color: colors.white,
     fontFamily: fontFamily.appTextSemiBold,
     fontSize: 16,
   },
