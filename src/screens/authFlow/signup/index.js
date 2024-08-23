@@ -73,7 +73,7 @@ const SignupScreen = ({navigation}) => {
             />
           </View>
           <View style={styles.pv30}>
-            <Button onPress={() => navigation.navigate(routes.accountsetup)}>
+            <Button onPress={() => navigation.navigate(routes.profilesetup)}>
               CONTINUE
             </Button>
           </View>

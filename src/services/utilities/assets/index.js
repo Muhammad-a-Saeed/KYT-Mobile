@@ -17,6 +17,21 @@ const appIcons = {
     hideeye: require(`${iconUrl}/hideeye.png`),
     dollar: require(`${iconUrl}/dollar.png`),
     arrowback: require(`${iconUrl}/arrowback.png`),
+    camera: require(`${iconUrl}/camera.png`),
+    Calendar: require(`${iconUrl}/Calendar.png`),
+    unmark: require(`${iconUrl}/unmark.png`),
+    mark: require(`${iconUrl}/mark.png`),
+    addicon: require(`${iconUrl}/addicon.png`),
+    homeicon: require(`${iconUrl}/homeicon.png`),
+    tickrectangle: require(`${iconUrl}/tickrectangle.png`),
+    officeicon: require(`${iconUrl}/officeicon.png`),
+    location: require(`${iconUrl}/location.png`),
+
+
+    
+
+
+
 
 
 

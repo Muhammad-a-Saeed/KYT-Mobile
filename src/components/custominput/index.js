@@ -28,7 +28,7 @@ export const CustomInput = ({
   inputstyle,
   rightloc,
   rightIcon,
-  rightcamera,
+  rightcalendar,
   width = '100%',
   height = heightPixel(60),
   borderRadius = widthPixel(14),
@@ -36,10 +36,12 @@ export const CustomInput = ({
   borderWidth = 2,
   elevation = 0,
   value,
+  marginHorizontal=0,
   placeholder,
   keyboardType,
   editable,
   onChangeText,
+  onCalendarPress,
 }) => {
   
   return (
@@ -60,7 +62,7 @@ export const CustomInput = ({
           onPress={() => rightIcon && onPressIcon()}>
           <TextInput
             selectionColor={colors.black}
-            style={[styles.inputTextStyle]}
+            style={{...styles.inputTextStyle,marginHorizontal}}
             value={value}
             placeholder={placeholder}
             placeholderTextColor={'#C7C7C7'}
@@ -68,6 +70,7 @@ export const CustomInput = ({
             keyboardType={keyboardType}
             editable={editable}
             onChangeText={onChangeText}
+            
            
           />
         </TouchableOpacity>
@@ -86,9 +89,9 @@ export const CustomInput = ({
             <Image style={styles.rightarrow} source={appIcons.addres} />
           </TouchableOpacity>
         )}
-        {rightcamera && (
-          <TouchableOpacity >
-            <Image style={styles.rightarrow} source={appIcons.camera} />
+        {rightcalendar && (
+          <TouchableOpacity onPress={onCalendarPress} >
+            <Image style={{...styles.rightarrow}} source={appIcons.Calendar} />
           </TouchableOpacity>
         )}
       </View>
@@ -144,12 +147,13 @@ const styles = StyleSheet.create({
 
   inputTextStyle: {
     width: '90%',
-    height:60,
+    height:50,
     fontSize: 14,
     fontFamily: fontFamily.appTextRegular,
     color: colors.lightBlack,
-    // backgroundColor:'red',
-    
+paddingBottom:-20, 
+// marginHorizontal:-30, 
+
     
   },
   icon: {
@@ -168,7 +172,8 @@ const styles = StyleSheet.create({
     borderColor: colors.greyLight,
     borderTopWidth:0,
     borderLeftWidth:0,
-    borderRightWidth:0
+    borderRightWidth:0,
+
 
   },
   rightarrow: {

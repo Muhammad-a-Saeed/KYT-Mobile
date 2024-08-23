@@ -94,7 +94,7 @@ borderColor:colors.dividerColor2,
     color: colors.black,
     fontFamily: fontFamily.appTextRegular,
     fontSize: 16,
-    marginTop: 50,
+    marginTop: 40,
   },
   spanedit: {
     color: colors.theme,

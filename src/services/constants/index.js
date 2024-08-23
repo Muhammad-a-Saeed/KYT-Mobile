@@ -1,4 +1,5 @@
 import { Dimensions, PixelRatio } from 'react-native';
+import { ProfileSetup, Resetpasword } from '../../screens/authFlow';
 const WINDOW_WIDTH = Dimensions.get('window').width;
 const WINDOW_HEIGHT = Dimensions.get('window').height;
 const SCREEN_WIDTH = Dimensions.get('screen').width;
@@ -17,6 +18,10 @@ export const routes = {
     signin: 'signin',
     signup: 'signup',
     forgetpasword:'forgetpasword',
+    otpscreen:'otpscreen',
+    resetpasword:'resetpasword',
+    profilesetup:'profilesetup'
+
     // dashboard: 'dashboard',
     // report: 'report',
     // notification: 'notification',

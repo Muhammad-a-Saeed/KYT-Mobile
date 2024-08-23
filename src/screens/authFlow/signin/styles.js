@@ -5,20 +5,13 @@ export const styles = StyleSheet.create({
   container: {
     flex: 0.9,
     alignContent:'center',
-  // backgroundColor:'green',
-  // marginVertical:20,
-  // position:'relative'
-
-
   },
   fg1: {
     flexGrow: 1,
     padding: 20,
   },
   wrapper: {
-    // flex: 1,
     marginTop: StatusBar.currentHeight,
-    // backgroundColor:'red',
     marginBottom:-70,
     
   },
@@ -53,16 +46,16 @@ export const styles = StyleSheet.create({
 
   },
   rectangle: {
-   widht:widthPixel(23),
+   width:widthPixel(23),
    height:heightPixel(24),
    resizeMode:'contain',
-   marginLeft:-20,
+  //  marginLeft:,
 
   },
   remtext:{
     color: colors.lightText,
     fontSize: 14,
-    marginLeft:-12,
+    marginLeft:5,
     
   },
   forget:{
@@ -74,7 +67,6 @@ export const styles = StyleSheet.create({
     
   },
   pv30: {
-    // paddingVertical: heightPixel(80),
     marginVertical:30,
     justifyContent:'center',
     alignItems:'center'
@@ -96,7 +88,6 @@ export const styles = StyleSheet.create({
     width:widthPixel(110),
     borderBottomWidth:1,
 borderColor:colors.dividerColor2,
-
   },
   ortext: {
     color: colors.black,

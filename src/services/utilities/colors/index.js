@@ -12,6 +12,7 @@ export const colors = {
   dividerColor2: '#C7C7C7',
   green: '#4CC26C',
   greyLight: '#E9E9E9',
+  greyLight1:'#F4F3F3',
   errorColor: '#FF0000',
   textRed: "#DA2828",
   placeholderColor: '#cccccc',

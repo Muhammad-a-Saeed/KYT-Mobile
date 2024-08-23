@@ -45,10 +45,11 @@ const styles = StyleSheet.create({
   },
   container: {
     // flex:1,
-    height: heightPixel(120),
+    height: heightPixel(100),
     width: wp(100),
     alignContent: 'center',
     justifyContent: 'center',
+    // backgroundColor:'red'
   },
   goBack: {
     height: heightPixel(30),
@@ -70,7 +71,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     width: widthPixel(100),
     height: widthPixel(90),
-    // marginTop: 70,
+    marginTop: -15,
     resizeMode: 'contain',
     position:'absolute'
     // backgroundColor:'red'
@@ -81,12 +82,16 @@ const styles = StyleSheet.create({
     fontWeight: '800',
   },
   titleStyle: {
+    backgroundColor:colors.white,
     fontSize: responsiveFontSize(2.5),
     color: colors.lightBlack,
     fontFamily: fontFamily.appTextSemiBold,
     alignSelf: 'center',
     width: widthPixel(310),
-    marginTop: -heightPixel(31),
+    // marginTop: -heightPixel(31),
+    alignItems:'center',
+    justifyContent:'center',
+    textAlign:'center'
   },
 });
 export default Header;
