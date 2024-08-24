@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-import {appIcons, colors} from '../../../services';
+import {appIcons, colors, routes, } from '../../../services';
 import {Button, Header} from '../../../components';
 import {styles} from './styles';
 import {CustomInput} from '../../../components/custominput';
@@ -153,7 +153,7 @@ const ProfileSetup = ({navigation, onCalendarPress}) => {
             </View>
           </View>
           <View style={styles.pv30}>
-          <Button onPress={() => navigation.navigate()}>CONTINUE</Button>
+          <Button onPress={() => navigation.navigate(routes.addaddress)}>CONTINUE</Button>
         </View>
 
         </View>

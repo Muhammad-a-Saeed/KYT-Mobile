@@ -17,6 +17,8 @@ export const AuthNavigation = () => {
             <AuthStack.Screen name={routes.otpscreen} component={Auth.Otpscreen} />
             <AuthStack.Screen name={routes.resetpasword} component={Auth.Resetpasword} />
             <AuthStack.Screen name={routes.profilesetup} component={Auth.ProfileSetup} />
+            <AuthStack.Screen name={routes.addaddress} component={Auth.AddAddress} />
+            <AuthStack.Screen name={routes.mapscreen} component={Auth.MapScreen} />
 
 
         </AuthStack.Navigator>

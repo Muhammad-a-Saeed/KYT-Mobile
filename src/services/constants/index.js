@@ -1,5 +1,5 @@
 import { Dimensions, PixelRatio } from 'react-native';
-import { ProfileSetup, Resetpasword } from '../../screens/authFlow';
+import { MapScreen, ProfileSetup, Resetpasword } from '../../screens/authFlow';
 const WINDOW_WIDTH = Dimensions.get('window').width;
 const WINDOW_HEIGHT = Dimensions.get('window').height;
 const SCREEN_WIDTH = Dimensions.get('screen').width;
@@ -9,9 +9,6 @@ export const storageKey = {}
 
 export const routes = {
     auth: 'auth',
-    // tab: 'tabNavigator',
-    // drawer: 'drawer',
-    // app: 'app',
     splash: 'splash',
     onboarding:'onboarding',
     selectAccount: 'selectAccount',
@@ -20,12 +17,12 @@ export const routes = {
     forgetpasword:'forgetpasword',
     otpscreen:'otpscreen',
     resetpasword:'resetpasword',
-    profilesetup:'profilesetup'
+    profilesetup:'profilesetup',
+    addaddress:'addaddress',
+    mapscreen:'mapscreen',
 
-    // dashboard: 'dashboard',
-    // report: 'report',
-    // notification: 'notification',
-    // profile: 'profile',
+
+   
 }
 
 export const loaderStyles = {

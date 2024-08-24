@@ -153,7 +153,7 @@ export const styles = StyleSheet.create({
   },
   pv30: {
     marginTop:80,
-    alignItems:'center'
+    alignItems:'center',
 },
   
 

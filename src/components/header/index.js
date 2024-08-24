@@ -10,7 +10,7 @@ import {
 } from '../../services';
 import {useNavigation} from '@react-navigation/native';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
-const Header = ({title, leftIcon, mainLogo, hintLogo}) => {
+const Header = ({title, leftIcon, mainLogo, hintLogo,titleleft}) => {
   const navigation = useNavigation();
   return (
     <View style={[styles.container]}>
@@ -30,8 +30,9 @@ const Header = ({title, leftIcon, mainLogo, hintLogo}) => {
         <View>
           {hintLogo && <Image style={styles.logo} source={appIcons.hint} />}
         </View>
-
         <View>{title && <Text style={[styles.titleStyle]}>{title}</Text>}</View>
+        <View>{titleleft && <Text style={[styles.titleleftStyle]}>{titleleft}</Text>}</View>
+       
       </View>
     </View>
   );
@@ -88,9 +89,19 @@ const styles = StyleSheet.create({
     fontFamily: fontFamily.appTextSemiBold,
     alignSelf: 'center',
     width: widthPixel(310),
-    // marginTop: -heightPixel(31),
+   
     alignItems:'center',
     justifyContent:'center',
+    textAlign:'center'
+  },
+  titleleftStyle: {
+   
+    fontSize: responsiveFontSize(2.5),
+    color: colors.lightBlack,
+    fontFamily: fontFamily.appTextSemiBold,
+    marginHorizontal:-25,
+    marginTop:-17,
+    width: widthPixel(310),
     textAlign:'center'
   },
 });
