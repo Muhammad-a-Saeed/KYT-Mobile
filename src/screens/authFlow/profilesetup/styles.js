@@ -155,6 +155,9 @@ export const styles = StyleSheet.create({
     marginTop:80,
     alignItems:'center',
 },
+alertcontainer: {
+  // flex: 1,
+},
   
 
   

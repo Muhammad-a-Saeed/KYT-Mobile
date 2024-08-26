@@ -32,6 +32,7 @@ export const CustomInput = ({
   width = '100%',
   height = heightPixel(60),
   borderRadius = widthPixel(14),
+  borderColor=colors.greyLight1,
   backgroundColor = colors.lightgrey,
   borderWidth = 2,
   elevation = 0,
@@ -45,7 +46,7 @@ export const CustomInput = ({
 }) => {
   
   return (
-    <View style={{...styles.formInput, width: width, height: height}}>
+    <View style={{...styles.formInput, width: width, height: height, borderColor: borderColor}}>
       <View
         style={{
           ...styles.input,
@@ -54,6 +55,8 @@ export const CustomInput = ({
           height: height,
           backgroundColor: backgroundColor,
           elevation: elevation,
+          borderColor:borderColor
+
         }}>
         <Image source={leftIcon} style={styles.leftIcon} />
         
@@ -62,7 +65,7 @@ export const CustomInput = ({
           onPress={() => rightIcon && onPressIcon()}>
           <TextInput
             selectionColor={colors.black}
-            style={{...styles.inputTextStyle,marginHorizontal}}
+            style={{...styles.inputTextStyle,marginHorizontal,backgroundColor,height,borderColor}}
             value={value}
             placeholder={placeholder}
             placeholderTextColor={'#C7C7C7'}

@@ -26,6 +26,14 @@ const appIcons = {
     tickrectangle: require(`${iconUrl}/tickrectangle.png`),
     officeicon: require(`${iconUrl}/officeicon.png`),
     location: require(`${iconUrl}/location.png`),
+    Search: require(`${iconUrl}/Search.png`),
+    pin: require(`${iconUrl}/pin.png`),
+    alertbackground: require(`${iconUrl}/alertbackground.png`),
+    procompalert: require(`${iconUrl}/procompalert.png`),
+
+ 
+
+
 
 
     

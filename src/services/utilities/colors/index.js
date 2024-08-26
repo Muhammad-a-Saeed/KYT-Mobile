@@ -10,10 +10,12 @@ export const colors = {
   grey: '#D9D9D9',
   dividerColor: '#DADADA',
   dividerColor2: '#C7C7C7',
+  dividerColor3:'#F0E4D1',
   green: '#4CC26C',
   greyLight: '#E9E9E9',
   greyLight1:'#F4F3F3',
   errorColor: '#FF0000',
   textRed: "#DA2828",
   placeholderColor: '#cccccc',
+  pinbackground:'#FDF2DF',
 }

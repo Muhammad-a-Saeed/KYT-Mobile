@@ -6,11 +6,18 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.white,
   },
+  fg1:{
+    flexGrow:1
+  },
   wrapper: {
     flex: 1,
     alignItems: 'center',
+    // marginTop:-20,
+    // position:'absolute'
+
   },
   pv30: {
+    flex:0.2,
     alignItems: 'center',
   },
   addrescard:{

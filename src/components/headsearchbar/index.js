@@ -11,11 +11,11 @@ import {
 import {useNavigation} from '@react-navigation/native';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
 import { CustomInput } from '../custominput';
-const Header = ({title, leftIcon, mainLogo, hintLogo,titleleft,SearchBar}) => {
+const HeadSearchBar = ({title, leftIcon, mainLogo, hintLogo,titleleft,SearchBar}) => {
   const navigation = useNavigation();
   return (
     <View style={[styles.container]}>
-      <View>
+     
         <View style={styles.rowCenter}>
           {leftIcon && (
             <TouchableOpacity style={[styles.goBack]}>
@@ -25,39 +25,33 @@ const Header = ({title, leftIcon, mainLogo, hintLogo,titleleft,SearchBar}) => {
             </TouchableOpacity>
           )}
         </View>
-        <View>
-          {mainLogo && <Image style={styles.logo} source={appIcons.mainlogo} />}
-        </View>
-        <View>
-          {hintLogo && <Image style={styles.logo} source={appIcons.hint} />}
-        </View>
-        <View>{title && <Text style={[styles.titleStyle]}>{title}</Text>}</View>
-        <View>{titleleft && <Text style={[styles.titleleftStyle]}>{titleleft}</Text>}</View>
-        <View>{ SearchBar &&
+        <View style={styles.searchbar}>{ SearchBar &&
           <CustomInput
             // onChangeText={text => setEmail(text)}
             placeholder={'Search'}
             leftIcon={appIcons.Search}
             width='80%'
+            backgroundColor={colors.greyLight1}
+            borderRadius={4}
+            height={50}
           />}</View>
        
       </View>
-    </View>
+   
   );
 };
 
 const styles = StyleSheet.create({
   rowCenter: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
   },
   container: {
     // flex:1,
     height: heightPixel(100),
-    width: wp(100),
-    alignContent: 'center',
-    justifyContent: 'center',
+    width: '100%',
+    // backgroundColor:"red",
+    // alignItems: 'center',
+    justifyContent: 'space-between',
+    flexDirection:'row'
     // backgroundColor:'red'
   },
   goBack: {
@@ -67,7 +61,8 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     justifyContent: 'center',
     alignContent: 'center',
-    marginHorizontal: 8,
+    marginHorizontal: 15,
+    marginTop:20,
     elevation: 1,
     position:'absolute',
   },
@@ -76,6 +71,13 @@ const styles = StyleSheet.create({
     height: widthPixel(25),
     resizeMode: 'contain',
   },
+  searchbar:{
+  width:'90%',
+  marginTop:12,
+
+// position:'absolute',
+marginHorizontal:-30, 
+},
   logo: {
     alignSelf: 'center',
     width: widthPixel(100),
@@ -85,32 +87,6 @@ const styles = StyleSheet.create({
     position:'absolute'
     // backgroundColor:'red'
   },
-  textlogin: {
-    color: colors.lightBlack,
-    paddingBottom: heightPixel(28),
-    fontWeight: '800',
-  },
-  titleStyle: {
-    backgroundColor:colors.white,
-    fontSize: responsiveFontSize(2.5),
-    color: colors.lightBlack,
-    fontFamily: fontFamily.appTextSemiBold,
-    alignSelf: 'center',
-    width: widthPixel(310),
-   
-    alignItems:'center',
-    justifyContent:'center',
-    textAlign:'center'
-  },
-  titleleftStyle: {
-   
-    fontSize: responsiveFontSize(2.5),
-    color: colors.lightBlack,
-    fontFamily: fontFamily.appTextSemiBold,
-    marginHorizontal:-25,
-    marginTop:-17,
-    width: widthPixel(310),
-    textAlign:'center'
-  },
+ 
 });
-export default Header;
+export default HeadSearchBar;

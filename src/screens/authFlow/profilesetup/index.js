@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 
 import {appIcons, colors, routes, } from '../../../services';
-import {Button, Header} from '../../../components';
+import {Alert, Button, Header} from '../../../components';
 import {styles} from './styles';
 import {CustomInput} from '../../../components/custominput';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
@@ -25,8 +25,7 @@ const ProfileSetup = ({navigation, onCalendarPress}) => {
   const [selected, setSelected] = useState('');
   const [selectedGender, setSelectedGender] = useState(null);
   const [profileOption, setProfileOption] = useState(null);
-
-
+  const [showAlert, setShowAlert] = useState(false);
   const[isOnState,setisOnState]=useState(false)
 
   const handleSelectImage = async () => {
@@ -48,6 +47,12 @@ const ProfileSetup = ({navigation, onCalendarPress}) => {
   const SelectprofileOption = profile => {
     setProfileOption(profile);
   };
+
+
+
+
+
+
   return (
     <View style={[styles.container]}>
       <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
@@ -152,37 +157,24 @@ const ProfileSetup = ({navigation, onCalendarPress}) => {
               </TouchableOpacity>
             </View>
           </View>
-          <View style={styles.pv30}>
+          {/* <View style={styles.pv30}>
+          <Button onPress={() => setShowAlert(true)}>CONTINUE</Button>
+        </View> */}
+        <View style={styles.pv30}>
           <Button onPress={() => navigation.navigate(routes.addaddress)}>CONTINUE</Button>
         </View>
 
         </View>
+        <View style={styles.alertcontainer}>
+          <Alert
+            visible={showAlert}
+            leftIcon={true}
+            onClose={() => setShowAlert(false)}
+            title="Your Profile has been updated successfully"
+          />
+        </View>
       </KeyboardAwareScrollView>
-      <View style={styles.centeredView}>
-        <Modal
-          animationType="slide"
-          transparent={true}
-          visible={isCalendarVisible}
-          // onRequestClose={() => {
-          //   Alert.alert('Modal has been closed.');
-          //   setModalVisible(!modalVisible);
-          // }}
-          onRequestClose={closeCalendar}>
-          <TouchableOpacity onPress={closeCalendar} style={styles.centeredView}>
-            <View style={styles.modalview}>
-              <SafeAreaView style={styles.calendermain}>
-                <CustomCalendar
-                  onDayPress={day => {
-                    // console.log('daysssss',day)
-                    setSelected(day.dateString);
-                    setCalendarVisible(false);
-                  }}
-                />
-              </SafeAreaView>
-            </View>
-          </TouchableOpacity>
-        </Modal>
-      </View>
+   
     </View>
   );
 };

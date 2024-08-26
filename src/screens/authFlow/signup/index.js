@@ -69,7 +69,7 @@ const SignupScreen = ({navigation}) => {
              <CustomInput
               placeholder={'Ref Code '}
               leftIcon={appIcons.dollar}
-              onChangeText={text => setConfirmPassword(text)}
+              // onChangeText={text => setConfirmPassword(text)}
             />
           </View>
           <View style={styles.pv30}>
