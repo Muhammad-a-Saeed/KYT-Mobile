@@ -5,7 +5,12 @@ const appImages = {}
 
 const appIcons = {
     splash: require(`${iconUrl}/splash.png`),
+    splashbackground: require(`${iconUrl}/splashbackground.png`),
     coin: require(`${iconUrl}/coin.png`),
+    logo: require(`${iconUrl}/logo.png`),
+    onboard1: require(`${iconUrl}/onboard1.png`),
+    onboard2: require(`${iconUrl}/onboard2.png`),
+    onboard3: require(`${iconUrl}/onboard3.png`),
     rectangle: require(`${iconUrl}/rectangle.png`),
     google: require(`${iconUrl}/google.png`),
     ios: require(`${iconUrl}/ios.png`),
@@ -30,6 +35,9 @@ const appIcons = {
     pin: require(`${iconUrl}/pin.png`),
     alertbackground: require(`${iconUrl}/alertbackground.png`),
     procompalert: require(`${iconUrl}/procompalert.png`),
+    rightprogress: require(`${iconUrl}/rightprogress.png`),
+
+
 
  
 

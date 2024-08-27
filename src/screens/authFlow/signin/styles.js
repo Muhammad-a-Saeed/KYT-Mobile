@@ -3,8 +3,9 @@ import {colors, fontFamily, heightPixel, widthPixel} from '../../../services';
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 0.9,
+    flex: 1,
     alignContent:'center',
+
   },
   fg1: {
     flexGrow: 1,
@@ -12,7 +13,7 @@ export const styles = StyleSheet.create({
   },
   wrapper: {
     marginTop: StatusBar.currentHeight,
-    marginBottom:-70,
+    // marginBottom:-70,
     
   },
  
@@ -38,7 +39,7 @@ export const styles = StyleSheet.create({
     flexDirection:'row',
     justifyContent:'space-between',
     width:widthPixel(335),
-    marginVertical:5,
+    // marginVertical:5,
   },
   rightmain:{
     flexDirection:'row',

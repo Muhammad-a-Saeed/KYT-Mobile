@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {View, StatusBar, Image, ImageBackground} from 'react-native';
 import {styles} from './styles';
-import { appIcons, routes} from '../../../services';
+import { appIcons, colors, heightPixel, routes, widthPixel} from '../../../services';
 const Splash = ({navigation}) => {
   const [user, setUser] = useState(null);
   useEffect(() => {
@@ -16,15 +16,20 @@ const Splash = ({navigation}) => {
   };
   return (
     <View style={[styles.container]}>
-      <ImageBackground
-      source={appIcons.image}
-      style={{width: 430, height:932,position:'absolute'}}>
        <StatusBar translucent backgroundColor="transparent"  barStyle="dark-content"/> 
-       </ImageBackground>
-      <Image
+      <ImageBackground
+      source={appIcons.splashbackground}
+      style={{ flex:1,width:widthPixel(450), height:'100%',position:'absolute',}}
+        resizeMode="stretch"
+      >
+      <View style={styles.splash}>     
+         <Image
         source={appIcons.splash}
-        style={{width: 220, height:220, alignItems:'center',justifyContent:'center'}}
+        style={{width: 220, height: 220}}
       />
+      </View>
+
+       </ImageBackground>
     </View>
   );
 };

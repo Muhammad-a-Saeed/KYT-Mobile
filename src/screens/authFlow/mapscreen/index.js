@@ -15,7 +15,7 @@ const MapScreen = ({navigation}) => {
   return (
     <View style={[styles.container]}>
       <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
-      <HeadSearchBar leftIcon={true} SearchBar={true} />
+      <HeadSearchBar leftIcon={true} />
       <KeyboardAwareScrollView
         keyboardShouldPersistTaps="always"
         showsVerticalScrollIndicator={false}

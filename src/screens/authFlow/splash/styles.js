@@ -7,6 +7,10 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center'
     },
+    splash:{
+        flex:1,
+         alignItems:'center',justifyContent:'center',
+    }
     // wrapper: {
     //     flex: 1,
     //     justifyContent: 'center',

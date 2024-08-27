@@ -34,7 +34,7 @@ export const styles = StyleSheet.create({
   },
   custominput: {
     // marginTop: -30,
-    gap: 8,
+    // gap: 8,
   },
   pv30: {
     paddingVertical: heightPixel(30),

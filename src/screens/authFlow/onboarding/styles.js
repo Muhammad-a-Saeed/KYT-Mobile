@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
-import {colors, fontFamily, widthPixel, wp} from '../../../services';
+import {colors, fontFamily, heightPixel, widthPixel, wp} from '../../../services';
+import { responsiveFontSize } from 'react-native-responsive-dimensions';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -10,12 +11,18 @@ export const styles = StyleSheet.create({
     width: 300,
     height: 306,
   },
+  onboardingImage2: {
+    // backgroundColor:'red',
+    resizeMode:'stretch',
+    width: 430,
+    height: 306,
+  },
   onboardingItem: {
     flex:1,
     alignItems: 'center',
     justifyContent: 'center',
-    alignSelf:'flex-end',
-    textAlign:'center',
+    // alignSelf:'flex-end',
+    // textAlign:'center',
     width: wp(100),
     // marginVertical:-30,
   },
@@ -25,21 +32,22 @@ export const styles = StyleSheet.create({
     height: 510,
     alignItems:'center',
     justifyContent:'center',
+    resizeMode:'contain'
 
   },
   maintextstyle:{
   width:'90%',
-  // flex:1,
-  justifyContent:'flex-end'
+  justifyContent:'center'
    
   },
   onboardingHeading: {
+    width:'100%',
     fontSize: 22,
     fontFamily:fontFamily.appTextBold,
-    padding: 20,
+    // padding: 20,
     color: colors.black,
     textAlign: 'center',
-    lineHeight: 25,
+    // lineHeight: 25,
   },
   onboardingHeadingTwo: {
     fontFamily: fontFamily.appTextRegular,
@@ -48,31 +56,45 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     lineHeight: 24,
   },
-  pagination: {
-    width:'60%',
-    height:'5%',
-    flexDirection: 'row',
+ 
+ 
+  buttonView: {
+    width:widthPixel(350),
+    flexDirection:'row',
+    justifyContent:'space-between',
+    backgroundColor:'red',
+   
+  },
+  skiptxt:{
+    backgroundColor:'green',
+alignItems:'center',
+justifyContent:'center'
+  },
+  skiptext:{
+fontFamily:fontFamily.appTextItalic,
+    color: colors.theme,
+    fontSize: responsiveFontSize(1.9),
+    textDecorationLine:'underline'
+  },
+  progressContainer: {
+    width:widthPixel(60),
+    height:heightPixel(60),
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom:30,
+    position: 'relative',
+  },
+  progressCircle: {
+    zIndex: 1, // Ensure the Progress.Circle stays on top
+  },
+  rightprogress: {
+    position: 'absolute',
    
+    resizeMode:'center',
+    zIndex: 0, // Ensure the Image stays under the Progress.Circle
   },
-  dot: {
-    height: 8,
-    width: 16,
-    borderRadius: 8,
-    backgroundColor: '#3F4835',
-    marginHorizontal: 2,
-  },
-  activeDot: {
-    backgroundColor:colors.white,
-    height: 8,
-    width: 16, 
-  },
-  buttonView: {
-    textAlign: 'center',
-    alignSelf: 'center',
-    marginBottom:50,
-   
-  },
+  rightprogress:{
+    width:widthPixel(50),
+    height:heightPixel(50),
+    resizeMode:'center'
+  }
 });

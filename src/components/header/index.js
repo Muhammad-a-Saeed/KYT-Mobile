@@ -33,7 +33,7 @@ const Header = ({title, leftIcon, mainLogo, hintLogo,titleleft,SearchBar}) => {
         </View>
         <View>{title && <Text style={[styles.titleStyle]}>{title}</Text>}</View>
         <View>{titleleft && <Text style={[styles.titleleftStyle]}>{titleleft}</Text>}</View>
-        <View>{ SearchBar &&
+        <View style={styles.SearchBar}>{ SearchBar &&
           <CustomInput
             // onChangeText={text => setEmail(text)}
             placeholder={'Search'}
@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    marginTop:10,
   },
   container: {
     // flex:1,
@@ -68,6 +69,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignContent: 'center',
     marginHorizontal: 8,
+    // marginTop:30,
     elevation: 1,
     position:'absolute',
   },
@@ -108,9 +110,13 @@ const styles = StyleSheet.create({
     color: colors.lightBlack,
     fontFamily: fontFamily.appTextSemiBold,
     marginHorizontal:-25,
-    marginTop:-17,
+    marginTop:-15,
     width: widthPixel(310),
     textAlign:'center'
   },
+  SearchBar:{
+    top:0
+
+  }
 });
 export default Header;
