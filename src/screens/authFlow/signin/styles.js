@@ -1,11 +1,11 @@
-import {StyleSheet,StatusBar} from 'react-native';
+import {StyleSheet, StatusBar} from 'react-native';
 import {colors, fontFamily, heightPixel, widthPixel} from '../../../services';
+import {responsiveFontSize} from 'react-native-responsive-dimensions';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignContent:'center',
-
+    alignContent: 'center',
   },
   fg1: {
     flexGrow: 1,
@@ -13,95 +13,80 @@ export const styles = StyleSheet.create({
   },
   wrapper: {
     marginTop: StatusBar.currentHeight,
-    // marginBottom:-70,
-    
   },
- 
+
   title: {
-    width:'90%',
-    fontSize: 18,
+    width: '90%',
+    fontSize: responsiveFontSize(2.7),
+
     color: colors.lightBlack,
-    fontFamily: 'Poppins-Bold', 
+    fontFamily: 'Poppins-Bold',
   },
   title2: {
-    width:widthPixel(388),
-    fontSize: 16,
+    width: widthPixel(388),
+    fontSize: responsiveFontSize(1.8),
     color: colors.lightBlack,
-    fontFamily:fontFamily.appTextRegular,
-  
+    fontFamily: fontFamily.appTextRegular,
   },
-  custominput:{
-    paddingTop:10,
-    gap:20,
+  custominput: {
+    paddingTop: 10,
+    gap: 17,
   },
   forgetcontainer: {
-    // backgroundColor:'red',
-    flexDirection:'row',
-    justifyContent:'space-between',
-    width:widthPixel(335),
-    // marginVertical:5,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: widthPixel(335),
   },
-  rightmain:{
-    flexDirection:'row',
-    alignItems:'center'
-
+  rightmain: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginHorizontal: 5,
   },
   rectangle: {
-   width:widthPixel(23),
-   height:heightPixel(24),
-   resizeMode:'contain',
-  //  marginLeft:,
-
+    width: widthPixel(23),
+    height: heightPixel(24),
+    resizeMode: 'contain',
   },
-  remtext:{
+  remtext: {
     color: colors.lightText,
-    fontSize: 14,
-    marginLeft:5,
-    
+    fontSize: responsiveFontSize(1.6),
+    marginLeft: 5,
   },
-  forget:{
-
+  forget: {
+    marginHorizontal: 5,
   },
   forgetText: {
     color: colors.theme,
-    fontSize: 14,
-    
+    fontSize: responsiveFontSize(1.6),
   },
   pv30: {
-    marginVertical:30,
-    justifyContent:'center',
-    alignItems:'center'
-},
-
- 
-  ormain:{
-    justifyContent:'center',
-       alignItems:'center',
-    flexDirection:'row',
-    // paddingBottom:10,
-    gap:10,
-   
-    // backgroundColor: colors.errorColor,
-   
-
+    marginVertical: 30,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  line1:{
-    width:widthPixel(110),
-    borderBottomWidth:1,
-borderColor:colors.dividerColor2,
+
+  ormain: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+    gap: 10,
+  },
+  line1: {
+    width: widthPixel(110),
+    borderBottomWidth: 1,
+    borderColor: colors.dividerColor2,
   },
   ortext: {
     color: colors.black,
     fontFamily: fontFamily.appTextRegular,
-    fontSize: 13,
-   
+    fontSize: responsiveFontSize(1.5),
   },
   rowEvenly: {
     flexDirection: 'row',
-    justifyContent:'center',
+    justifyContent: 'center',
     justifyContent: 'space-around',
-    marginHorizontal:90,
-    marginTop:50,
+    marginHorizontal: 90,
+    marginTop: 50,
     backgroundColor: colors.white,
   },
   socialView: {
@@ -111,7 +96,7 @@ borderColor:colors.dividerColor2,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,
-    elevation: 3,
+    elevation: 2,
   },
   socialIcon: {
     width: widthPixel(32),
@@ -119,16 +104,15 @@ borderColor:colors.dividerColor2,
   },
   texthead: {
     alignItems: 'center',
-    
   },
   dontHaveText: {
     color: colors.black,
     fontFamily: fontFamily.appTextRegular,
-    fontSize: 16,
+    fontSize: responsiveFontSize(1.8),
     marginTop: 50,
   },
   spanedit: {
     color: colors.theme,
-    fontFamily:fontFamily.appTextSemiBold
+    fontFamily: fontFamily.appTextSemiBold,
   },
 });

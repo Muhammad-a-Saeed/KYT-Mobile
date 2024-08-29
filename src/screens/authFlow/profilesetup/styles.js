@@ -30,9 +30,19 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.greyLight1,
     width: 120,
     height: 120,
+    resizeMode:"contain",
+    borderRadius: 100,
+  },
+  avatarContainer1: {
+    alignSelf: 'center',
+    marginBottom: 10,
+    width: 120,
+    height: 120,
+    resizeMode:"contain",
     borderRadius: 100,
   },
   image: {
+
     width: 34,
     height: 34,
     borderRadius: 50,
@@ -40,8 +50,8 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     position: 'absolute',
-    bottom: 5,
-    right: 5,
+    bottom: 0,
+    right: 0,
   },
   title2: {
     width: widthPixel(388),
@@ -149,16 +159,13 @@ export const styles = StyleSheet.create({
   mark1: {
     width: widthPixel(16),
     height: heightPixel(16),
-    
+    resizeMode:'contain'
   },
   pv30: {
     marginTop:80,
     alignItems:'center',
 },
-alertcontainer: {
-  // flex: 1,
-},
-  
+
 
   
 });

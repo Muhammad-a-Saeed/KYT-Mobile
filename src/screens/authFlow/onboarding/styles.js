@@ -5,6 +5,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
+    justifyContent:'center'
   },
   onboardingImage: {
     resizeMode: 'contain',
@@ -20,53 +21,59 @@ export const styles = StyleSheet.create({
   onboardingItem: {
     flex:1,
     alignItems: 'center',
-    justifyContent: 'center',
-    // alignSelf:'flex-end',
-    // textAlign:'center',
+    justifyContent: 'space-between',
     width: wp(100),
-    // marginVertical:-30,
+    paddingVertical:20,
   },
   onboardimg:{
-    // flex:1,
+    flex:3,
     width: 410,
-    height: 510,
+    height: 340,
     alignItems:'center',
     justifyContent:'center',
-    resizeMode:'contain'
+    // resizeMode:'contain'
 
   },
   maintextstyle:{
+    flex: 1, 
   width:'90%',
-  justifyContent:'center'
+  alignItems:'center',
+  marginTop:20,
    
   },
   onboardingHeading: {
-    width:'100%',
-    fontSize: 22,
+    width:'80%',
+    fontSize:responsiveFontSize(2.8),
     fontFamily:fontFamily.appTextBold,
-    // padding: 20,
+   marginBottom:10,
     color: colors.black,
     textAlign: 'center',
-    // lineHeight: 25,
+    lineHeight: 26, 
+    maxHeight: 25 * 2.3, 
   },
   onboardingHeadingTwo: {
+    width: '95%',
     fontFamily: fontFamily.appTextRegular,
-    fontSize: 16,
+    // fontSize: 16,
+    fontSize:responsiveFontSize(1.9),
     color: colors.black,
     textAlign: 'center',
-    lineHeight: 24,
+    lineHeight: 22, 
+    maxHeight: 24 * 4, 
   },
  
  
   buttonView: {
-    width:widthPixel(350),
+    width:widthPixel(360),
+    height:widthPixel(70),
     flexDirection:'row',
     justifyContent:'space-between',
-    backgroundColor:'red',
+    // backgroundColor:'red',
+    alignItems:'center',
+    padding:10,
    
   },
   skiptxt:{
-    backgroundColor:'green',
 alignItems:'center',
 justifyContent:'center'
   },
@@ -76,25 +83,19 @@ fontFamily:fontFamily.appTextItalic,
     fontSize: responsiveFontSize(1.9),
     textDecorationLine:'underline'
   },
-  progressContainer: {
-    width:widthPixel(60),
-    height:heightPixel(60),
-    justifyContent: 'center',
-    alignItems: 'center',
-    position: 'relative',
-  },
-  progressCircle: {
-    zIndex: 1, // Ensure the Progress.Circle stays on top
-  },
-  rightprogress: {
-    position: 'absolute',
-   
-    resizeMode:'center',
-    zIndex: 0, // Ensure the Image stays under the Progress.Circle
-  },
+  // progressContainer: {
+  //   width:widthPixel(60),
+  //   height:heightPixel(60),
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  //   position: 'relative',
+  // },
+ 
+
   rightprogress:{
     width:widthPixel(50),
     height:heightPixel(50),
-    resizeMode:'center'
+    resizeMode:'contain',
+    marginHorizontal:4,
   }
 });

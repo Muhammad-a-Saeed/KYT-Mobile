@@ -14,6 +14,7 @@ import {
   colors,
   fontFamily,
   heightPixel,
+  routes,
   widthPixel,
 } from '../../services';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
@@ -32,7 +33,7 @@ const Alert = ({navigation, visible, onClose, message, title, leftIcon, buttons}
          
             <View style={styles.content}>
             <ImageBackground
-              source={appIcons.alertbackground} // Replace with your background image
+              source={appIcons.alertbackground} 
               style={styles.backgroundImage}
               imageStyle={styles.imageStyle}
             >

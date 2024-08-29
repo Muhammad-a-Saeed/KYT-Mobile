@@ -10,8 +10,16 @@ import {
 } from '../../services';
 import {useNavigation} from '@react-navigation/native';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
-import { CustomInput } from '../custominput';
-const Header = ({title, leftIcon, mainLogo, hintLogo,titleleft,SearchBar}) => {
+import {CustomInput} from '../custominput';
+const Header = ({
+  title,
+  leftIcon,
+  mainLogo,
+  Logo,
+  hintLogo,
+  titleleft,
+  SearchBar,
+}) => {
   const navigation = useNavigation();
   return (
     <View style={[styles.container]}>
@@ -26,21 +34,32 @@ const Header = ({title, leftIcon, mainLogo, hintLogo,titleleft,SearchBar}) => {
           )}
         </View>
         <View>
-          {mainLogo && <Image style={styles.logo} source={appIcons.mainlogo} />}
+          {mainLogo && (
+            <Image style={styles.mainlogo} source={appIcons.mainlogo} />
+          )}
+        </View>
+        <View>
+          {Logo && <Image style={styles.logo} source={appIcons.logo} />}
         </View>
         <View>
           {hintLogo && <Image style={styles.logo} source={appIcons.hint} />}
         </View>
         <View>{title && <Text style={[styles.titleStyle]}>{title}</Text>}</View>
-        <View>{titleleft && <Text style={[styles.titleleftStyle]}>{titleleft}</Text>}</View>
-        <View style={styles.SearchBar}>{ SearchBar &&
-          <CustomInput
-            // onChangeText={text => setEmail(text)}
-            placeholder={'Search'}
-            leftIcon={appIcons.Search}
-            width='80%'
-          />}</View>
-       
+        <View>
+          {titleleft && (
+            <Text style={[styles.titleleftStyle]}>{titleleft}</Text>
+          )}
+        </View>
+        <View style={styles.SearchBar}>
+          {SearchBar && (
+            <CustomInput
+              // onChangeText={text => setEmail(text)}
+              placeholder={'Search'}
+              leftIcon={appIcons.Search}
+              width="80%"
+            />
+          )}
+        </View>
       </View>
     </View>
   );
@@ -51,16 +70,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginTop:10,
+    marginTop: 10,
   },
   container: {
-    // flex:1,
     height: heightPixel(100),
     width: wp(100),
     alignContent: 'center',
     justifyContent: 'center',
-    // backgroundColor:'red'
-  },
+    },
   goBack: {
     height: heightPixel(30),
     width: widthPixel(30),
@@ -69,54 +86,57 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignContent: 'center',
     marginHorizontal: 8,
-    // marginTop:30,
     elevation: 1,
-    position:'absolute',
+    position: 'absolute',
   },
   iconStyle: {
     width: widthPixel(25),
     height: widthPixel(25),
     resizeMode: 'contain',
   },
-  logo: {
+  mainlogo: {
     alignSelf: 'center',
     width: widthPixel(100),
     height: widthPixel(90),
     marginTop: -15,
     resizeMode: 'contain',
-    position:'absolute'
-    // backgroundColor:'red'
+    position: 'absolute',
   },
+  logo: {
+    alignSelf: 'center',
+    width: widthPixel(60),
+    height: widthPixel(60),
+    marginTop: -15,
+    resizeMode: 'contain',
+    position: 'absolute',
+    },
   textlogin: {
     color: colors.lightBlack,
     paddingBottom: heightPixel(28),
     fontWeight: '800',
   },
   titleStyle: {
-    backgroundColor:colors.white,
+    backgroundColor: colors.white,
     fontSize: responsiveFontSize(2.5),
     color: colors.lightBlack,
     fontFamily: fontFamily.appTextSemiBold,
     alignSelf: 'center',
     width: widthPixel(310),
-   
-    alignItems:'center',
-    justifyContent:'center',
-    textAlign:'center'
+    alignItems: 'center',
+    justifyContent: 'center',
+    textAlign: 'center',
   },
   titleleftStyle: {
-   
     fontSize: responsiveFontSize(2.5),
     color: colors.lightBlack,
     fontFamily: fontFamily.appTextSemiBold,
-    marginHorizontal:-25,
-    marginTop:-15,
+    marginHorizontal: -25,
+    marginTop: -18,
     width: widthPixel(310),
-    textAlign:'center'
+    textAlign: 'center',
   },
-  SearchBar:{
-    top:0
-
-  }
+  SearchBar: {
+    top: 0,
+  },
 });
 export default Header;

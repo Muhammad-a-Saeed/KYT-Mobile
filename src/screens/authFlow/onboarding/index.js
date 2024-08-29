@@ -10,7 +10,6 @@ import {
 } from 'react-native';
 import {styles} from './styles';
 import {colors, appIcons, routes} from '../../../services';
-import * as Progress from 'react-native-progress';
 import Button from '../../../components/button';
 import {Header} from '../../../components';
 import {TouchableOpacity} from 'react-native-gesture-handler';
@@ -36,14 +35,14 @@ const Onboarding = ({navigation}) => {
     {
       id: 3,
       image: appIcons.onboard3,
-      heading: 'Start Earning Stars Today!',
+      heading: 'Start Earning!',
       headingTwo:
         'Visit your dentist, refer friends, and leave reviews to unlock exciting rewards!',
     },
   ];
   const renderItem = ({item}) => (
     <View style={styles.onboardingItem}>
-      <Header mainLogo={true} />
+     
       <View style={styles.onboardimg}>
         {item.image2 ? (
           <Image source={item.image2} style={styles.onboardingImage2} />
@@ -66,15 +65,13 @@ const Onboarding = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <ImageBackground
-        source={appIcons.backgroundimg}
-        style={{width: 430, height: 932, position: 'absolute'}}>
+    
         <StatusBar
           translucent
           backgroundColor="transparent"
           barStyle="dark-content"
         />
-      </ImageBackground>
+         <Header Logo={true} />
       <FlatList
         data={onboardingArray}
         renderItem={renderItem}
@@ -97,15 +94,8 @@ const Onboarding = ({navigation}) => {
         </TouchableOpacity>
 
         <View style={styles.progressContainer}>
-          <Progress.Circle
-            size={30}
-            indeterminate={true}
-            borderWidth={3}
-            borderColor='green'
-
-            style={styles.progressCircle}
-          />
-          {/* <Image source={appIcons.rightprogress} style={styles.rightprogress} /> */}
+         
+          <Image source={appIcons.rightprogress} style={styles.rightprogress} />
         </View>
       </View>
     </View>

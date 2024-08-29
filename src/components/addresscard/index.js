@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import {appIcons, colors, fontFamily, heightPixel, widthPixel,} from '../../services';
 import LinearGradient from 'react-native-linear-gradient';
+import { responsiveFontSize } from 'react-native-responsive-dimensions';
 const AddressCard = props => {
   const {Address,Addresstype, onPress} = props;
   const [isMarked, setIsMarked] = useState(false);
@@ -34,8 +35,9 @@ const AddressCard = props => {
                 <Text style={styles.addresstext}>{Address}</Text>
                 </View>
 
-                <TouchableOpacity onPress={onPress}>
+                <TouchableOpacity onPress={onPress} style={styles.viewmain}>
                 <Text style={styles.viewtext}>view on map</Text>
+                <Image source={appIcons.More} style={styles.moreicon}/>
                 </TouchableOpacity>               
             </View>
           </View>
@@ -48,7 +50,7 @@ const styles = StyleSheet.create({
   },
   maincard: {
     width: widthPixel(350),
-    height: heightPixel(150),
+    minHeight: heightPixel(150),
     borderWidth: 1,
     borderColor: colors.grey,
     borderRadius: 16,
@@ -72,7 +74,7 @@ const styles = StyleSheet.create({
   hometext: {
     width:'80%',
     fontFamily: fontFamily.appTextItalic,
-    fontSize: 18,
+    fontSize: responsiveFontSize(2),
     color: colors.lightBlack,
   },
   stylesinnercard2: {},
@@ -88,12 +90,24 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: colors.lightText,
   },
+  viewmain:{
+   width:'100%',
+  // backgroundColor:'red',
+    marginTop:25,
+   flexDirection: 'row',
+    justifyContent: 'space-between',
+
+  },
   viewtext: {
-    marginTop:10,
-    width:'90%',
     fontFamily: fontFamily.appTextRegular,
     fontSize: 15,
     color: colors.theme,
+  },
+  moreicon: {
+    width: widthPixel(19),
+    height: heightPixel(22),
+    resizeMode: 'center',
+    // backgroundColor:'green'
   },
 });
 

@@ -32,10 +32,10 @@ const MapScreen = ({navigation}) => {
           <View style={styles.pin}>
             <Image style={styles.pinstyle} source={appIcons.pin} />
           </View>
-          <View>
+          <View style={styles.addresstittle}>
             <Text style={styles.titladdres}>Fountain Valley</Text>
             <Text style={styles.compaddress}>
-              2640 Street, Fountain Valley, California, USA
+              2640 Street, Fountain Valley, California, USA 
             </Text>
           </View>
         </View>

@@ -6,71 +6,57 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.white,
-    alignContent:'center',
+    alignContent: 'center',
   },
   fg1: {
     flexGrow: 1,
     padding: widthPixel(20),
   },
   wrapper: {
-    flex:1,
+    flex: 1,
     marginTop: StatusBar.currentHeight,
-    marginTop:-10,
-    // marginVertical: -35,
+    marginTop: -10,
   },
   title: {
-    fontSize: 20,
+    fontSize: responsiveFontSize(2.6),
     color: colors.lightBlack,
     fontFamily: fontFamily.appTextBold,
-    // marginTop: 30,
-
   },
   title2: {
-    width:widthPixel(388),
-    fontSize: 16,
+    width: widthPixel(388),
+    fontSize: responsiveFontSize(1.8),
     color: colors.lightBlack,
-    fontFamily:fontFamily.appTextRegular,
-  
+    fontFamily: fontFamily.appTextRegular,
   },
-  custominput: {
-    // marginTop: -30,
-    // gap: 8,
-  },
+  custominput: {},
   pv30: {
     paddingVertical: heightPixel(30),
-    justifyContent:'center',
-    alignItems:'center'
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  
-  ormain:{
-    justifyContent:'center',
-       alignItems:'center',
-    flexDirection:'row',
-    // paddingBottom:10,
-    gap:10,
-   
-    // backgroundColor: colors.errorColor,
-   
 
+  ormain: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+    gap: 10,
   },
-  line1:{
-    width:widthPixel(110),
-    borderBottomWidth:1,
-borderColor:colors.dividerColor2,
-
+  line1: {
+    width: widthPixel(110),
+    borderBottomWidth: 1,
+    borderColor: colors.dividerColor2,
   },
   ortext: {
     color: colors.black,
     fontFamily: fontFamily.appTextRegular,
-    fontSize: 13,
-   
+    fontSize: responsiveFontSize(1.5),
   },
   rowEvenly: {
     flexDirection: 'row',
-    justifyContent:'center',
+    justifyContent: 'center',
     justifyContent: 'space-around',
-    marginHorizontal:90,
-    marginTop:35,
+    marginHorizontal: 90,
+    marginTop: 35,
     backgroundColor: colors.white,
   },
   socialView: {
@@ -80,7 +66,7 @@ borderColor:colors.dividerColor2,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,
-    elevation: 3,
+    elevation: 2,
   },
   socialIcon: {
     width: widthPixel(32),
@@ -88,16 +74,15 @@ borderColor:colors.dividerColor2,
   },
   texthead: {
     alignItems: 'center',
-    
   },
   dontHaveText: {
     color: colors.black,
     fontFamily: fontFamily.appTextRegular,
-    fontSize: 16,
+    fontSize: responsiveFontSize(1.8),
     marginTop: 40,
   },
   spanedit: {
     color: colors.theme,
-    fontFamily:fontFamily.appTextSemiBold
+    fontFamily: fontFamily.appTextSemiBold,
   },
 });

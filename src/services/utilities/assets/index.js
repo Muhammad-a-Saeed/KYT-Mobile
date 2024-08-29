@@ -36,6 +36,10 @@ const appIcons = {
     alertbackground: require(`${iconUrl}/alertbackground.png`),
     procompalert: require(`${iconUrl}/procompalert.png`),
     rightprogress: require(`${iconUrl}/rightprogress.png`),
+    profilepic: require(`${iconUrl}/profilepic.png`),
+    More: require(`${iconUrl}/More.png`),
+
+
 
 
 

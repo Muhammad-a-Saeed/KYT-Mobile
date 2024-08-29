@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { View, Text, StatusBar, Image } from 'react-native'
 
 import { appIcons, colors, routes } from '../../../services'
-import { AddButton, AddressCard, Button, Header } from '../../../components';
+import { AddButton, AddressCard, Alert, Button, Header } from '../../../components';
 import { styles } from './styles';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 const AddAddress = ({ navigation }) => {
+  const [showAlert, setShowAlert] = useState(false);
+
     const handlePress = () => {
       };
     return (
@@ -23,7 +25,7 @@ const AddAddress = ({ navigation }) => {
           <View style={styles.addrescard}>
           <AddressCard
           Addresstype="Home"
-        Address="6103, Park Way, California, United State America" 
+        Address="6103, Park Way, California, United State America." 
         onPress={handlePress} 
       />
        <AddressCard
@@ -35,7 +37,15 @@ const AddAddress = ({ navigation }) => {
         </View>
         </View>
         <View style={styles.pv30}>
-          <Button onPress={() =>navigation.navigate()}>CONTINUE</Button>
+            <Button onPress={() => setShowAlert(true)}>CONTINUE</Button>
+          </View>
+          <View style={styles.alertcontainer}>
+          <Alert
+            visible={showAlert}
+            leftIcon={true}
+            onClose={() => setShowAlert(false)}
+            title="Your Profile has been updated successfully"
+          />
         </View>
         </KeyboardAwareScrollView>
             </View>

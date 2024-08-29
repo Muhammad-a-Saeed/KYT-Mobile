@@ -12,9 +12,9 @@ export const styles = StyleSheet.create({
   },
   confirmloc: {
     width:'100%',
-    height:heightPixel(260),
+    minHeight:heightPixel(300),
     borderRadius:24,
-    borderWidth:1,    borderColor:'red',
+    borderWidth:1,
     position:'absolute',
     bottom:0,
     
@@ -50,30 +50,34 @@ export const styles = StyleSheet.create({
     pinstyle:{
       width:'45%',
       height:'65%',
-      resizeMode: 'contain',
-      
-      
+      resizeMode: 'contain',      
+    },
+    addresstittle:{
+      width:widthPixel(260),
+      minHeight:heightPixel(40),
+      maxHeight:heightPixel(80),
     },
     titladdres:{
       fontFamily:fontFamily.appTextRegular,
       fontSize:18,
       color:colors.lightBlack,
+
     },
     compaddress:{
-      width:widthPixel(260),
+     
       fontFamily:fontFamily.appTextRegular,
       fontSize:14,
       color:colors.lightBlack,
     },
   pv30: {
     alignItems: 'center',
-    marginTop:50
+    marginTop:100
   },
   addressdetail: {
     width:'100%',
-    height:heightPixel(400),
+    minHeight:heightPixel(400),
     borderRadius:24,
-    borderWidth:1,    borderColor:'red',
+    borderWidth:1,
     position:'absolute',
     bottom:0,
     
@@ -123,7 +127,8 @@ marginHorizontal:15,
       flexDirection:'row',
       gap:5,
     },
-    hometxt:{fontFamily:fontFamily.appTextItalic,
+    hometxt:{
+      fontFamily:fontFamily.appTextItalic,
       fontSize:16,
       color:colors.lightBlack,
       marginTop:3
