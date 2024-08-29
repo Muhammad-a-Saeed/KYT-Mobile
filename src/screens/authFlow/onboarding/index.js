@@ -6,7 +6,7 @@ import {
   FlatList,
   Image,
   Dimensions,
-  ImageBackground,
+  Pressable,
 } from 'react-native';
 import {styles} from './styles';
 import {colors, appIcons, routes} from '../../../services';
@@ -17,6 +17,9 @@ const {width} = Dimensions.get('window');
 const Onboarding = ({navigation}) => {
   const [currentIndex, setcurrentIndex] = useState(0);
   const listRef = useRef(null);
+  const [buttonImage, setButtonImage] = useState(appIcons.Button1);
+ 
+
   const onboardingArray = [
     {
       id: 1,
@@ -40,6 +43,25 @@ const Onboarding = ({navigation}) => {
         'Visit your dentist, refer friends, and leave reviews to unlock exciting rewards!',
     },
   ];
+
+  const handleProgressClick = () => {
+    const newIndex = currentIndex + 1;
+
+    if (newIndex < onboardingArray.length) {
+      setcurrentIndex(newIndex);
+      listRef.current.scrollToIndex({ index: newIndex,  });
+
+      if (newIndex === 1) {
+        setButtonImage(appIcons.Button2);
+      } else if (newIndex === 2) {
+        setButtonImage(appIcons.Button3);
+      }
+    } else {
+      navigation.navigate(routes.signup); 
+    }
+  };
+ 
+
   const renderItem = ({item}) => (
     <View style={styles.onboardingItem}>
      
@@ -61,6 +83,14 @@ const Onboarding = ({navigation}) => {
   const onScroll = event => {
     newIndex = Math.round(event.nativeEvent.contentOffset.x / 360);
     setcurrentIndex(newIndex);
+    if (newIndex === 1) {
+      setButtonImage(appIcons.Button2);
+    } else if (newIndex === 2) {
+      setButtonImage(appIcons.Button3);
+    } else {
+      setButtonImage(appIcons.Button1); 
+    }
+
   };
 
   return (
@@ -94,8 +124,11 @@ const Onboarding = ({navigation}) => {
         </TouchableOpacity>
 
         <View style={styles.progressContainer}>
-         
-          <Image source={appIcons.rightprogress} style={styles.rightprogress} />
+        <Pressable
+          onPress={handleProgressClick}
+          style={styles.progressWrapper}>
+          <Image source={buttonImage} style={styles.rightprogress} />
+        </Pressable>
         </View>
       </View>
     </View>

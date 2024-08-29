@@ -8,7 +8,7 @@ const AuthStack = createStackNavigator()
 
 export const AuthNavigation = () => {
     return (
-        <AuthStack.Navigator initialRouteName={routes.addaddress} screenOptions={{ headerShown: false, cardStyleInterpolator: CardStyleInterpolators.forFadeFromCenter }}>
+        <AuthStack.Navigator initialRouteName={routes.mapscreen} screenOptions={{ headerShown: false, cardStyleInterpolator: CardStyleInterpolators.forFadeFromCenter }}>
             <AuthStack.Screen name={routes.splash} component={Auth.Splash} />
             <AuthStack.Screen name={routes.onboarding} component={Auth.onboarding} />
             <AuthStack.Screen name={routes.signin} component={Auth.Signin} />

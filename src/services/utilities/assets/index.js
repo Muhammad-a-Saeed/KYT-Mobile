@@ -22,6 +22,7 @@ const appIcons = {
     hideeye: require(`${iconUrl}/hideeye.png`),
     dollar: require(`${iconUrl}/dollar.png`),
     arrowback: require(`${iconUrl}/arrowback.png`),
+    goback: require(`${iconUrl}/goback.png`),
     camera: require(`${iconUrl}/camera.png`),
     Calendar: require(`${iconUrl}/Calendar.png`),
     unmark: require(`${iconUrl}/unmark.png`),
@@ -38,6 +39,9 @@ const appIcons = {
     rightprogress: require(`${iconUrl}/rightprogress.png`),
     profilepic: require(`${iconUrl}/profilepic.png`),
     More: require(`${iconUrl}/More.png`),
+    Button1: require(`${iconUrl}/Button1.png`),
+    Button2: require(`${iconUrl}/Button2.png`),
+    Button3: require(`${iconUrl}/Button3.png`),
 
 
 

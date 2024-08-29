@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import {View, Text, StatusBar, Image} from 'react-native';
 
 import {appIcons, colors, routes} from '../../../services';
-import {Button, HeadSearchBar} from '../../../components';
+import {Button } from '../../../components';
 import {styles} from './styles';
 import { CustomInput } from '../../../components/custominput';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import GooglePlacesInput from '../../../components/googlePlacesInput';
 
 const MapScreen = ({navigation}) => {
      const [selectedAddress, setSelectedAddress] = useState('');
@@ -15,13 +15,13 @@ const MapScreen = ({navigation}) => {
   return (
     <View style={[styles.container]}>
       <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
-      <HeadSearchBar leftIcon={true} />
-      <KeyboardAwareScrollView
-        keyboardShouldPersistTaps="always"
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={styles.fg1}>
-
-
+      
+      <GooglePlacesInput containerStyle={styles.searchInput} listViewStyle={styles.searchListView}  renderLeftButton={() => (
+          <TouchableOpacity onPress={() => navigation.navigate()}>
+            <Image style={styles.goback} source={appIcons.goback} />
+          </TouchableOpacity>
+        )}/>   
+         <View>
       {!showAddressDetails && (
       <View style={styles.confirmloc}>
         
@@ -43,9 +43,7 @@ const MapScreen = ({navigation}) => {
           <Button onPress={() => setShowAddressDetails(true)}>CONFIRM & ADD DETAILS</Button>
         </View>
       </View>
-
       )}
-
       {showAddressDetails && (
       <View style={styles.addressdetail}>
         <View style={styles.maintxt}>
@@ -106,7 +104,7 @@ const MapScreen = ({navigation}) => {
      
     </View>
       )}
-      </KeyboardAwareScrollView>
+      </View>
     </View>
   );
 };

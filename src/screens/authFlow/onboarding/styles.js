@@ -83,18 +83,21 @@ fontFamily:fontFamily.appTextItalic,
     fontSize: responsiveFontSize(1.9),
     textDecorationLine:'underline'
   },
-  // progressContainer: {
-  //   width:widthPixel(60),
-  //   height:heightPixel(60),
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  //   position: 'relative',
-  // },
+  progressContainer: {
+    width:widthPixel(60),
+    height:heightPixel(60),
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  progressWrapper: {
+   
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
  
-
   rightprogress:{
-    width:widthPixel(50),
-    height:heightPixel(50),
+    width:widthPixel(60),
+    height:heightPixel(60),
     resizeMode:'contain',
     marginHorizontal:4,
   }

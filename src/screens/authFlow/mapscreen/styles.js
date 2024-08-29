@@ -1,15 +1,20 @@
-import {StyleSheet} from 'react-native';
+import {StatusBar, StyleSheet} from 'react-native';
 import {colors, fontFamily, heightPixel, widthPixel} from '../../../services';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop:StatusBar.currentHeight-30,
     backgroundColor: colors.white,
     
   },
+
   fg1: {
     flexGrow: 1,
   },
+  goback: {width:widthPixel(52),height:heightPixel(52) ,resizeMode:'contain',position:'relative',marginLeft:-20,},
+  searchInput: {marginTop: 10, marginBottom: 7, width: '90%', alignSelf: 'center'},
+  searchListView: {position: 'absolute', top: 45},
   confirmloc: {
     width:'100%',
     minHeight:heightPixel(300),

@@ -3,7 +3,7 @@ import AddButton from './addbutton';
 import AddressCard from './addresscard'
 import { Loader } from './loader';
 import Header from './header';
-import HeadSearchBar from './headsearchbar';
+// import GooglePlacesInput from './googlePlacesInputt';
 import Alert from './alert';
 
 export {
@@ -12,7 +12,7 @@ export {
      Header,
      AddButton,
      AddressCard,
-     HeadSearchBar,
+    //  GooglePlacesInput,
      Alert,
 }
 

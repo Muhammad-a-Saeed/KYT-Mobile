@@ -8,6 +8,8 @@ export const colors = {
   black: '#000000',
   lightBlack: '#333333',
   grey: '#D9D9D9',
+  grey2: '#eeeeee',
+  grey5: '#FAFAFA',
   dividerColor: '#DADADA',
   dividerColor2: '#C7C7C7',
   dividerColor3:'#F0E4D1',
