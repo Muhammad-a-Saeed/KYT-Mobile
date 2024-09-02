@@ -4,27 +4,36 @@ import {colors, fontFamily, heightPixel, widthPixel} from '../../../services';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop:StatusBar.currentHeight-30,
+    marginTop:StatusBar.currentHeight,
     backgroundColor: colors.white,
     
   },
-
-  fg1: {
-    flexGrow: 1,
+  overlayContainer:{
+    width:'100%',
+    flex: 1,
+    zIndex: 1,  
+   position:'absolute',
+   bottom:0,
+   justifyContent:'center',
   },
-  goback: {width:widthPixel(52),height:heightPixel(52) ,resizeMode:'contain',position:'relative',marginLeft:-20,},
-  searchInput: {marginTop: 10, marginBottom: 7, width: '90%', alignSelf: 'center'},
-  searchListView: {position: 'absolute', top: 45},
+  searchInput: {  marginTop: 10, width: '90%', alignSelf: 'center', },
+  searchListView: {position:'absolute',top: 50},
+  mapMarkerImage: {height: 50, width: 53,resizeMode:'contain',},
+  // marker: {width: 100, height: 100, resizeMode:'contain', backgroundColor:'red'}, 
+  marker1: {width: 100, height: 100, borderRadius:100,alignItems:'center',backgroundColor:' rgba(209, 170, 102, 0.4)'},
+  maincurrloc:{position:"absolute",bottom:350,right:20, },
+  currloc: {height: 46, width: 46,resizeMode:'contain'},
   confirmloc: {
+    backgroundColor:colors.white,
     width:'100%',
     minHeight:heightPixel(300),
     borderRadius:24,
     borderWidth:1,
-    position:'absolute',
-    bottom:0,
-    
+    bottom:0, 
+    //  zIndex:1,
    },
     confirmtext:{
+    
       padding:15,
       fontFamily:fontFamily.appTextRegular,
       fontSize:16,
@@ -79,8 +88,9 @@ export const styles = StyleSheet.create({
     marginTop:100
   },
   addressdetail: {
+    backgroundColor:colors.white,
     width:'100%',
-    minHeight:heightPixel(400),
+    minHeight:heightPixel(360),
     borderRadius:24,
     borderWidth:1,
     position:'absolute',

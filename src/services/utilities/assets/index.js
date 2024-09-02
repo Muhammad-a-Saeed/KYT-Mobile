@@ -42,6 +42,7 @@ const appIcons = {
     Button1: require(`${iconUrl}/Button1.png`),
     Button2: require(`${iconUrl}/Button2.png`),
     Button3: require(`${iconUrl}/Button3.png`),
+    currloc: require(`${iconUrl}/currloc.png`),
 
 
 

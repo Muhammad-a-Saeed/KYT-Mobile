@@ -35,10 +35,12 @@ const AddressCard = props => {
                 <Text style={styles.addresstext}>{Address}</Text>
                 </View>
 
-                <TouchableOpacity onPress={onPress} style={styles.viewmain}>
+                <View  style={styles.viewmain}>
                 <Text style={styles.viewtext}>view on map</Text>
+                <TouchableOpacity onPress={onPress} >
                 <Image source={appIcons.More} style={styles.moreicon}/>
-                </TouchableOpacity>               
+                </TouchableOpacity>
+                </View>               
             </View>
           </View>
       

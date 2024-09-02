@@ -1,28 +1,64 @@
 import React, { useState } from 'react';
 import {View, Text, StatusBar, Image} from 'react-native';
-
 import {appIcons, colors, routes} from '../../../services';
 import {Button } from '../../../components';
 import {styles} from './styles';
 import { CustomInput } from '../../../components/custominput';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import GooglePlacesInput from '../../../components/googlePlacesInput';
-
+import { Marker } from 'react-native-maps';
+import GoogleMap from '../../../components/googleMap';
 const MapScreen = ({navigation}) => {
+  const [titleaddres, setTitleAddress] = useState('Fountain Valley');
+  const [compaddress, setCompAddress] = useState('2640 Street, Fountain Valley, California, USA');
      const [selectedAddress, setSelectedAddress] = useState('');
      const [showAddressDetails, setShowAddressDetails] = useState(false);
+     const [locationSelected, setLocationSelected] = useState(false);
 
+     const handleSelectLocation = (data, details) => {
+      setTitleAddress(data.structured_formatting.main_text);
+      setCompAddress(details.formatted_address);
+      setLocationSelected(false); 
+    };
+    const [markerPosition, setMarkerPosition] = useState({
+      latitude: 31.54505000,
+      longitude: 74.34068300,
+    });
+  
+    const handleDragEnd = (e) => {
+      setMarkerPosition({
+        latitude: e.nativeEvent.coordinate.latitude,
+        longitude: e.nativeEvent.coordinate.longitude,
+        
+      });
+    };
   return (
     <View style={[styles.container]}>
       <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
+      <GoogleMap>
+      <Marker  coordinate={markerPosition} handleDragEnd={true} draggable={true} tracksViewChanges={false}  style={styles.marker} >
+      <View style={styles.marker1}>
+    <Image source={appIcons.pin} style={styles.mapMarkerImage} />
+  </View>
+      </Marker>
+  
+  </GoogleMap>
+  <GooglePlacesInput 
+       leftIcon={true} 
+       SearchBar={true} 
+       containerStyle={styles.searchInput}
+       listViewStyle={styles.searchListView} 
+       onSelect={handleSelectLocation} 
+     
+      /> 
+    <View style={styles.maincurrloc}>
+    <Image source={appIcons.currloc} style={styles.currloc} />
+        </View>  
+      {!locationSelected && (
+  <View style={styles.overlayContainer}>
       
-      <GooglePlacesInput containerStyle={styles.searchInput} listViewStyle={styles.searchListView}  renderLeftButton={() => (
-          <TouchableOpacity onPress={() => navigation.navigate()}>
-            <Image style={styles.goback} source={appIcons.goback} />
-          </TouchableOpacity>
-        )}/>   
-         <View>
-      {!showAddressDetails && (
+         {/* <View> */}
+      {!showAddressDetails &&  (
       <View style={styles.confirmloc}>
         
           <Text style={styles.confirmtext}>Confirm your Location</Text>
@@ -33,9 +69,9 @@ const MapScreen = ({navigation}) => {
             <Image style={styles.pinstyle} source={appIcons.pin} />
           </View>
           <View style={styles.addresstittle}>
-            <Text style={styles.titladdres}>Fountain Valley</Text>
+            <Text style={styles.titladdres}>{titleaddres}</Text>
             <Text style={styles.compaddress}>
-              2640 Street, Fountain Valley, California, USA 
+            {compaddress} 
             </Text>
           </View>
         </View>
@@ -105,7 +141,11 @@ const MapScreen = ({navigation}) => {
     </View>
       )}
       </View>
-    </View>
+      )}
+     </View>
+    
+
+
   );
 };
 
