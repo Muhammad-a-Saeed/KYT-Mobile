@@ -13,12 +13,10 @@ const MapScreen = ({navigation}) => {
   const [compaddress, setCompAddress] = useState('2640 Street, Fountain Valley, California, USA');
      const [selectedAddress, setSelectedAddress] = useState('');
      const [showAddressDetails, setShowAddressDetails] = useState(false);
-     const [locationSelected, setLocationSelected] = useState(false);
 
      const handleSelectLocation = (data, details) => {
       setTitleAddress(data.structured_formatting.main_text);
       setCompAddress(details.formatted_address);
-      setLocationSelected(false); 
     };
     const [markerPosition, setMarkerPosition] = useState({
       latitude: 31.54505000,
@@ -54,7 +52,6 @@ const MapScreen = ({navigation}) => {
     <View style={styles.maincurrloc}>
     <Image source={appIcons.currloc} style={styles.currloc} />
         </View>  
-      {!locationSelected && (
   <View style={styles.overlayContainer}>
       
          {/* <View> */}
@@ -141,7 +138,7 @@ const MapScreen = ({navigation}) => {
     </View>
       )}
       </View>
-      )}
+      
      </View>
     
 

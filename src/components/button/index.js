@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import {colors, fontFamily, widthPixel} from '../../services';
 import LinearGradient from 'react-native-linear-gradient';
+import {Svg} from 'react-native-svg';
 const Button = props => {
   const {
     style,
@@ -10,18 +11,41 @@ const Button = props => {
     children,
     width = widthPixel(350),
     height = 60,
+    backgroundColor = ['#6D6010', '#D1AA66', '#6D6010'],
+    labelColor = colors.white,
+    borderColor = colors.transparent,
+    borderWidth = 0,
+    borderRadius = 18,
+    fontSize = 16,
+    fontFamily: customFontFamily = fontFamily.appTextSemiBold,
   } = props;
   return (
     <TouchableOpacity onPress={onPress}>
       <LinearGradient
-        style={{...styles.topContainer, width: width, height: height}}
+        style={{
+          ...styles.topContainer,
+          width: width,
+          height: height,
+          borderColor,
+          borderWidth,
+          borderRadius,
+          fontSize,
+        }}
         start={{x: 0, y: 0}}
         end={{x: 0, y: 1}}
-        colors={['#6D6010', '#D1AA66', '#6D6010']}>
+        colors={backgroundColor}>
         <TouchableOpacity
           style={{...styles.container, width, height}}
           onPress={onPress}>
-          <Text style={styles.label}>{children}</Text>
+          <Text
+            style={{
+              ...styles.label,
+              color: labelColor,
+              fontSize: fontSize,
+              fontFamily: customFontFamily,
+            }}>
+            {children}
+          </Text>
         </TouchableOpacity>
       </LinearGradient>
     </TouchableOpacity>
@@ -33,6 +57,8 @@ const styles = StyleSheet.create({
     height: 60,
     marginBottom: 5,
     borderRadius: 18,
+    borderWidth: 0,
+    borderColor: colors.transparent,
   },
   container: {
     height: 60,

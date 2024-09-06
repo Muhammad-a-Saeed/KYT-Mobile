@@ -1,0 +1,14 @@
+diff --git a/node_modules/react-native-step-indicator/src/index.tsx b/node_modules/react-native-step-indicator/src/index.tsx
+index 222aeb6..f950622 100644
+--- a/node_modules/react-native-step-indicator/src/index.tsx
++++ b/node_modules/react-native-step-indicator/src/index.tsx
+@@ -370,7 +370,8 @@ const StepIndicator = ({
+             stepStatus: getStepStatus(position),
+           })
+         ) : (
+-          <Text style={indicatorLabelStyle}>{`${position + 1}`}</Text>
++          null
++          // <Text style={indicatorLabelStyle}>{`${position + 1}`}</Text>
+         )}
+       </Animated.View>
+     );

@@ -19,6 +19,8 @@ const Header = ({
   hintLogo,
   titleleft,
   SearchBar,
+  wellcome,
+  
 }) => {
   const navigation = useNavigation();
   return (
@@ -50,6 +52,17 @@ const Header = ({
             <Text style={[styles.titleleftStyle]}>{titleleft}</Text>
           )}
         </View>
+        <View style={styles.wellcomemain} >
+          {wellcome && (
+            <Text style={[styles.wellcomeStyle]}>{wellcome}</Text>
+          )}
+           <TouchableOpacity >
+        <Image
+          source={appIcons.wellcomebell}
+          style={styles.imageStyle}
+        />
+      </TouchableOpacity>
+        </View>
         <View style={styles.SearchBar}>
           {SearchBar && (
             <CustomInput
@@ -70,7 +83,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginTop: 10,
+    // marginTop: 10,
   },
   container: {
     height: heightPixel(100),
@@ -134,6 +147,24 @@ const styles = StyleSheet.create({
     marginTop: -18,
     width: widthPixel(310),
     textAlign: 'center',
+  },
+  wellcomemain:{
+    flexDirection:'row',
+    justifyContent:'center',
+    alignItems:'center',
+
+    padding:10,
+  },
+  wellcomeStyle: {
+    fontSize: responsiveFontSize(2.8),
+    color: colors.mediumblack,
+    fontFamily: fontFamily.appTextSemiBold,
+    width: widthPixel(310),
+  },
+  imageStyle: {
+    width: widthPixel(42),
+    height: widthPixel(42),
+    resizeMode: 'contain',
   },
   SearchBar: {
     top: 0,

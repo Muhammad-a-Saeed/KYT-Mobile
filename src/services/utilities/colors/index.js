@@ -6,6 +6,7 @@ export const colors = {
   lightText: '#666666',
   white: '#FFFFFF',
   black: '#000000',
+  mediumblack: '#121212',
   lightBlack: '#333333',
   grey: '#D9D9D9',
   grey2: '#eeeeee',
@@ -20,4 +21,5 @@ export const colors = {
   textRed: "#DA2828",
   placeholderColor: '#cccccc',
   pinbackground:'#FDF2DF',
+  greendark:'#02464A',
 }

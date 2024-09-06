@@ -1,8 +1,11 @@
-import Dashboard from './dashboard'
+import HomeScreen from './homeScreen'
 import Profile from './profile'
 import Notification from './notification'
 import Report from './report'
 
 export {
-    Dashboard, Profile, Notification, Report
+    HomeScreen, 
+    // Profile, 
+    // Notification, 
+    // Report
 }

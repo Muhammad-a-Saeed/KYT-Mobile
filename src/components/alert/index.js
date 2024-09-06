@@ -19,8 +19,10 @@ import {
 } from '../../services';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
 import Button from '../button';
+import { useNavigation } from '@react-navigation/native';
 
-const Alert = ({navigation, visible, onClose, message, title, leftIcon, buttons}) => {
+const Alert = ({ visible, onClose, message, title, leftIcon, buttons}) => {
+  const navigation =useNavigation();
   return (
     <Modal transparent={true} animationType="slide" visible={visible}>
       <StatusBar
@@ -50,7 +52,7 @@ const Alert = ({navigation, visible, onClose, message, title, leftIcon, buttons}
              
               {leftIcon && (
                   <View style={styles.pv30}>
-                  <Button onPress={() => navigation.navigate()}
+                  <Button onPress={() => navigation.navigate(routes.homeScreen)}
                     width={widthPixel(280)}
                     height={50}>CONTINUE</Button>
                 </View>

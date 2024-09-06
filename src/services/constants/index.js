@@ -20,6 +20,7 @@ export const routes = {
     profilesetup:'profilesetup',
     addaddress:'addaddress',
     mapscreen:'mapscreen',
+    homeScreen:'homeScreen',
 
 
    

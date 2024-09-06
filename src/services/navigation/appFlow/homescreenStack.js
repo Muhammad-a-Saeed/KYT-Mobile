@@ -7,8 +7,8 @@ const MyStack = createStackNavigator()
 export class DashboardStack extends Component {
     render() {
         return (
-            <MyStack.Navigator initialRouteName={routes.dashboard} screenOptions={{ headerShown: false }}>
-                <MyStack.Screen name={routes.dashboard} component={App.Dashboard} />
+            <MyStack.Navigator initialRouteName={routes.homeScreen} screenOptions={{ headerShown: false }}>
+                <MyStack.Screen name={routes.homeScreen} component={App.HomeScreen} />
             </MyStack.Navigator>
         )
     }
