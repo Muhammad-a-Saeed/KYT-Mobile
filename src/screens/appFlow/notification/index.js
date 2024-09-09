@@ -1,20 +1,73 @@
-import React from 'react'
-import { View, Text, StatusBar } from 'react-native'
+import React from 'react';
+import {View, Text, StatusBar, ScrollView} from 'react-native';
 
-import { colors } from '../../../services'
-import { Header } from '../../../components';
-import { styles } from './styles';
+import {appIcons, colors} from '../../../services';
+import {Header} from '../../../components';
+import {styles} from './styles';
+import NotificationList from '../../../components/custumlist';
 
-const Notification = ({ navigation }) => {
-    return (
-        <View style={[styles.container]} >
-            <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
-            <Header title={'Notification'} />
-            <View style={[styles.wrapper, { backgroundColor: colors.white }]}>
-                <Text style={{ color: colors.black, fontSize: 20 }}>Notification Screen</Text>
-            </View>
-        </View>
-    )
-}
+const Notification = ({navigation}) => {
+  return (
+    <View style={[styles.container]}>
+      <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
+      <Header leftIcon={true} titleleft={'Notification'} />
+      <View style={styles.maincontainer}>
+        <ScrollView contentContainerStyle={styles.wrapper}>
+          <Text style={styles.Today}>Today</Text>
+          <NotificationList
+            icon={appIcons.notificationicon}
+            title="$50 Earned"
+            description="Ref a friend at Bronze tier"
+          />
+          <NotificationList
+            icon={appIcons.notificationicon}
+            title="$50 Earned"
+            description="Ref a friend at Bronze tier"
+          />
+          <NotificationList
+            icon={appIcons.notificationicon}
+            title="80 Star Earned"
+            description="Ref a friend at Bronze tier"
+          />
+          {/* </ScrollView> */}
 
-export default Notification
+          {/* <ScrollView contentContainerStyle={styles.wrapper}> */}
+          <Text style={styles.Today}>Yestarday</Text>
+          <NotificationList
+            icon={appIcons.notificationicon}
+            title="$50 Earned"
+            description="Ref a friend at Bronze tier"
+          />
+          <NotificationList
+            icon={appIcons.notificationicon}
+            title="$50 Earned"
+            description="Ref a friend at Bronze tier"
+          />
+          <NotificationList
+            icon={appIcons.notificationicon}
+            title="80 Star Earned"
+            description="Ref a friend at Bronze tier"
+          />
+          <Text style={styles.Today}>Recent</Text>
+          <NotificationList
+            icon={appIcons.notificationicon}
+            title="$50 Earned"
+            description="Ref a friend at Bronze tier"
+          />
+          <NotificationList
+            icon={appIcons.notificationicon}
+            title="$50 Earned"
+            description="Ref a friend at Bronze tier"
+          />
+          <NotificationList
+            icon={appIcons.notificationicon}
+            title="80 Star Earned"
+            description="Ref a friend at Bronze tier"
+          />
+        </ScrollView>
+      </View>
+    </View>
+  );
+};
+
+export default Notification;

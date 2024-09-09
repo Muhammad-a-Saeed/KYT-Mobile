@@ -5,6 +5,7 @@ import {
   colors,
   fontFamily,
   heightPixel,
+  routes,
   widthPixel,
   wp,
 } from '../../services';
@@ -20,7 +21,7 @@ const Header = ({
   titleleft,
   SearchBar,
   wellcome,
-  
+  Notification,
 }) => {
   const navigation = useNavigation();
   return (
@@ -52,16 +53,14 @@ const Header = ({
             <Text style={[styles.titleleftStyle]}>{titleleft}</Text>
           )}
         </View>
-        <View style={styles.wellcomemain} >
-          {wellcome && (
-            <Text style={[styles.wellcomeStyle]}>{wellcome}</Text>
-          )}
-           <TouchableOpacity >
-        <Image
-          source={appIcons.wellcomebell}
-          style={styles.imageStyle}
-        />
-      </TouchableOpacity>
+        <View style={styles.wellcomemain}>
+          {wellcome && <Text style={[styles.wellcomeStyle]}>{wellcome}</Text>}
+          <TouchableOpacity
+            onPress={() => navigation.navigate(routes.notification)}>
+            {Notification && (
+              <Image source={appIcons.wellcomebell} style={styles.imageStyle} />
+            )}
+          </TouchableOpacity>
         </View>
         <View style={styles.SearchBar}>
           {SearchBar && (
@@ -90,7 +89,8 @@ const styles = StyleSheet.create({
     width: wp(100),
     alignContent: 'center',
     justifyContent: 'center',
-    },
+    // backgroundColor: 'green',
+  },
   goBack: {
     height: heightPixel(30),
     width: widthPixel(30),
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     marginTop: -15,
     resizeMode: 'contain',
     position: 'absolute',
-    },
+  },
   textlogin: {
     color: colors.lightBlack,
     paddingBottom: heightPixel(28),
@@ -148,12 +148,12 @@ const styles = StyleSheet.create({
     width: widthPixel(310),
     textAlign: 'center',
   },
-  wellcomemain:{
-    flexDirection:'row',
-    justifyContent:'center',
-    alignItems:'center',
+  wellcomemain: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
 
-    padding:10,
+    padding: 10,
   },
   wellcomeStyle: {
     fontSize: responsiveFontSize(2.8),

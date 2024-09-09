@@ -1,3 +1,5 @@
+import {Header} from '@react-navigation/stack';
+
 const iconUrl = '../../../assets/icons';
 const imageUrl = '../../../assets/images';
 
@@ -6,7 +8,6 @@ const appImages = {};
 const appIcons = {
   splash: require(`${iconUrl}/splash.png`),
   splashbackground: require(`${iconUrl}/splashbackground.png`),
-  coin: require(`${iconUrl}/coin.png`),
   logo: require(`${iconUrl}/logo.png`),
   onboard1: require(`${iconUrl}/onboard1.png`),
   onboard2: require(`${iconUrl}/onboard2.png`),
@@ -54,8 +55,15 @@ const appIcons = {
   card2: require(`${iconUrl}/card2.png`),
   card3: require(`${iconUrl}/card3.png`),
   rightarrow: require(`${iconUrl}/rightarrow.png`),
-
+  notificationicon: require(`${iconUrl}/notificationicon.png`),
   backIcon: require(`${iconUrl}/backIcon.png`),
+  redeem1: require(`${iconUrl}/redeem1.png`),
+  redeem2: require(`${iconUrl}/redeem2.png`),
+  Header: require(`${iconUrl}/header.png`),
+  coin1: require(`${iconUrl}/coin1.png`),
+  rankbackground: require(`${iconUrl}/rankbackground.png`),
+  p1: require(`${iconUrl}/p1.png`),
+  p2: require(`${iconUrl}/p2.png`),
 };
 
 export {appImages, appIcons};

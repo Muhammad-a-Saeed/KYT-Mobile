@@ -8,6 +8,10 @@ import Alert from './alert';
 import GoogleMap from './googleMap';
 import StepIndicatorComponent from './stepindicatorcomponent';
 import RedeemCard from './redeemcard';
+import CustumList from './custumlist';
+import Head from './head';
+import Customstarhistory from './customstarhistory';
+import CustomRanking from './customranking';
 
 export {
   Button,
@@ -20,4 +24,8 @@ export {
   GoogleMap,
   StepIndicatorComponent,
   RedeemCard,
+  CustumList,
+  Head,
+  Customstarhistory,
+  CustomRanking,
 };

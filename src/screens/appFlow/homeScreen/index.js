@@ -1,7 +1,20 @@
 import React from 'react';
-import {View, Text, StatusBar, Image, ScrollView} from 'react-native';
+import {
+  View,
+  Text,
+  StatusBar,
+  Image,
+  ScrollView,
+  Pressable,
+} from 'react-native';
 
-import {appIcons, colors, fontFamily, widthPixel} from '../../../services';
+import {
+  appIcons,
+  colors,
+  fontFamily,
+  routes,
+  widthPixel,
+} from '../../../services';
 import {
   Button,
   Header,
@@ -14,7 +27,7 @@ import * as Progress from 'react-native-progress';
 const HomeScreen = ({navigation}) => (
   <View style={[styles.container]}>
     <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
-    <Header wellcome={'Wellcome'} />
+    <Header wellcome={'Wellcome'} Notification={true} />
     <View style={[styles.wrapper, {backgroundColor: colors.white}]}>
       <View style={styles.main}>
         <TouchableOpacity style={styles.prousername}>
@@ -23,7 +36,9 @@ const HomeScreen = ({navigation}) => (
         </TouchableOpacity>
         <View style={styles.lochistory}>
           <Image source={appIcons.locatio} style={styles.locStyle} />
-          <Image source={appIcons.history} style={styles.listStyle} />
+          <Pressable onPress={() => navigation.navigate(routes.starhistory)}>
+            <Image source={appIcons.history} style={styles.listStyle} />
+          </Pressable>
         </View>
       </View>
       <View style={styles.view3}>
@@ -49,7 +64,7 @@ const HomeScreen = ({navigation}) => (
         </View>
         <View>
           <Button
-            onPress={() => navigation.navigate(routes.homeScreen)}
+            onPress={() => navigation.navigate(routes.profileranking)}
             width={widthPixel(150)}
             height={40}
             backgroundColor={['#FFFFFF', '#FFFFFF', '#FFFFFF']}
@@ -130,7 +145,7 @@ const HomeScreen = ({navigation}) => (
                 backgroundImage={appIcons.card2}
                 title="Gift your friend"
                 description="Gift your friends a $50 Amazon Gift Card when they schedule a teeth cleaning- available
-through your custom link."
+                through your custom link."
                 titleColor={colors.white}
                 descriptionColor={colors.white}
                 buttonLabelColor={colors.white}
