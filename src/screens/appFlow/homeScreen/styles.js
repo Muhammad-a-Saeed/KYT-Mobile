@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
     padding: 15,
-    marginTop: -20,
+    // marginTop: -20,
   },
   main: {
     width: widthPixel(350),

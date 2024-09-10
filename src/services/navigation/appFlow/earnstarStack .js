@@ -9,12 +9,9 @@ export class NotificationStack extends Component {
   render() {
     return (
       <MyStack.Navigator
-        initialRouteName={routes.notification}
+        initialRouteName={routes.earnstar}
         screenOptions={{headerShown: false}}>
-        <MyStack.Screen
-          name={routes.notification}
-          component={App.Notification}
-        />
+        <MyStack.Screen name={routes.earnstar} component={App.EarnStar} />
       </MyStack.Navigator>
     );
   }

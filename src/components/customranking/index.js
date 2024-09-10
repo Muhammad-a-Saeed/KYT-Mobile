@@ -34,22 +34,17 @@ const CustomRanking = ({profileImage, profileName, starRating}) => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.white,
-    // width: wp(100),
     width: widthPixel(350),
-
     height: heightPixel(72),
     borderRadius: 16,
     position: 'relative',
-    alignItems: 'center',
-    elevation: 1,
+    elevation: 3,
   },
   backgroundImage: {
     position: 'absolute',
-    width: widthPixel(350),
-    height: heightPixel(72),
+    width: widthPixel(340),
+    height: heightPixel(70),
     resizeMode: 'contain',
-
-    // backgroundColor: colors.white,
   },
   content: {
     flexDirection: 'row',
@@ -61,7 +56,6 @@ const styles = StyleSheet.create({
     width: widthPixel(50),
     height: heightPixel(50),
     resizeMode: 'contain',
-    // alignItems: 'center',
     marginLeft: 15,
     marginRight: 10,
   },

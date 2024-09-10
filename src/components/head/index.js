@@ -6,13 +6,19 @@ import {
   ImageBackground,
   StyleSheet,
   TouchableOpacity,
+  StatusBar,
 } from 'react-native';
-import {widthPixel, heightPixel, fontFamily} from '../../services';
+import {widthPixel, heightPixel, fontFamily, colors} from '../../services';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
 
 const Head = ({backgroundImage, leftArrowIcon, logo, title}) => {
   return (
     <ImageBackground source={backgroundImage} style={styles.headerContainer}>
+      <StatusBar
+        translucent
+        backgroundColor="transparent"
+        barStyle={'dark-content'}
+      />
       <TouchableOpacity style={styles.leftArrow}>
         <Image source={leftArrowIcon} style={styles.arrowIcon} />
       </TouchableOpacity>
@@ -35,7 +41,7 @@ const styles = StyleSheet.create({
   leftArrow: {
     position: 'absolute',
     left: 5,
-    top: 20,
+    top: 35,
   },
   arrowIcon: {
     width: 50,
@@ -45,9 +51,9 @@ const styles = StyleSheet.create({
   logo: {
     position: 'absolute',
     width: widthPixel(130),
-    height: heightPixel(115),
+    height: heightPixel(110),
     resizeMode: 'contain',
-    top: '17%', // Adjust this to align properly under the header
+    top: '19%', // Adjust this to align properly under the header
   },
   title: {
     position: 'absolute',

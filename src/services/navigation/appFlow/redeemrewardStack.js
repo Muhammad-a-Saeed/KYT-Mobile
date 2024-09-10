@@ -9,11 +9,11 @@ export class NotificationStack extends Component {
   render() {
     return (
       <MyStack.Navigator
-        initialRouteName={routes.notification}
+        initialRouteName={routes.redeemreward}
         screenOptions={{headerShown: false}}>
         <MyStack.Screen
-          name={routes.notification}
-          component={App.Notification}
+          name={routes.redeemreward}
+          component={App.RedeemReward}
         />
       </MyStack.Navigator>
     );

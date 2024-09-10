@@ -108,7 +108,7 @@ const HomeScreen = ({navigation}) => (
 
             <View style={styles.button}>
               <Button
-                onPress={() => navigation.navigate(routes.homeScreen)}
+                onPress={() => navigation.navigate(routes.earnstar)}
                 width={widthPixel(80)}
                 height={40}
                 backgroundColor={['#D1AA66', '#D1AA66']}
@@ -118,7 +118,7 @@ const HomeScreen = ({navigation}) => (
                 Detail
               </Button>
               <Button
-                onPress={() => navigation.navigate(routes.homeScreen)}
+                onPress={() => navigation.navigate(routes.redeemreward)}
                 width={widthPixel(100)}
                 height={40}
                 backgroundColor={['#D1AA66', '#D1AA66']}
@@ -139,6 +139,7 @@ const HomeScreen = ({navigation}) => (
                 buttonLabelColor={colors.white}
                 buttonText={'Redeem'}
                 buttonBackgroundColor={['#205A5D', '#205A5D']}
+                onPress={() => navigation.navigate(routes.redeemreward)}
               />
 
               <RedeemCard

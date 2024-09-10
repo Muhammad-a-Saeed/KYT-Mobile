@@ -1,6 +1,6 @@
 import {Dimensions, PixelRatio} from 'react-native';
 import {MapScreen, ProfileSetup, Resetpasword} from '../../screens/authFlow';
-import {Notification, StarHistory} from '../../screens/appFlow';
+import {Notification, RedeemReward, StarHistory} from '../../screens/appFlow';
 const WINDOW_WIDTH = Dimensions.get('window').width;
 const WINDOW_HEIGHT = Dimensions.get('window').height;
 const SCREEN_WIDTH = Dimensions.get('screen').width;
@@ -25,6 +25,8 @@ export const routes = {
   notification: 'notification',
   starhistory: 'starhistory',
   profileranking: 'profileranking',
+  redeemreward: 'redeemreward',
+  earnstar: 'earnstar',
 };
 
 export const loaderStyles = {

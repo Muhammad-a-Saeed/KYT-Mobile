@@ -20,6 +20,7 @@ const RedeemCard = ({
   buttonLabelColor,
   buttonBackgroundColor,
   buttonText,
+  onPress,
 }) => {
   const Rightarrow = appIcons.arrowright;
   return (
@@ -31,10 +32,10 @@ const RedeemCard = ({
         </Text>
         <View style={styles.button}>
           <Button
-            onPress={() => navigation.navigate(routes.homeScreen)}
+            onPress={onPress}
             width={widthPixel(110)}
             height={35}
-            backgroundColor={buttonBackgroundColor} //{['#205A5D', '#205A5D']}
+            backgroundColor={buttonBackgroundColor}
             labelColor={buttonLabelColor}
             borderRadius={14}
             fontSize={13}

@@ -1,5 +1,12 @@
 import React from 'react';
-import {StyleSheet, Image, Text, View, TouchableOpacity} from 'react-native';
+import {
+  StyleSheet,
+  Image,
+  Text,
+  View,
+  TouchableOpacity,
+  StatusBar,
+} from 'react-native';
 import {
   appIcons,
   colors,
@@ -85,11 +92,12 @@ const styles = StyleSheet.create({
     // marginTop: 10,
   },
   container: {
-    height: heightPixel(100),
+    marginTop: StatusBar.currentHeight,
+    minHeight: heightPixel(30),
     width: wp(100),
     alignContent: 'center',
     justifyContent: 'center',
-    // backgroundColor: 'green',
+    // backgroundColor: 'red',
   },
   goBack: {
     height: heightPixel(30),
@@ -143,9 +151,9 @@ const styles = StyleSheet.create({
     fontSize: responsiveFontSize(2.5),
     color: colors.lightBlack,
     fontFamily: fontFamily.appTextSemiBold,
-    marginHorizontal: -25,
+    // paddingHorizontal: -30,
     marginTop: -18,
-    width: widthPixel(310),
+    width: widthPixel(270),
     textAlign: 'center',
   },
   wellcomemain: {

@@ -12,6 +12,7 @@ import CustumList from './custumlist';
 import Head from './head';
 import Customstarhistory from './customstarhistory';
 import CustomRanking from './customranking';
+import Custumredeemreward from './customredeemreward';
 
 export {
   Button,
@@ -28,4 +29,5 @@ export {
   Head,
   Customstarhistory,
   CustomRanking,
+  Custumredeemreward,
 };

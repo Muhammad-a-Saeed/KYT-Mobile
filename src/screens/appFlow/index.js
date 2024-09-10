@@ -3,6 +3,8 @@ import Profile from './profile';
 import Notification from './notification';
 import StarHistory from './starhistory';
 import ProfileRanking from './profileranking';
+import RedeemReward from './redeemreward';
+import EarnStar from './earnstar';
 
 import Report from './report';
 
@@ -12,5 +14,7 @@ export {
   Notification,
   StarHistory,
   ProfileRanking,
+  RedeemReward,
+  EarnStar,
   // Report
 };

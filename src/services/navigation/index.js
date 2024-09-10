@@ -4,9 +4,11 @@ import {NavigationContainer} from '@react-navigation/native';
 import {routes} from '..';
 import {AuthNavigation} from './authFlow';
 import {
+  EarnStar,
   HomeScreen,
   Notification,
   ProfileRanking,
+  RedeemReward,
   StarHistory,
 } from '../../screens/appFlow';
 // import { TabNavigator } from './tabFlow/index'
@@ -22,6 +24,9 @@ export const MainNavigator = () => {
         <MyStack.Screen name={routes.homeScreen} component={HomeScreen} />
         <MyStack.Screen name={routes.notification} component={Notification} />
         <MyStack.Screen name={routes.starhistory} component={StarHistory} />
+        <MyStack.Screen name={routes.redeemreward} component={RedeemReward} />
+        <MyStack.Screen name={routes.earnstar} component={EarnStar} />
+
         <MyStack.Screen
           name={routes.profileranking}
           component={ProfileRanking}

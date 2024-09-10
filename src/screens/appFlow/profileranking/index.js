@@ -19,7 +19,42 @@ const ProfileRanking = ({navigation}) => {
       profileName: 'Jane Smith',
       starRating: 1500,
     },
-    // Add more profiles as needed
+    {
+      id: '3',
+      profileImage: appIcons.p1, // Adjust this to your image source
+      profileName: 'John Doe',
+      starRating: 1000,
+    },
+    {
+      id: '4',
+      profileImage: appIcons.p2,
+      profileName: 'Jane Smith',
+      starRating: 800,
+    },
+    {
+      id: '5',
+      profileImage: appIcons.p1, // Adjust this to your image source
+      profileName: 'John Doe',
+      starRating: 750,
+    },
+    {
+      id: '6',
+      profileImage: appIcons.p2,
+      profileName: 'Jane Smith',
+      starRating: 500,
+    },
+    {
+      id: '7',
+      profileImage: appIcons.p1, // Adjust this to your image source
+      profileName: 'John Doe',
+      starRating: 450,
+    },
+    {
+      id: '8',
+      profileImage: appIcons.p2,
+      profileName: 'Jane Smith',
+      starRating: 350,
+    },
   ];
 
   const renderProfileItem = ({item}) => (
@@ -31,19 +66,26 @@ const ProfileRanking = ({navigation}) => {
   );
   return (
     <View style={[styles.container]}>
-      <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
       <Head
         backgroundImage={appIcons.Header}
         leftArrowIcon={appIcons.goback}
-        logo={appIcons.coin1}
-        title="Redeem History"
+        logo={appIcons.head1}
+        title="LeaderBoard"
       />
       <View style={styles.wrapper}>
         <FlatList
           data={profileData}
           renderItem={renderProfileItem}
           keyExtractor={item => item.id}
-          contentContainerStyle={styles.listContainer} // Optional styling for FlatList
+          contentContainerStyle={styles.listContainer}
+          showsVerticalScrollIndicator={true}
+        />
+      </View>
+      <View style={styles.bottomSection}>
+        <CustomRanking
+          profileImage={appIcons.p2}
+          profileName="Sarah Martinez"
+          starRating="300"
         />
       </View>
     </View>

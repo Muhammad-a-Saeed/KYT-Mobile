@@ -64,6 +64,9 @@ const appIcons = {
   rankbackground: require(`${iconUrl}/rankbackground.png`),
   p1: require(`${iconUrl}/p1.png`),
   p2: require(`${iconUrl}/p2.png`),
+  head1: require(`${iconUrl}/head1.png`),
+  head2: require(`${iconUrl}/head2.png`),
+  ticksquare: require(`${iconUrl}/ticksquare.png`),
 };
 
 export {appImages, appIcons};
