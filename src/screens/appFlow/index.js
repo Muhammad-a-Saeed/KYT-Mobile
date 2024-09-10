@@ -5,6 +5,7 @@ import StarHistory from './starhistory';
 import ProfileRanking from './profileranking';
 import RedeemReward from './redeemreward';
 import EarnStar from './earnstar';
+import QrGenerator from './qrgenerator';
 
 import Report from './report';
 
@@ -16,5 +17,6 @@ export {
   ProfileRanking,
   RedeemReward,
   EarnStar,
+  QrGenerator,
   // Report
 };

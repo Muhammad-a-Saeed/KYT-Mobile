@@ -8,6 +8,7 @@ import {
   HomeScreen,
   Notification,
   ProfileRanking,
+  QrGenerator,
   RedeemReward,
   StarHistory,
 } from '../../screens/appFlow';
@@ -26,6 +27,7 @@ export const MainNavigator = () => {
         <MyStack.Screen name={routes.starhistory} component={StarHistory} />
         <MyStack.Screen name={routes.redeemreward} component={RedeemReward} />
         <MyStack.Screen name={routes.earnstar} component={EarnStar} />
+        <MyStack.Screen name={routes.qrgenerator} component={QrGenerator} />
 
         <MyStack.Screen
           name={routes.profileranking}

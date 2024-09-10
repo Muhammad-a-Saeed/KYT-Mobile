@@ -66,7 +66,9 @@ const appIcons = {
   p2: require(`${iconUrl}/p2.png`),
   head1: require(`${iconUrl}/head1.png`),
   head2: require(`${iconUrl}/head2.png`),
+  head3: require(`${iconUrl}/head3.png`),
   ticksquare: require(`${iconUrl}/ticksquare.png`),
+  QR: require(`${iconUrl}/QR.png`),
 };
 
 export {appImages, appIcons};

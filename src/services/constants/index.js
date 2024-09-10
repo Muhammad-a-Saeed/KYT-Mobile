@@ -27,6 +27,7 @@ export const routes = {
   profileranking: 'profileranking',
   redeemreward: 'redeemreward',
   earnstar: 'earnstar',
+  qrgenerator: 'qrgenerator',
 };
 
 export const loaderStyles = {

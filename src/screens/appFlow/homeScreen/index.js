@@ -118,7 +118,7 @@ const HomeScreen = ({navigation}) => (
                 Detail
               </Button>
               <Button
-                onPress={() => navigation.navigate(routes.redeemreward)}
+                onPress={() => navigation.navigate(routes.qrgenerator)}
                 width={widthPixel(100)}
                 height={40}
                 backgroundColor={['#D1AA66', '#D1AA66']}
