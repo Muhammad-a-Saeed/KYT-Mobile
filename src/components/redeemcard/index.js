@@ -21,6 +21,8 @@ const RedeemCard = ({
   buttonBackgroundColor,
   buttonText,
   onPress,
+  boldText,
+  subText,
 }) => {
   const Rightarrow = appIcons.arrowright;
   return (
@@ -70,6 +72,10 @@ const RedeemCard = ({
             </View>
           </Button>
         </View>
+        <View style={styles.textContainer}>
+          <Text style={styles.boldText}>{boldText}</Text>
+          <Text style={styles.subText}>{subText}</Text>
+        </View>
       </ImageBackground>
     </View>
   );
@@ -108,6 +114,24 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 25,
     left: 15,
+  },
+  textContainer: {
+    position: 'absolute',
+    top: 80,
+    right: 10,
+    gap: -20,
+    alignItems: 'flex-end',
+  },
+  boldText: {
+    fontFamily: fontFamily.appTextBold,
+    fontSize: 38,
+    color: colors.white,
+  },
+  subText: {
+    fontFamily: fontFamily.appTextBold,
+    fontSize: 13,
+    color: colors.white,
+    paddingHorizontal: 5,
   },
 });
 

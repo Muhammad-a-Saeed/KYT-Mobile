@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -6,6 +6,7 @@ import {
   Image,
   ScrollView,
   Pressable,
+  ImageBackground,
 } from 'react-native';
 
 import {
@@ -17,6 +18,7 @@ import {
 } from '../../../services';
 import {
   Button,
+  Custumredeemreward,
   Header,
   RedeemCard,
   StepIndicatorComponent,
@@ -24,152 +26,262 @@ import {
 import {styles} from './styles';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import * as Progress from 'react-native-progress';
-const HomeScreen = ({navigation}) => (
-  <View style={[styles.container]}>
-    <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
-    <Header wellcome={'Wellcome'} Notification={true} />
-    <View style={[styles.wrapper, {backgroundColor: colors.white}]}>
-      <View style={styles.main}>
-        <TouchableOpacity style={styles.prousername}>
-          <Image source={appIcons.profileicon} style={styles.profileStyle} />
-          <Text style={styles.username}>Sarah Martinez </Text>
-        </TouchableOpacity>
-        <View style={styles.lochistory}>
-          <Image source={appIcons.locatio} style={styles.locStyle} />
-          <Pressable onPress={() => navigation.navigate(routes.starhistory)}>
-            <Image source={appIcons.history} style={styles.listStyle} />
-          </Pressable>
+const HomeScreen = ({navigation}) => {
+  const [isArrowUp, setIsArrowUp] = useState(false);
+  const [showRewards, setShowRewards] = useState(false);
+  const [Isselected, setSelected] = useState(false);
+  const toggleArrow = () => {
+    setIsArrowUp(!isArrowUp);
+    setShowRewards(!showRewards);
+  };
+  const toggleStarSelection = () => {
+    setSelected(!Isselected);
+  };
+
+  return (
+    <View style={[styles.container]}>
+      <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
+      <Header wellcome={'Wellcome'} Notification={true} />
+
+      <View style={[styles.wrapper, {backgroundColor: colors.white}]}>
+        <View style={styles.main}>
+          <TouchableOpacity style={styles.prousername}>
+            <Image source={appIcons.profileicon} style={styles.profileStyle} />
+            <Text style={styles.username}>Sarah Martinez </Text>
+          </TouchableOpacity>
+          <View style={styles.lochistory}>
+            <Pressable onPress={() => navigation.navigate(routes.mapscreen)}>
+              <Image source={appIcons.locatio} style={styles.locStyle} />
+            </Pressable>
+            <Pressable onPress={() => navigation.navigate(routes.starhistory)}>
+              <Image source={appIcons.history} style={styles.listStyle} />
+            </Pressable>
+          </View>
         </View>
-      </View>
-      <View style={styles.view3}>
-        <View style={styles.maincontainer}>
-          <View style={styles.view1}>
-            <View style={styles.view2}>
-              <Text style={styles.t1}>Referral </Text>
-              <Image source={appIcons.right} style={styles.rightStyle} />
+        <View style={styles.view3}>
+          <View style={styles.maincontainer}>
+            <View style={styles.view1}>
+              <View style={styles.view2}>
+                <Text style={styles.t1}>Referral </Text>
+                <Image source={appIcons.right} style={styles.rightStyle} />
+              </View>
+              <View>
+                <Text style={styles.t2}>( Bronze )</Text>
+              </View>
             </View>
             <View>
-              <Text style={styles.t2}>( Bronze )</Text>
+              <Progress.Bar
+                progress={0.4}
+                width={192}
+                borderColor={colors.theme}
+                borderWidth={1}
+                color={colors.theme}
+              />
             </View>
           </View>
           <View>
-            <Progress.Bar
-              progress={0.4}
-              width={192}
+            <Button
+              onPress={() => navigation.navigate(routes.profileranking)}
+              width={widthPixel(150)}
+              height={40}
+              backgroundColor={['#FFFFFF', '#FFFFFF', '#FFFFFF']}
+              labelColor="#000000"
               borderColor={colors.theme}
               borderWidth={1}
-              color={colors.theme}
-            />
+              borderRadius={14}
+              fontFamily={fontFamily.appTextRegular}>
+              Ranking
+            </Button>
           </View>
-        </View>
-        <View>
-          <Button
-            onPress={() => navigation.navigate(routes.profileranking)}
-            width={widthPixel(150)}
-            height={40}
-            backgroundColor={['#FFFFFF', '#FFFFFF', '#FFFFFF']}
-            labelColor="#000000"
-            borderColor={colors.theme}
-            borderWidth={1}
-            borderRadius={14}
-            fontFamily={fontFamily.appTextRegular}>
-            Ranking
-          </Button>
         </View>
       </View>
-    </View>
-    <View style={styles.backdiv}>
-      <ScrollView contentContainerStyle={styles.scrollContainer}>
-        <View style={styles.frontdiv}>
-          <View>
-            <View style={styles.rewardoptmain}>
-              <View style={styles.starmain}>
-                <Text style={styles.star}>300</Text>
-                <Image source={appIcons.staricon} style={styles.staricon} />
+
+      <Pressable
+        style={styles.mainscanbar}
+        onPress={() => navigation.navigate(routes.scanqr)}>
+        <Image source={appIcons.scanbar} style={styles.scanbar} />
+      </Pressable>
+
+      <View
+        style={[styles.backdiv, Isselected && {backgroundColor: '#D4AF37'}]}>
+        <ScrollView contentContainerStyle={styles.scrollContainer}>
+          <View
+            style={[
+              styles.frontdiv,
+              Isselected && {backgroundColor: '#D4AF37'},
+            ]}>
+            <View>
+              <Pressable
+                onPress={toggleStarSelection}
+                style={[styles.rewardoptmain]}>
+                <View style={styles.starmain}>
+                  <Text style={styles.star}>300</Text>
+                  <Image source={appIcons.staricon} style={styles.staricon} />
+                </View>
+                <View style={styles.rewardopt}>
+                  <Text style={styles.rewardtext}>Reward Option</Text>
+                  <Pressable onPress={toggleArrow}>
+                    <Image
+                      source={isArrowUp ? appIcons.arrowup : appIcons.arrowdown}
+                      style={styles.arrowdown}
+                    />
+                  </Pressable>
+                </View>
+              </Pressable>
+
+              {/* </View> */}
+            </View>
+
+            <View style={styles.starlvl}>
+              <View style={styles.startxt}>
+                <Text style={styles.startxt1}>Star Level</Text>
               </View>
-              <View style={styles.rewardopt}>
-                <Text style={styles.rewardtext}>Reward Option</Text>
-                <Image source={appIcons.arrowdown} style={styles.arrowdown} />
+              <ScrollView
+                style={{height: 60, marginHorizontal: -12, marginTop: 20}}
+                horizontal={true}
+                showsHorizontalScrollIndicator={false}
+                contentContainerStyle={{width: 700}}>
+                <View style={styles.stepindicator}>
+                  <StepIndicatorComponent
+                    stepStrokeCurrentColor={
+                      Isselected ? '#815A16' : colors.theme
+                    }
+                    separatorFinishedColor={
+                      Isselected ? '#815A16' : colors.theme
+                    }
+                    setpStrokeFinishedColor={
+                      Isselected ? '#815A16' : colors.theme
+                    }
+                  />
+                </View>
+              </ScrollView>
+
+              <View style={styles.button}>
+                <Button
+                  onPress={() => navigation.navigate(routes.earnstar)}
+                  width={widthPixel(80)}
+                  height={40}
+                  backgroundColor={
+                    Isselected ? ['#FFFFFF', '#FFFFFF'] : ['#D1AA66', '#D1AA66']
+                  }
+                  labelColor="#000000"
+                  borderRadius={14}
+                  fontFamily={fontFamily.appTextItalic}>
+                  Detail
+                </Button>
+                <Button
+                  onPress={() => navigation.navigate(routes.qrgenerator)}
+                  width={widthPixel(100)}
+                  height={40}
+                  backgroundColor={
+                    Isselected ? ['#FFFFFF', '#FFFFFF'] : ['#D1AA66', '#D1AA66']
+                  }
+                  labelColor="#000000"
+                  borderRadius={14}
+                  fontS
+                  fontFamily={fontFamily.appTextItalic}>
+                  Redeem
+                </Button>
               </View>
-            </View>
-          </View>
+              {showRewards && (
+                <View style={styles.getreward}>
+                  <Text style={styles.topText}>
+                    Reward you can get with stars
+                  </Text>
+                  <Custumredeemreward
+                    starCount={60}
+                    rewardType="hey! biroo hoiw are youuuu."
+                    starIcon={appIcons.staricon}
+                    elevation={0}
+                  />
+                  <Custumredeemreward
+                    starCount={60}
+                    rewardType="hey! biroo hoiw are youuuu."
+                    starIcon={appIcons.staricon}
+                    elevation={0}
+                  />
+                  <Custumredeemreward
+                    starCount={60}
+                    rewardType="hey! biroo hoiw are youuuu."
+                    starIcon={appIcons.staricon}
+                    elevation={0}
+                  />
+                  <Custumredeemreward
+                    starCount={400}
+                    rewardType="In-Office Whitening, Invisalign Whitening Tray, or Retainers."
+                    starIcon={appIcons.staricon}
+                    elevation={0}
+                  />
+                  <Custumredeemreward
+                    starCount={60}
+                    rewardType="hey! biroo hoiw are youuuu."
+                    starIcon={appIcons.staricon}
+                    elevation={0}
+                  />
+                  <Custumredeemreward
+                    starCount={60}
+                    rewardType="hey! biroo hoiw are youuuu."
+                    starIcon={appIcons.staricon}
+                    elevation={0}
+                  />
+                  <Custumredeemreward
+                    starCount={60}
+                    rewardType="hey! biroo hoiw are youuuu."
+                    starIcon={appIcons.staricon}
+                    elevation={0}
+                  />
+                  <Custumredeemreward
+                    starCount={1000}
+                    rewardType="hey! biroo hoiw are youuuu."
+                    starIcon={appIcons.staricon}
+                    elevation={0}
+                  />
+                </View>
+              )}
+              <View style={{alignItems: 'center', gap: 20, marginTop: 15}}>
+                <RedeemCard
+                  backgroundImage={appIcons.card1}
+                  title="Redeem Rewards"
+                  description="$50 for you and $50 for your friend’s who signed up and got an appointment"
+                  titleColor={colors.mediumblack}
+                  descriptionColor={colors.lightBlack}
+                  buttonLabelColor={colors.white}
+                  buttonText={'Redeem'}
+                  boldText={'$100'}
+                  subText={'Gift card'}
+                  buttonBackgroundColor={['#205A5D', '#205A5D']}
+                  onPress={() => navigation.navigate(routes.redeemreward)}
+                />
 
-          <View style={styles.starlvl}>
-            <View style={styles.startxt}>
-              <Text style={styles.startxt1}>Star Level</Text>
-            </View>
-            <ScrollView
-              style={{height: 60, marginHorizontal: -12, marginTop: 20}}
-              horizontal={true}
-              showsHorizontalScrollIndicator={false}
-              contentContainerStyle={{width: 700}}>
-              <StepIndicatorComponent />
-            </ScrollView>
-
-            <View style={styles.button}>
-              <Button
-                onPress={() => navigation.navigate(routes.earnstar)}
-                width={widthPixel(80)}
-                height={40}
-                backgroundColor={['#D1AA66', '#D1AA66']}
-                labelColor="#000000"
-                borderRadius={14}
-                fontFamily={fontFamily.appTextItalic}>
-                Detail
-              </Button>
-              <Button
-                onPress={() => navigation.navigate(routes.qrgenerator)}
-                width={widthPixel(100)}
-                height={40}
-                backgroundColor={['#D1AA66', '#D1AA66']}
-                labelColor="#000000"
-                borderRadius={14}
-                fontS
-                fontFamily={fontFamily.appTextItalic}>
-                Redeem
-              </Button>
-            </View>
-            <View style={{alignItems: 'center', gap: 20, marginTop: 15}}>
-              <RedeemCard
-                backgroundImage={appIcons.card1}
-                title="Redeem Rewards"
-                description="$50 for you and $50 for your friend’s who signed up and got an appointment"
-                titleColor={colors.mediumblack}
-                descriptionColor={colors.lightBlack}
-                buttonLabelColor={colors.white}
-                buttonText={'Redeem'}
-                buttonBackgroundColor={['#205A5D', '#205A5D']}
-                onPress={() => navigation.navigate(routes.redeemreward)}
-              />
-
-              <RedeemCard
-                backgroundImage={appIcons.card2}
-                title="Gift your friend"
-                description="Gift your friends a $50 Amazon Gift Card when they schedule a teeth cleaning- available
+                <RedeemCard
+                  backgroundImage={appIcons.card2}
+                  title="Gift your friend"
+                  description="Gift your friends a $50 Amazon Gift Card when they schedule a teeth cleaning- available
                 through your custom link."
-                titleColor={colors.white}
-                descriptionColor={colors.white}
-                buttonLabelColor={colors.white}
-                buttonText={'Gift now'}
-                buttonBackgroundColor={['#205A5D', '#205A5D']}
-              />
+                  titleColor={colors.white}
+                  descriptionColor={colors.white}
+                  buttonLabelColor={colors.white}
+                  buttonText={'Gift now'}
+                  buttonBackgroundColor={['#205A5D', '#205A5D']}
+                />
 
-              <RedeemCard
-                backgroundImage={appIcons.card3}
-                title="Special Promotional"
-                description="Refer 5 Friends with PPO Dental Insurance By 15/07/25 - Get $500 (2x The Rewards with an extra $250 Bonus!)"
-                titleColor={colors.mediumblack}
-                descriptionColor={colors.lightBlack}
-                buttonLabelColor={colors.white}
-                buttonText={'Invite now'}
-                buttonBackgroundColor={['#E9BD5A', '#E9BD5A']}
-              />
+                <RedeemCard
+                  backgroundImage={appIcons.card3}
+                  title="Special Promotional"
+                  description="Refer 5 Friends with PPO Dental Insurance By 15/07/25 - Get $500 (2x The Rewards with an extra $250 Bonus!)"
+                  titleColor={colors.mediumblack}
+                  descriptionColor={colors.lightBlack}
+                  buttonLabelColor={colors.white}
+                  buttonText={'Invite now'}
+                  buttonBackgroundColor={['#E9BD5A', '#E9BD5A']}
+                />
+              </View>
             </View>
           </View>
-        </View>
-      </ScrollView>
+        </ScrollView>
+      </View>
     </View>
-  </View>
-);
+  );
+};
 
 export default HomeScreen;

@@ -28,6 +28,8 @@ export const routes = {
   redeemreward: 'redeemreward',
   earnstar: 'earnstar',
   qrgenerator: 'qrgenerator',
+  scanqr: 'scanqr',
+  mapscreen: 'mapscreen',
 };
 
 export const loaderStyles = {

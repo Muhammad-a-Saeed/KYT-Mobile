@@ -4,7 +4,12 @@ import StepIndicator from 'react-native-step-indicator'; // Import the StepIndic
 import {colors, widthPixel} from '../../services';
 import {forHorizontalIOS} from '@react-navigation/stack/lib/typescript/src/TransitionConfigs/CardStyleInterpolators';
 
-const StepIndicatorComponent = () => {
+const StepIndicatorComponent = ({
+  stepStrokeCurrentColor,
+  setpStrokeFinishedColor,
+  separatorFinishedColor,
+  currentStepLabelColor,
+}) => {
   const [currentPosition, setCurrentPosition] = useState(0);
   const labels = [
     '100',
@@ -19,25 +24,25 @@ const StepIndicatorComponent = () => {
     '1000',
   ];
   const customStyles = {
-    stepIndicatorSize: 25,
+    stepIndicatorSize: 30,
     currentStepIndicatorSize: 30,
     separatorStrokeWidth: 2,
     currentStepStrokeWidth: 2,
-    stepStrokeCurrentColor: colors.theme,
+    stepStrokeCurrentColor: stepStrokeCurrentColor || colors.theme,
     stepStrokeWidth: 2,
-    stepStrokeFinishedColor: colors.theme,
+    stepStrokeFinishedColor: setpStrokeFinishedColor || colors.theme,
     stepStrokeUnFinishedColor: '#aaaaaa',
-    separatorFinishedColor: colors.theme,
+    separatorFinishedColor: separatorFinishedColor || colors.theme,
     separatorUnFinishedColor: '#aaaaaa',
     stepIndicatorFinishedColor: '#fff',
     stepIndicatorUnFinishedColor: '#ffffff',
     stepIndicatorCurrentColor: '#fff',
     stepIndicatorLabelFontSize: 13,
     currentStepIndicatorLabelFontSize: 13,
-    stepIndicatorLabelCurrentColor: colors.theme,
+    stepIndicatorLabelCurrentColor: '#aaa',
     labelColor: '#999999',
     labelSize: 13,
-    currentStepLabelColor: colors.theme,
+    currentStepLabelColor: '#aaa',
   };
 
   const onPageChange = position => {
@@ -61,6 +66,7 @@ const StepIndicatorComponent = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: 5,
   },
 });
 

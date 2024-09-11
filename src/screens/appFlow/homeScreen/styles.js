@@ -100,12 +100,20 @@ export const styles = StyleSheet.create({
     flexGrow: 1,
   },
   frontdiv: {
+    // flex: 1,
     width: widthPixel(390),
     height: heightPixel(960),
     backgroundColor: colors.white,
     borderRadius: 40,
     marginTop: 10,
     padding: 20,
+  },
+  ImageBackground: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 
   rewardoptmain: {
@@ -164,9 +172,30 @@ export const styles = StyleSheet.create({
   },
   stepindicator: {
     flex: 1,
-    width: widthPixel(350),
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'red',
+    height: heightPixel(90),
+    // justifyContent: 'center',
+    // alignItems: 'center',
+  },
+  topText: {
+    fontSize: 16,
+    color: colors.mediumblack,
+    fontFamily: fontFamily.appTextSemiBold,
+    marginTop: 5,
+    marginBottom: 10,
+  },
+  getreward: {
+    backgroundColor: 'white',
+    gap: -10,
+  },
+  mainscanbar: {
+    position: 'absolute',
+    right: 0,
+    bottom: 30,
+    zIndex: 1,
+  },
+  scanbar: {
+    width: widthPixel(120),
+    height: heightPixel(120),
+    resizeMode: 'contain',
   },
 });

@@ -6,6 +6,8 @@ import ProfileRanking from './profileranking';
 import RedeemReward from './redeemreward';
 import EarnStar from './earnstar';
 import QrGenerator from './qrgenerator';
+import ScanQR from './scanqr';
+import MapScreen from './mapscreen';
 
 import Report from './report';
 
@@ -18,5 +20,7 @@ export {
   RedeemReward,
   EarnStar,
   QrGenerator,
+  ScanQR,
+  MapScreen,
   // Report
 };

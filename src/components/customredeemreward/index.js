@@ -9,25 +9,19 @@ const Custumredeemreward = ({
   starIcon,
   shuffle,
   starBackgroundColor,
+  borderRadius = 16,
+  elevation = 2,
 }) => {
   return (
-    <View style={styles.container}>
+    <View style={{...styles.container, borderRadius, elevation}}>
       <View
         style={[
           styles.starContainer,
+          {flexDirection: shuffle ? 'row-reverse' : 'row'},
           {backgroundColor: starBackgroundColor || colors.white},
         ]}>
-        {shuffle ? (
-          <>
-            <Text style={styles.starCount}>{starCount}</Text>
-            <Image source={starIcon} style={styles.starIcon} />
-          </>
-        ) : (
-          <>
-            <Image source={starIcon} style={styles.starIcon} />
-            <Text style={styles.starCount}>{starCount}</Text>
-          </>
-        )}
+        <Text style={styles.starCount}>{starCount}</Text>
+        <Image source={starIcon} style={styles.starIcon} />
       </View>
 
       <Text style={styles.rewardType}>{rewardType}</Text>
@@ -46,17 +40,16 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   starContainer: {
-    flexDirection: 'row',
+    // flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
-    // flex: 1,
-    width: widthPixel(70),
+    width: widthPixel(80),
     height: heightPixel(60),
     borderTopLeftRadius: 16,
     borderBottomLeftRadius: 16,
     gap: 5,
     paddingHorizontal: 5,
     backgroundColor: colors.gold,
+    justifyContent: 'flex-end',
   },
   starIcon: {
     width: widthPixel(16),
@@ -68,7 +61,9 @@ const styles = StyleSheet.create({
     color: colors.mediumblack,
     fontFamily: fontFamily.appTextSemiBold,
     paddingTop: 7,
+    textAlign: 'right',
   },
+
   rewardType: {
     flex: 5,
     fontSize: responsiveFontSize(1.6),

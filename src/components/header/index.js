@@ -151,10 +151,10 @@ const styles = StyleSheet.create({
     fontSize: responsiveFontSize(2.5),
     color: colors.lightBlack,
     fontFamily: fontFamily.appTextSemiBold,
-    // paddingHorizontal: -30,
+    marginHorizontal: 50,
     marginTop: -18,
     width: widthPixel(270),
-    textAlign: 'center',
+    textAlign: 'left',
   },
   wellcomemain: {
     flexDirection: 'row',

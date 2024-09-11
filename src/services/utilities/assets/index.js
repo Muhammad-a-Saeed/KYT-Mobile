@@ -51,6 +51,7 @@ const appIcons = {
   right: require(`${iconUrl}/right.png`),
   staricon: require(`${iconUrl}/staricon.png`),
   arrowdown: require(`${iconUrl}/arrowdown.png`),
+  arrowup: require(`${iconUrl}/arrowup.png`),
   card1: require(`${iconUrl}/card1.png`),
   card2: require(`${iconUrl}/card2.png`),
   card3: require(`${iconUrl}/card3.png`),
@@ -69,6 +70,9 @@ const appIcons = {
   head3: require(`${iconUrl}/head3.png`),
   ticksquare: require(`${iconUrl}/ticksquare.png`),
   QR: require(`${iconUrl}/QR.png`),
+  background2: require(`${iconUrl}/background2.png`),
+  scanbar: require(`${iconUrl}/scanbar.png`),
+  qrscanner: require(`${iconUrl}/qrscanner.png`),
 };
 
 export {appImages, appIcons};

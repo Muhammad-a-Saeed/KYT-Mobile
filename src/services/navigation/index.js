@@ -6,10 +6,12 @@ import {AuthNavigation} from './authFlow';
 import {
   EarnStar,
   HomeScreen,
+  MapScreen,
   Notification,
   ProfileRanking,
   QrGenerator,
   RedeemReward,
+  ScanQR,
   StarHistory,
 } from '../../screens/appFlow';
 // import { TabNavigator } from './tabFlow/index'
@@ -28,6 +30,8 @@ export const MainNavigator = () => {
         <MyStack.Screen name={routes.redeemreward} component={RedeemReward} />
         <MyStack.Screen name={routes.earnstar} component={EarnStar} />
         <MyStack.Screen name={routes.qrgenerator} component={QrGenerator} />
+        <MyStack.Screen name={routes.scanqr} component={ScanQR} />
+        <MyStack.Screen name={routes.mapscreen} component={MapScreen} />
 
         <MyStack.Screen
           name={routes.profileranking}
