@@ -13,6 +13,7 @@ export const styles = StyleSheet.create({
   },
   wrapper: {
     marginTop: StatusBar.currentHeight,
+    marginTop: 70,
   },
 
   title: {
@@ -60,7 +61,7 @@ export const styles = StyleSheet.create({
     fontSize: responsiveFontSize(1.6),
   },
   pv30: {
-    marginVertical: 30,
+    marginVertical: 50,
     justifyContent: 'center',
     alignItems: 'center',
   },

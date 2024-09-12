@@ -86,10 +86,12 @@ const Header = ({
 
 const styles = StyleSheet.create({
   rowCenter: {
+    // marginTop: StatusBar.currentHeight,
+
     flexDirection: 'row',
-    alignItems: 'center',
+    // alignItems: 'center',
     justifyContent: 'space-between',
-    // marginTop: 10,
+    marginTop: 10,
   },
   container: {
     marginTop: StatusBar.currentHeight,
@@ -97,7 +99,6 @@ const styles = StyleSheet.create({
     width: wp(100),
     alignContent: 'center',
     justifyContent: 'center',
-    // backgroundColor: 'red',
   },
   goBack: {
     height: heightPixel(30),
@@ -119,7 +120,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     width: widthPixel(100),
     height: widthPixel(90),
-    marginTop: -15,
+    // marginTop: -5,
     resizeMode: 'contain',
     position: 'absolute',
   },
@@ -155,12 +156,13 @@ const styles = StyleSheet.create({
     marginTop: -18,
     width: widthPixel(270),
     textAlign: 'left',
+    // backgroundColor: 'red',
   },
   wellcomemain: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-
+    marginTop: -20,
     padding: 10,
   },
   wellcomeStyle: {

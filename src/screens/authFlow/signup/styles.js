@@ -14,8 +14,7 @@ export const styles = StyleSheet.create({
   },
   wrapper: {
     flex: 1,
-    marginTop: StatusBar.currentHeight,
-    marginTop: -10,
+    marginTop: 60,
   },
   title: {
     fontSize: responsiveFontSize(2.6),
@@ -79,7 +78,7 @@ export const styles = StyleSheet.create({
     color: colors.black,
     fontFamily: fontFamily.appTextRegular,
     fontSize: responsiveFontSize(1.8),
-    marginTop: 40,
+    marginTop: 60,
   },
   spanedit: {
     color: colors.theme,

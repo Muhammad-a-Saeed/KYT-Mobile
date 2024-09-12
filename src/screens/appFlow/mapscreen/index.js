@@ -54,7 +54,7 @@ const MapScreen = ({navigation}) => {
         onSelect={handleSelectLocation}
       />
       <View style={styles.maincurrloc}>
-        <Image source={appIcons.currloc} style={styles.currloc} />
+        <Image source={appIcons.currloc1} style={styles.currloc} />
       </View>
       <View style={styles.overlayContainer}>
         {/* <View> */}
@@ -70,6 +70,7 @@ const MapScreen = ({navigation}) => {
             <View style={styles.addresstittle}>
               <Text style={styles.titladdres}>{titleaddres}</Text>
               <Text style={styles.compaddress}>{compaddress}</Text>
+              <Text style={styles.livetime}>Open until 07:00 AM</Text>
             </View>
           </View>
 

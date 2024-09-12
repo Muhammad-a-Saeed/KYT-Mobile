@@ -19,10 +19,24 @@ import {
 } from '../../services';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
 import Button from '../button';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 
-const Alert = ({ visible, onClose, message, title, leftIcon, buttons}) => {
-  const navigation =useNavigation();
+const Alert = ({
+  visible,
+  onClose,
+  message,
+  title,
+  leftIcon,
+  onPress,
+  buttons,
+}) => {
+  const navigation = useNavigation();
+
+  const handleContinuePress = () => {
+    // console.log('thisss');
+    onClose();
+    navigation.navigate(routes.homeScreen);
+  };
   return (
     <Modal transparent={true} animationType="slide" visible={visible}>
       <StatusBar
@@ -32,33 +46,40 @@ const Alert = ({ visible, onClose, message, title, leftIcon, buttons}) => {
       <View style={styles.maincontainer}>
         <View style={styles.main}>
           <View style={styles.centerview}>
-         
             <View style={styles.content}>
-            <ImageBackground
-              source={appIcons.alertbackground} 
-              style={styles.backgroundImage}
-              imageStyle={styles.imageStyle}
-            >
-              <View style={styles.head}>
+              <ImageBackground
+                source={appIcons.alertbackground}
+                style={styles.backgroundImage}
+                imageStyle={styles.imageStyle}>
+                <View style={styles.head}>
+                  {leftIcon && (
+                    <TouchableOpacity
+                      style={styles.procompalert}
+                      onPress={onClose}>
+                      <Image
+                        style={styles.iconStyle}
+                        source={appIcons.procompalert}
+                      />
+                    </TouchableOpacity>
+                  )}
+                  <TouchableOpacity onPress={onClose}>
+                    <Text style={styles.hint}>{title}</Text>
+                  </TouchableOpacity>
+                </View>
+
                 {leftIcon && (
-                  <TouchableOpacity style={styles.procompalert} onPress={onClose}>
-                    <Image style={styles.iconStyle} source={appIcons.procompalert} />
+                  <TouchableOpacity
+                    onPress={handleContinuePress}
+                    style={styles.pv30}>
+                    <Button
+                      onPress={onClose}
+                      width={widthPixel(280)}
+                      height={50}>
+                      CONTINUE
+                    </Button>
                   </TouchableOpacity>
                 )}
-                <TouchableOpacity onPress={onClose}>
-                  <Text style={styles.hint}>{title}</Text>
-                </TouchableOpacity>
-              </View>
-             
-              {leftIcon && (
-                  <View style={styles.pv30}>
-                  <Button onPress={() => navigation.navigate(routes.homeScreen)}
-                    width={widthPixel(280)}
-                    height={50}>CONTINUE</Button>
-                </View>
-                )}
-            </ImageBackground>
-
+              </ImageBackground>
             </View>
           </View>
         </View>
@@ -78,7 +99,7 @@ const styles = StyleSheet.create({
   },
   main: {
     flex: 1,
-    alignSelf:'center'
+    alignSelf: 'center',
   },
   backgroundImage: {
     justifyContent: 'center',
@@ -95,7 +116,6 @@ const styles = StyleSheet.create({
     height: heightPixel(440),
     // marginLeft: -19,
     // padding:50,
-    
   },
   content: {
     padding: 10,
@@ -104,10 +124,9 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignItems: 'center',
   },
-  procompalert:{
-alignItems:'center',
-justifyContent:'center'
-
+  procompalert: {
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   iconStyle: {
     width: widthPixel(190),
@@ -119,18 +138,18 @@ justifyContent:'center'
     // flexDirection: 'row',
   },
   hint: {
-    width:widthPixel(290),
+    width: widthPixel(290),
     fontFamily: fontFamily.appTextSemiBold,
     color: colors.black,
     fontSize: responsiveFontSize(2.2),
     marginTop: 20,
     marginLeft: 10,
-    textAlign:'center'
+    textAlign: 'center',
   },
-  pv30:{
-    marginTop:20,
-    alignItems:'center',
-  }
+  pv30: {
+    marginTop: 20,
+    alignItems: 'center',
+  },
 });
 
 export default Alert;

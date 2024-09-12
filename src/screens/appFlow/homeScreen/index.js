@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   View,
   Text,
@@ -20,8 +20,11 @@ import {
   Button,
   Custumredeemreward,
   Header,
+  HomescreenAlert,
   RedeemCard,
+  RewardAlert,
   StepIndicatorComponent,
+  Vipalert,
 } from '../../../components';
 import {styles} from './styles';
 import {TouchableOpacity} from 'react-native-gesture-handler';
@@ -30,30 +33,118 @@ const HomeScreen = ({navigation}) => {
   const [isArrowUp, setIsArrowUp] = useState(false);
   const [showRewards, setShowRewards] = useState(false);
   const [Isselected, setSelected] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
+  const [showvipAlert, setShowvipAlert] = useState(false);
+  const [rewardAlert, setrewardAlert] = useState(false);
+  const [locAlert, setlocAlert] = useState(false);
+
   const toggleArrow = () => {
     setIsArrowUp(!isArrowUp);
     setShowRewards(!showRewards);
   };
   const toggleStarSelection = () => {
     setSelected(!Isselected);
+    setShowvipAlert(true);
+    setTimeout(() => {
+      setShowvipAlert(false);
+    }, 3000);
+  };
+
+  useEffect(() => {
+    const shouldShowAlert = true;
+    if (shouldShowAlert) {
+      setShowAlert(true);
+    }
+  }, []);
+
+  const handleCloseAlert = () => {
+    setShowAlert(false);
+  };
+  const showrewardAlert = () => {
+    setrewardAlert(true);
+  };
+
+  const hideAlert = () => {
+    setrewardAlert(false);
+    navigation.navigate(routes.starhistory);
+  };
+  const showlocAlert = () => {
+    setlocAlert(true);
+  };
+  const localerthide = () => {
+    setlocAlert(false);
+    navigation.navigate(routes.mapscreen);
   };
 
   return (
     <View style={[styles.container]}>
       <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
-      <Header wellcome={'Wellcome'} Notification={true} />
+      {/* <Header wellcome={'Wellcome'} Notification={true} /> */}
+
+      <View>
+        <HomescreenAlert
+          visible={showAlert}
+          onClose={handleCloseAlert}
+          image={appIcons.stars}
+          starCount="80"
+          star={appIcons.staricon}
+          message="Congratulations! You've downloaded the app and earned 80 stars."
+          buttonText="OK"
+        />
+      </View>
+      <View>
+        <Vipalert
+          visible={showvipAlert}
+          onClose={() => setShowAlert(false)}
+          backgroundImage={appIcons.vipalert}
+          icon={appIcons.vip}
+          text1="Congratulation"
+          text2="You earned 1000 stars and achieved the VIP Status"
+        />
+      </View>
+      <View>
+        <RewardAlert
+          visible={rewardAlert}
+          onClose={hideAlert}
+          backgroundImage={appIcons.redeemalert}
+          icon={appIcons.gift}
+          congratsText="Congratulations!"
+          descriptionText="You achieved the 80-star level and this Complementary Bag is for you."
+          onText={'Redeem'}
+          onRedeem={() => console.log('Redeem Pressed')}
+        />
+      </View>
+      <View>
+        <RewardAlert
+          visible={locAlert}
+          onClose={localerthide}
+          backgroundImage={appIcons.localert}
+          icon={appIcons.loc}
+          congratsText="Our family is growing!"
+          descriptionText="The new KYT clinic is now open. We can't wait to welcome you to our newest location."
+          onText={'Go'}
+          // onRedeem={() => console.log('Redeem Pressed')}
+        />
+      </View>
 
       <View style={[styles.wrapper, {backgroundColor: colors.white}]}>
+        <View style={styles.head}>
+          <Text style={styles.wellcome}>Wellcome</Text>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(routes.notification)}>
+            <Image source={appIcons.wellcomebell} style={styles.imageStyle} />
+          </TouchableOpacity>
+        </View>
         <View style={styles.main}>
           <TouchableOpacity style={styles.prousername}>
             <Image source={appIcons.profileicon} style={styles.profileStyle} />
             <Text style={styles.username}>Sarah Martinez </Text>
           </TouchableOpacity>
           <View style={styles.lochistory}>
-            <Pressable onPress={() => navigation.navigate(routes.mapscreen)}>
+            <Pressable onPress={showlocAlert}>
               <Image source={appIcons.locatio} style={styles.locStyle} />
             </Pressable>
-            <Pressable onPress={() => navigation.navigate(routes.starhistory)}>
+            <Pressable onPress={showrewardAlert}>
               <Image source={appIcons.history} style={styles.listStyle} />
             </Pressable>
           </View>
@@ -72,7 +163,7 @@ const HomeScreen = ({navigation}) => {
             <View>
               <Progress.Bar
                 progress={0.4}
-                width={192}
+                width={180}
                 borderColor={colors.theme}
                 borderWidth={1}
                 color={colors.theme}
@@ -82,7 +173,7 @@ const HomeScreen = ({navigation}) => {
           <View>
             <Button
               onPress={() => navigation.navigate(routes.profileranking)}
-              width={widthPixel(150)}
+              width={widthPixel(130)}
               height={40}
               backgroundColor={['#FFFFFF', '#FFFFFF', '#FFFFFF']}
               labelColor="#000000"
@@ -238,7 +329,7 @@ const HomeScreen = ({navigation}) => {
                   />
                 </View>
               )}
-              <View style={{alignItems: 'center', gap: 20, marginTop: 15}}>
+              <View style={{alignItems: 'center', gap: 20, marginTop: 10}}>
                 <RedeemCard
                   backgroundImage={appIcons.card1}
                   title="Redeem Rewards"

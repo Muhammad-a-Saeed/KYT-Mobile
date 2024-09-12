@@ -6,12 +6,32 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.white,
-    // marginTop: StatusBar.currentHeight ,
+    marginTop: StatusBar.currentHeight,
   },
   wrapper: {
-    flex: 1,
+    // flex: 1,
     padding: 15,
     // marginTop: -20,
+  },
+
+  head: {
+    width: widthPixel(350),
+    height: heightPixel(50),
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  wellcome: {
+    fontSize: responsiveFontSize(2.8),
+    color: colors.mediumblack,
+    fontFamily: fontFamily.appTextSemiBold,
+    // width: widthPixel(310),
+    // backgroundColor: 'green',
+  },
+  imageStyle: {
+    width: widthPixel(42),
+    height: widthPixel(42),
+    resizeMode: 'contain',
   },
   main: {
     width: widthPixel(350),
@@ -19,6 +39,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignSelf: 'center',
+    marginTop: 10,
   },
   prousername: {
     flexDirection: 'row',
@@ -54,10 +75,11 @@ export const styles = StyleSheet.create({
   },
   view3: {
     width: widthPixel(350),
-    height: heightPixel(40),
+    height: heightPixel(50),
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: 10,
+    // backgroundColor: 'red',
   },
   view1: {
     flexDirection: 'row',
@@ -91,10 +113,11 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     width: widthPixel(400),
-    height: heightPixel(480),
+    // height: heightPixel(990),
     borderRadius: 50,
     marginHorizontal: -12,
     backgroundColor: colors.greendark,
+    // marginTop: 40,
   },
   scrollContainer: {
     flexGrow: 1,
@@ -102,7 +125,7 @@ export const styles = StyleSheet.create({
   frontdiv: {
     // flex: 1,
     width: widthPixel(390),
-    height: heightPixel(960),
+    minHeight: heightPixel(1000),
     backgroundColor: colors.white,
     borderRadius: 40,
     marginTop: 10,
@@ -184,7 +207,6 @@ export const styles = StyleSheet.create({
     marginBottom: 10,
   },
   getreward: {
-    backgroundColor: 'white',
     gap: -10,
   },
   mainscanbar: {

@@ -1,10 +1,11 @@
-import {StyleSheet} from 'react-native';
+import {StatusBar, StyleSheet} from 'react-native';
 import {colors, fontFamily, heightPixel, widthPixel} from '../../../services';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.white,
+    marginTop: StatusBar.currentHeight,
   },
   fg1: {
     flexGrow: 1,
@@ -14,7 +15,6 @@ export const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
     marginTop: -30,
-
     alignContent: 'center',
   },
   cameraIcon: {
@@ -30,7 +30,7 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.greyLight1,
     width: 120,
     height: 120,
-    resizeMode:"contain",
+    resizeMode: 'contain',
     borderRadius: 100,
   },
   avatarContainer1: {
@@ -38,11 +38,10 @@ export const styles = StyleSheet.create({
     marginBottom: 10,
     width: 120,
     height: 120,
-    resizeMode:"contain",
+    resizeMode: 'contain',
     borderRadius: 100,
   },
   image: {
-
     width: 34,
     height: 34,
     borderRadius: 50,
@@ -131,9 +130,6 @@ export const styles = StyleSheet.create({
     padding: 20,
   },
 
-
-
-
   seeprofiletext: {
     width: '90%',
     fontSize: 16,
@@ -155,17 +151,14 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     marginLeft: 8,
   },
-  
+
   mark1: {
     width: widthPixel(16),
     height: heightPixel(16),
-    resizeMode:'contain'
+    resizeMode: 'contain',
   },
   pv30: {
-    marginTop:80,
-    alignItems:'center',
-},
-
-
-  
+    marginTop: 80,
+    alignItems: 'center',
+  },
 });

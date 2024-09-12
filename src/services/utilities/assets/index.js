@@ -44,12 +44,14 @@ const appIcons = {
   Button2: require(`${iconUrl}/Button2.png`),
   Button3: require(`${iconUrl}/Button3.png`),
   currloc: require(`${iconUrl}/currloc.png`),
+  currloc1: require(`${iconUrl}/currloc1.png`),
   wellcomebell: require(`${iconUrl}/wellcomebell.png`),
   profileicon: require(`${iconUrl}/profileicon.png`),
   locatio: require(`${iconUrl}/locatio.png`),
   history: require(`${iconUrl}/history.png`),
   right: require(`${iconUrl}/right.png`),
   staricon: require(`${iconUrl}/staricon.png`),
+  stars: require(`${iconUrl}/stars.png`),
   arrowdown: require(`${iconUrl}/arrowdown.png`),
   arrowup: require(`${iconUrl}/arrowup.png`),
   card1: require(`${iconUrl}/card1.png`),
@@ -73,6 +75,12 @@ const appIcons = {
   background2: require(`${iconUrl}/background2.png`),
   scanbar: require(`${iconUrl}/scanbar.png`),
   qrscanner: require(`${iconUrl}/qrscanner.png`),
+  vipalert: require(`${iconUrl}/vipalert.png`),
+  vip: require(`${iconUrl}/vip.png`),
+  redeemalert: require(`${iconUrl}/redeemalert.png`),
+  gift: require(`${iconUrl}/gift.png`),
+  localert: require(`${iconUrl}/localert.png`),
+  loc: require(`${iconUrl}/loc.png`),
 };
 
 export {appImages, appIcons};

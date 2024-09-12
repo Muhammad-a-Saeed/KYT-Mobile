@@ -1,5 +1,6 @@
 import {StatusBar, StyleSheet} from 'react-native';
 import {colors, fontFamily, heightPixel, widthPixel} from '../../../services';
+import {responsiveFontSize} from 'react-native-responsive-dimensions';
 
 export const styles = StyleSheet.create({
   container: {
@@ -84,6 +85,12 @@ export const styles = StyleSheet.create({
     fontFamily: fontFamily.appTextRegular,
     fontSize: 14,
     color: colors.white,
+  },
+  livetime: {
+    fontFamily: fontFamily.appTextRegular,
+    fontSize: responsiveFontSize(1.8),
+    color: colors.white,
+    marginTop: 10,
   },
   pv30: {
     alignItems: 'center',

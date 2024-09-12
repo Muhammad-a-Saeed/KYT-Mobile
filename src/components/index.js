@@ -13,6 +13,9 @@ import Head from './head';
 import Customstarhistory from './customstarhistory';
 import CustomRanking from './customranking';
 import Custumredeemreward from './customredeemreward';
+import HomescreenAlert from './homescreenalert';
+import Vipalert from './vipalert';
+import RewardAlert from './rewardalert';
 
 export {
   Button,
@@ -30,4 +33,7 @@ export {
   Customstarhistory,
   CustomRanking,
   Custumredeemreward,
+  HomescreenAlert,
+  Vipalert,
+  RewardAlert,
 };
