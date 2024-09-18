@@ -1,10 +1,11 @@
-import {StyleSheet} from 'react-native';
+import {StatusBar, StyleSheet} from 'react-native';
 import {colors, fontFamily} from '../../../services';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: StatusBar.currentHeight,
     backgroundColor: colors.white,
   },
   maincontainer: {
@@ -21,5 +22,6 @@ export const styles = StyleSheet.create({
     color: colors.lightText,
     fontFamily: fontFamily.appTextRegular,
     fontSize: responsiveFontSize(1.9),
+    // marginBottom: 10,
   },
 });

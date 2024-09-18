@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, StatusBar, Image} from 'react-native';
 import {appIcons, colors, routes} from '../../../services';
-import {Header, Button} from '../../../components';
+import {Header, Button, Background} from '../../../components';
 import {CustomInput} from '../../../components/custominput';
 import {styles} from './styles';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
@@ -21,17 +21,18 @@ const SignupScreen = ({navigation}) => {
       id: 1,
       title: 'Continue with FaceBook',
       icon: appIcons.google,
-      onPress: () => googlelogin(),
+      // onPress: () => googlelogin(),
     },
     {
       id: 2,
       title: 'Continue with Google',
       icon: appIcons.ios,
-      onPress: () => appleLogin(),
+      // onPress: () => appleLogin(),
     },
   ];
   return (
     <View style={[styles.container]}>
+      {/* <Background> */}
       <StatusBar backgroundColor={colors.background} barStyle="dark-content" />
       <Header mainLogo={true} />
       <KeyboardAwareScrollView
@@ -106,6 +107,7 @@ const SignupScreen = ({navigation}) => {
           </View>
         </View>
       </KeyboardAwareScrollView>
+      {/* </Background> */}
     </View>
   );
 };

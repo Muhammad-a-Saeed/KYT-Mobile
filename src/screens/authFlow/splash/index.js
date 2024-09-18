@@ -16,7 +16,7 @@ const Splash = ({navigation}) => {
   const perfomeTimeconsumingTask = async () => {
     return new Promise(resolve =>
       setTimeout(() => {
-        navigation.navigate(user == null ? routes.onboarding : routes.splash);
+        navigation.replace(user == null ? routes.onboarding : routes.splash);
       }, 3000),
     );
   };

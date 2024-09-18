@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   },
   backgroundImage: {
     width: widthPixel(350),
-    height: heightPixel(370),
+    minHeight: heightPixel(370),
     justifyContent: 'center',
     alignItems: 'center',
   },

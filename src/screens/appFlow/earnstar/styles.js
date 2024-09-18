@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StatusBar, StyleSheet} from 'react-native';
 import {colors, fontFamily, heightPixel, widthPixel} from '../../../services';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
 
@@ -6,13 +6,13 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.white,
+    marginTop: StatusBar.currentHeight,
   },
   centeredImageBackground: {
     width: '100%',
-    height: heightPixel(85),
+    height: heightPixel(90),
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: -10,
   },
   overlay: {
     width: '100%',
@@ -27,7 +27,7 @@ export const styles = StyleSheet.create({
     color: colors.white,
   },
   ratingContainer: {
-    height: heightPixel(40),
+    height: heightPixel(45),
     flexDirection: 'row',
     alignItems: 'center',
     marginTop: -5,

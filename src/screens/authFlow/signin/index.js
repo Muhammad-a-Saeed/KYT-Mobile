@@ -22,12 +22,12 @@ const Signin = ({navigation}) => {
     {
       id: 1,
       icon: appIcons.google,
-      onPress: () => facebookLogin(),
+      // onPress: () => facebookLogin(),
     },
     {
       id: 2,
       icon: appIcons.ios,
-      onPress: () => appleLogin(),
+      // onPress: () => appleLogin(),
     },
   ];
   return (

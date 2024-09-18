@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StatusBar, StyleSheet} from 'react-native';
 import {colors, fontFamily, heightPixel, widthPixel} from '../../../services';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
 
@@ -6,6 +6,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.white,
+    marginTop: StatusBar.currentHeight,
   },
   centeredContent: {
     flex: 1,
@@ -34,6 +35,7 @@ export const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   backdiv: {
+    flex: 6,
     justifyContent: 'center',
     alignItems: 'center',
     width: widthPixel(400),
@@ -53,6 +55,7 @@ export const styles = StyleSheet.create({
   },
   listContainer: {
     flexGrow: 1,
+    minHeight: heightPixel(650),
     alignItems: 'center',
     marginTop: 20,
     padding: 5,

@@ -19,26 +19,26 @@ const Resetpasword = ({navigation}) => {
         contentContainerStyle={styles.fg1}>
         <View style={[styles.wrapper]}>
           <View>
-          <Text style={styles.title}>Reset Password</Text>
+            <Text style={styles.title}>Reset Password</Text>
             <Text style={styles.etext}>Set your new password</Text>
-         
-          <View style={styles.custominput}>
-          <CustomInput
-            onChangeText={text => setPassword(text)}
-            placeholder={'New Password'}
-            rightIcon={true}
-            leftIcon={appIcons.Lock}
-          />
-           <CustomInput
-            onChangeText={text => setPassword(text)}
-            placeholder={'Confirm Password'}
-            rightIcon={true}
-            leftIcon={appIcons.Lock}
-          />
-          </View>
+
+            <View style={styles.custominput}>
+              <CustomInput
+                onChangeText={text => setPassword(text)}
+                placeholder={'New Password'}
+                rightIcon={true}
+                leftIcon={appIcons.Lock}
+              />
+              <CustomInput
+                onChangeText={text => setPassword(text)}
+                placeholder={'Confirm Password'}
+                rightIcon={true}
+                leftIcon={appIcons.Lock}
+              />
+            </View>
           </View>
           <View style={styles.pv30}>
-            <Button onPress={() => navigation.navigate()}>
+            <Button onPress={() => navigation.navigate(routes.signin)}>
               Continue
             </Button>
           </View>

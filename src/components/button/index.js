@@ -10,7 +10,7 @@ const Button = props => {
     onPress,
     children,
     width = widthPixel(350),
-    height = 60,
+    height = 50,
     backgroundColor = ['#6D6010', '#D1AA66', '#6D6010'],
     labelColor = colors.white,
     borderColor = colors.transparent,

@@ -86,10 +86,8 @@ const Header = ({
 
 const styles = StyleSheet.create({
   rowCenter: {
-    // marginTop: StatusBar.currentHeight,
-
     flexDirection: 'row',
-    // alignItems: 'center',
+    alignItems: 'center',
     justifyContent: 'space-between',
     marginTop: 10,
   },
@@ -99,6 +97,7 @@ const styles = StyleSheet.create({
     width: wp(100),
     alignContent: 'center',
     justifyContent: 'center',
+    // backgroundColor: 'red',
   },
   goBack: {
     height: heightPixel(30),

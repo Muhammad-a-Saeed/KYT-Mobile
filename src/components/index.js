@@ -16,6 +16,9 @@ import Custumredeemreward from './customredeemreward';
 import HomescreenAlert from './homescreenalert';
 import Vipalert from './vipalert';
 import RewardAlert from './rewardalert';
+import Background from './background';
+import ContactItem from './contact';
+import CustomLinks from './custumlinks';
 
 export {
   Button,
@@ -23,7 +26,6 @@ export {
   Header,
   AddButton,
   AddressCard,
-  //  GooglePlacesInput,
   Alert,
   GoogleMap,
   StepIndicatorComponent,
@@ -36,4 +38,7 @@ export {
   HomescreenAlert,
   Vipalert,
   RewardAlert,
+  Background,
+  ContactItem,
+  CustomLinks,
 };

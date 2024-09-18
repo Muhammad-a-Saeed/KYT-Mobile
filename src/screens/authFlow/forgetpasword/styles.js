@@ -6,15 +6,15 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.white,
     alignItems: 'center',
+    // justifyContent: 'center',
   },
   fg1: {
     flexGrow: 1,
   },
   wrapper: {
     flex: 1,
-
     paddingBottom: heightPixel(20),
-    // backgroundColor: colors.white,
+    // backgroundColor: colors.errorColor,
     justifyContent: 'flex-end',
   },
 
@@ -34,6 +34,7 @@ export const styles = StyleSheet.create({
   },
 
   pv30: {
+    // flex: 1,
     paddingVertical: heightPixel(180),
   },
 });

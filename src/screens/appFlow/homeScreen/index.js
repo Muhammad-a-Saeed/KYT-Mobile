@@ -13,6 +13,7 @@ import {
   appIcons,
   colors,
   fontFamily,
+  heightPixel,
   routes,
   widthPixel,
 } from '../../../services';
@@ -29,7 +30,9 @@ import {
 import {styles} from './styles';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import * as Progress from 'react-native-progress';
-const HomeScreen = ({navigation}) => {
+import {useNavigation} from '@react-navigation/native';
+const HomeScreen = ({}) => {
+  const navigation = useNavigation();
   const [isArrowUp, setIsArrowUp] = useState(false);
   const [showRewards, setShowRewards] = useState(false);
   const [Isselected, setSelected] = useState(false);
@@ -151,15 +154,17 @@ const HomeScreen = ({navigation}) => {
         </View>
         <View style={styles.view3}>
           <View style={styles.maincontainer}>
-            <View style={styles.view1}>
-              <View style={styles.view2}>
+            <Pressable
+              onPress={() => navigation.navigate(routes.referralscreen)}
+              style={styles.view1}>
+              <Pressable style={styles.view2}>
                 <Text style={styles.t1}>Referral </Text>
                 <Image source={appIcons.right} style={styles.rightStyle} />
-              </View>
+              </Pressable>
               <View>
                 <Text style={styles.t2}>( Bronze )</Text>
               </View>
-            </View>
+            </Pressable>
             <View>
               <Progress.Bar
                 progress={0.4}
@@ -329,7 +334,13 @@ const HomeScreen = ({navigation}) => {
                   />
                 </View>
               )}
-              <View style={{alignItems: 'center', gap: 20, marginTop: 10}}>
+              <View
+                style={{
+                  height: heightPixel(910),
+                  alignItems: 'center',
+                  gap: 20,
+                  marginTop: 10,
+                }}>
                 <RedeemCard
                   backgroundImage={appIcons.card1}
                   title="Redeem Rewards"

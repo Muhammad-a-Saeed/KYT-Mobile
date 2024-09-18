@@ -4,13 +4,16 @@ import {NavigationContainer} from '@react-navigation/native';
 import {routes} from '..';
 import {AuthNavigation} from './authFlow';
 import {
+  ContactScreen,
   EarnStar,
   HomeScreen,
+  InviteFriend,
   MapScreen,
   Notification,
   ProfileRanking,
   QrGenerator,
   RedeemReward,
+  ReferralScreen,
   ScanQR,
   StarHistory,
 } from '../../screens/appFlow';
@@ -21,7 +24,7 @@ export const MainNavigator = () => {
   return (
     <NavigationContainer>
       <MyStack.Navigator
-        initialRouteName={routes.splash}
+        initialRouteName={routes.referralscreen}
         screenOptions={{headerShown: false}}>
         <MyStack.Screen name={routes.auth} component={AuthNavigation} />
         <MyStack.Screen name={routes.homeScreen} component={HomeScreen} />
@@ -32,11 +35,16 @@ export const MainNavigator = () => {
         <MyStack.Screen name={routes.qrgenerator} component={QrGenerator} />
         <MyStack.Screen name={routes.scanqr} component={ScanQR} />
         <MyStack.Screen name={routes.mapscreen} component={MapScreen} />
-
+        <MyStack.Screen
+          name={routes.referralscreen}
+          component={ReferralScreen}
+        />
         <MyStack.Screen
           name={routes.profileranking}
           component={ProfileRanking}
         />
+        <MyStack.Screen name={routes.invitefriend} component={InviteFriend} />
+        <MyStack.Screen name={routes.contactscreen} component={ContactScreen} />
 
         {/* <MyStack.Screen name={routes.tab} component={TabNavigator} /> */}
       </MyStack.Navigator>

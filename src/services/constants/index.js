@@ -30,6 +30,9 @@ export const routes = {
   qrgenerator: 'qrgenerator',
   scanqr: 'scanqr',
   mapscreen: 'mapscreen',
+  referralscreen: 'referralscreen',
+  contactscreen: 'contactscreen',
+  invitefriend: 'invitefriend',
 };
 
 export const loaderStyles = {

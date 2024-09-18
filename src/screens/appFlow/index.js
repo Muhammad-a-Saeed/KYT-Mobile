@@ -8,6 +8,9 @@ import EarnStar from './earnstar';
 import QrGenerator from './qrgenerator';
 import ScanQR from './scanqr';
 import MapScreen from './mapscreen';
+import ReferralScreen from './referralscreen';
+import ContactScreen from './contactscreen';
+import InviteFriend from './invitefriend';
 
 import Report from './report';
 
@@ -22,5 +25,8 @@ export {
   QrGenerator,
   ScanQR,
   MapScreen,
+  ReferralScreen,
+  ContactScreen,
+  InviteFriend,
   // Report
 };

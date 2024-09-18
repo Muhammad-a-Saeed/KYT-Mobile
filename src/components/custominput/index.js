@@ -28,25 +28,34 @@ export const CustomInput = ({
   inputstyle,
   rightloc,
   rightIcon,
+  rightsearchbar,
   rightcalendar,
   width = '100%',
   height = heightPixel(60),
   borderRadius = widthPixel(14),
-  borderColor=colors.greyLight1,
+  borderColor = colors.greyLight1,
   backgroundColor = colors.lightgrey,
   borderWidth = 2,
+  borderTopWidth = 0,
+  borderLeftWidth = 0,
+  borderRightWidth = 0,
   elevation = 0,
   value,
-  marginHorizontal=0,
+  marginHorizontal = 0,
   placeholder,
   keyboardType,
   editable,
   onChangeText,
   onCalendarPress,
 }) => {
-  
   return (
-    <View style={{...styles.formInput, width: width, height: height, borderColor: borderColor}}>
+    <View
+      style={{
+        ...styles.formInput,
+        width: width,
+        height: height,
+        borderColor: borderColor,
+      }}>
       <View
         style={{
           ...styles.input,
@@ -55,17 +64,25 @@ export const CustomInput = ({
           height: height,
           backgroundColor: backgroundColor,
           elevation: elevation,
-          borderColor:borderColor
-
+          borderColor: borderColor,
+          borderTopWidth: borderTopWidth,
+          borderLeftWidth: borderLeftWidth,
+          borderRightWidth: borderRightWidth,
         }}>
         <Image source={leftIcon} style={styles.leftIcon} />
-        
+
         <TouchableOpacity
           style={{flex: 1}}
           onPress={() => rightIcon && onPressIcon()}>
           <TextInput
             selectionColor={colors.black}
-            style={{...styles.inputTextStyle,marginHorizontal,backgroundColor,height,borderColor}}
+            style={{
+              ...styles.inputTextStyle,
+              marginHorizontal,
+              backgroundColor,
+              height,
+              borderColor,
+            }}
             value={value}
             placeholder={placeholder}
             placeholderTextColor={'#C7C7C7'}
@@ -73,13 +90,16 @@ export const CustomInput = ({
             keyboardType={keyboardType}
             editable={editable}
             onChangeText={onChangeText}
-            
-           
           />
         </TouchableOpacity>
         {rightIcon && (
           <TouchableOpacity>
             <Image source={appIcons.Show} style={styles.eyeshow} />
+          </TouchableOpacity>
+        )}
+        {rightsearchbar && (
+          <TouchableOpacity>
+            <Image source={appIcons.Search} style={styles.eyeshow} />
           </TouchableOpacity>
         )}
         {righteye && (
@@ -88,12 +108,12 @@ export const CustomInput = ({
           </TouchableOpacity>
         )}
         {rightloc && (
-          <TouchableOpacity >
+          <TouchableOpacity>
             <Image style={styles.rightarrow} source={appIcons.addres} />
           </TouchableOpacity>
         )}
         {rightcalendar && (
-          <TouchableOpacity onPress={onCalendarPress} >
+          <TouchableOpacity onPress={onCalendarPress}>
             <Image style={{...styles.rightarrow}} source={appIcons.Calendar} />
           </TouchableOpacity>
         )}
@@ -122,7 +142,7 @@ const styles = StyleSheet.create({
     paddingBottom: heightPixel(20),
   },
   dropDownView: {
-    backgroundColor:'red',
+    backgroundColor: 'red',
     position: 'absolute',
     bottom: -heightPixel(85),
     zIndex: 10,
@@ -150,14 +170,12 @@ const styles = StyleSheet.create({
 
   inputTextStyle: {
     width: '90%',
-    height:50,
+    height: 50,
     fontSize: 14,
     fontFamily: fontFamily.appTextRegular,
     color: colors.lightBlack,
-paddingBottom:-20, 
-// marginHorizontal:-30, 
-
-    
+    paddingBottom: -20,
+    // marginHorizontal:-30,
   },
   icon: {
     width: widthPixel(22),
@@ -173,11 +191,9 @@ paddingBottom:-20,
     justifyContent: 'space-between',
     paddingHorizontal: widthPixel(10),
     borderColor: colors.greyLight,
-    borderTopWidth:0,
-    borderLeftWidth:0,
-    borderRightWidth:0,
-
-
+    borderTopWidth: 0,
+    borderLeftWidth: 0,
+    borderRightWidth: 0,
   },
   rightarrow: {
     width: widthPixel(24),

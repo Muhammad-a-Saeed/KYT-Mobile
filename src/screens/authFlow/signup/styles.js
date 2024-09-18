@@ -78,7 +78,7 @@ export const styles = StyleSheet.create({
     color: colors.black,
     fontFamily: fontFamily.appTextRegular,
     fontSize: responsiveFontSize(1.8),
-    marginTop: 60,
+    // marginTop: 45,
   },
   spanedit: {
     color: colors.theme,
