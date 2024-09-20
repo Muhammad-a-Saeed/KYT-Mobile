@@ -47,7 +47,6 @@ const ContactScreen = ({navigation}) => {
     contact => contact.isSelected,
   ).length;
 
-  // Toggle selection state for a contact
   const handleSelectionChange = id => {
     setContacts(prevContacts =>
       prevContacts.map(contact =>
@@ -61,8 +60,8 @@ const ContactScreen = ({navigation}) => {
     <ContactItem
       profileImage={item.profileImage}
       userName={item.userName}
-      isSelected={item.isSelected} // Pass the selected state to ContactItem
-      onSelectionChange={() => handleSelectionChange(item.id)} // Pass the toggle function
+      isSelected={item.isSelected}
+      onSelectionChange={() => handleSelectionChange(item.id)}
     />
   );
   return (

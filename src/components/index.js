@@ -19,6 +19,9 @@ import RewardAlert from './rewardalert';
 import Background from './background';
 import ContactItem from './contact';
 import CustomLinks from './custumlinks';
+import ProfileList from './profilelist';
+import ReferralItem from './referrelcard';
+import Appicon from './appicon';
 
 export {
   Button,
@@ -41,4 +44,7 @@ export {
   Background,
   ContactItem,
   CustomLinks,
+  ProfileList,
+  ReferralItem,
+  Appicon,
 };

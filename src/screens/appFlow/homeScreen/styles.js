@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.white,
-    marginTop: StatusBar.currentHeight,
+    // marginTop: StatusBar.currentHeight,
   },
   wrapper: {
     // flex: 1,
@@ -25,8 +25,6 @@ export const styles = StyleSheet.create({
     fontSize: responsiveFontSize(2.8),
     color: colors.mediumblack,
     fontFamily: fontFamily.appTextSemiBold,
-    // width: widthPixel(310),
-    // backgroundColor: 'green',
   },
   imageStyle: {
     width: widthPixel(42),

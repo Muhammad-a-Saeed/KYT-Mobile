@@ -33,6 +33,14 @@ export const routes = {
   referralscreen: 'referralscreen',
   contactscreen: 'contactscreen',
   invitefriend: 'invitefriend',
+  profile: 'profile',
+  accountbalance: 'accountbalance',
+  friend: 'friend',
+  settingnotification: 'settingnotication',
+  privacypolicy: 'privacypolicy',
+  appiconscreen: 'appiconscreen',
+  profilesetup: 'profilesetup',
+  locationscreen: 'locationscreen',
 };
 
 export const loaderStyles = {

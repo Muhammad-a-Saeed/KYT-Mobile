@@ -76,7 +76,7 @@ const HomeScreen = ({}) => {
   };
   const localerthide = () => {
     setlocAlert(false);
-    navigation.navigate(routes.mapscreen);
+    navigation.navigate(routes.locationscreen);
   };
 
   return (
@@ -139,7 +139,9 @@ const HomeScreen = ({}) => {
           </TouchableOpacity>
         </View>
         <View style={styles.main}>
-          <TouchableOpacity style={styles.prousername}>
+          <TouchableOpacity
+            style={styles.prousername}
+            onPress={() => navigation.navigate(routes.profile)}>
             <Image source={appIcons.profileicon} style={styles.profileStyle} />
             <Text style={styles.username}>Sarah Martinez </Text>
           </TouchableOpacity>

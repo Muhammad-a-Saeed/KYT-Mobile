@@ -3,9 +3,13 @@ import {colors, fontFamily, heightPixel, widthPixel} from '../../../services';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
 
 export const styles = StyleSheet.create({
+  head: {
+    flex: 1,
+    backgroundColor: colors.white,
+  },
   container: {
     flex: 1,
-    marginTop: StatusBar.currentHeight,
+    // marginTop: StatusBar.currentHeight,
     paddingHorizontal: 20,
     alignItems: 'center',
     justifyContent: 'center',
@@ -30,6 +34,12 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  medalContainer: {
+    width: widthPixel(370),
+    justifyContent: 'center',
+    alignItems: 'center',
+    // backgroundColor: 'red',
+  },
   medalImage: {
     width: widthPixel(350),
     height: heightPixel(350),
@@ -47,13 +57,17 @@ export const styles = StyleSheet.create({
     top: '50%',
     transform: [{translateY: -50}],
   },
+  indicatorleftIcon: {
+    width: 30,
+    height: 30,
+  },
   indicatorIcon: {
     width: 30,
     height: 30,
   },
   centerText: {
     fontSize: 18,
-    fontFamily: fontFamily.appTextSemiBold,
+    fontFamily: fontFamily.appTextItalic,
     color: colors.black,
     marginVertical: 20,
   },

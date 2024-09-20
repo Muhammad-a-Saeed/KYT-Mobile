@@ -1,5 +1,12 @@
 import React from 'react';
-import {View, Text, Image, Dimensions, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  Dimensions,
+  TouchableOpacity,
+  StatusBar,
+} from 'react-native';
 import {styles} from './styles';
 import {appIcons, colors, routes} from '../../../services';
 import {CustomInput} from '../../../components/custominput';
@@ -10,6 +17,7 @@ const InviteFriend = ({navigation}) => {
 
   return (
     <View style={styles.container}>
+      <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
       <View style={styles.topCurveContainer}>
         <Image
           source={appIcons.topcurve} // Replace with the actual path to your top curve background image
