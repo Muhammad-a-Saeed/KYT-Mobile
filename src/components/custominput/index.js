@@ -73,7 +73,8 @@ export const CustomInput = ({
 
         <TouchableOpacity
           style={{flex: 1}}
-          onPress={() => rightIcon && onPressIcon()}>
+          // onPress={() => rightIcon && onPressIcon()}
+        >
           <TextInput
             selectionColor={colors.black}
             style={{

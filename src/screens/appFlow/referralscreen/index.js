@@ -33,7 +33,7 @@ const ReferralScreen = ({navigation}) => {
   };
 
   const handlePrevMedal = () => {
-    // console.log('Current Medal Index (Prev):', medalIndex);
+    console.log('Current Medal Index (Prev):', handlePrevMedal);
     if (medalIndex > 0) {
       setMedalIndex(prevIndex => {
         const newIndex = prevIndex - 1;

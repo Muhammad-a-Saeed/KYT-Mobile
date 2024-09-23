@@ -1,34 +1,27 @@
 import {StyleSheet} from 'react-native';
-import {
-  colors,
-  fontFamily,
-  heightPixel,
-  widthPixel,
-} from '../../../services';
+import {colors, fontFamily, heightPixel, widthPixel} from '../../../services';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.white,
     // backgroundColor:'green'
-  
-   
   },
   fg1: {
-
-    flex:1,
-    paddingHorizontal:widthPixel(20),
-    justifyContent:'center',
-
-    
+    flexGrow: 1,
+    padding: 20,
+    // justifyContent:'center'
   },
+  // fg1: {
+  //   flex: 1,
+  //   paddingHorizontal: widthPixel(20),
+  //   justifyContent: 'center',
+  // },
   wrapper: {
-    flex:1,
-    marginTop:130,
-    // backgroundColor:'red'
-   
-   
-  
+    flex: 1,
+    // justifyContent: 'center',
+    // marginTop: 30,
+    // backgroundColor: 'red',
   },
   etext: {
     fontFamily: fontFamily.appTextBold,
@@ -38,15 +31,13 @@ export const styles = StyleSheet.create({
     // paddingBottom: 10,
     marginTop: -10,
   },
-  otptext:{
-    
-      fontFamily: fontFamily.appTextRegular,
-      fontSize: responsiveFontSize(1.9),
-      color: colors.lightText,
-      paddingTop: 20,
-      paddingBottom: 10,
-      marginTop: -15,
-
+  otptext: {
+    fontFamily: fontFamily.appTextRegular,
+    fontSize: responsiveFontSize(1.9),
+    color: colors.lightText,
+    paddingTop: 20,
+    paddingBottom: 10,
+    marginTop: -15,
   },
 
   // title: {
@@ -56,7 +47,7 @@ export const styles = StyleSheet.create({
   //   color: colors.darktext,
   //   fontFamily: fontFamily.appTextBold,
   // },
-  
+
   otpContainerTopView: {
     height: heightPixel(100),
   },
@@ -73,10 +64,9 @@ export const styles = StyleSheet.create({
     borderRadius: widthPixel(4),
     color: colors.lightBlack,
     backgroundColor: colors.greyLight1,
-   
   },
   texthead: {
-    alignItems: 'center', 
+    alignItems: 'center',
   },
   dontHaveText: {
     color: colors.lightText,
@@ -85,19 +75,18 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: -5,
   },
-  resend:{
-flexDirection:'row',
-gap:7,
+  resend: {
+    flexDirection: 'row',
+    gap: 7,
   },
   otptimer: {
-    textDecorationLine:'underline'
+    textDecorationLine: 'underline',
   },
   spanedit: {
     color: colors.theme,
   },
   pv30: {
-    
-    alignItems:'center',
-    marginTop:100,
+    alignItems: 'center',
+    marginTop: 100,
   },
 });

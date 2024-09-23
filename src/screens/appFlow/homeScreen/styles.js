@@ -1,17 +1,18 @@
 import {StatusBar, StyleSheet} from 'react-native';
 import {colors, fontFamily, heightPixel, widthPixel} from '../../../services';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.white,
-    // marginTop: StatusBar.currentHeight,
+    marginTop: StatusBar.currentHeight,
   },
   wrapper: {
     // flex: 1,
     padding: 15,
-    // marginTop: -20,
+    // marginTop: 10,
   },
 
   head: {
@@ -205,6 +206,7 @@ export const styles = StyleSheet.create({
     marginBottom: 10,
   },
   getreward: {
+    backgroundColor: colors.white,
     gap: -10,
   },
   mainscanbar: {

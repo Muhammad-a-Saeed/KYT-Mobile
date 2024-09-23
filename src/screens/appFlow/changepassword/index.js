@@ -5,7 +5,7 @@ import {styles} from './styles';
 import {Header, Button, Background} from '../../../components';
 import {CustomInput} from '../../../components/custominput';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
-const Resetpasword = ({navigation}) => {
+const ChangePassword = ({navigation}) => {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
 
@@ -23,10 +23,16 @@ const Resetpasword = ({navigation}) => {
           contentContainerStyle={styles.fg1}>
           <View style={[styles.wrapper]}>
             <View>
-              <Text style={styles.title}>Reset Password</Text>
-              <Text style={styles.etext}>Set your new password</Text>
+              <Text style={styles.title}>Change Password</Text>
+              <Text style={styles.etext}>Change your password</Text>
 
               <View style={styles.custominput}>
+                <CustomInput
+                  // onChangeText={text => setPassword(text)}
+                  placeholder={'Old Password'}
+                  rightIcon={true}
+                  leftIcon={appIcons.Lock}
+                />
                 <CustomInput
                   onChangeText={text => setPassword(text)}
                   placeholder={'New Password'}
@@ -42,7 +48,7 @@ const Resetpasword = ({navigation}) => {
               </View>
             </View>
             <View style={styles.pv30}>
-              <Button onPress={() => navigation.navigate(routes.signin)}>
+              <Button onPress={() => navigation.navigate(routes.profile)}>
                 Continue
               </Button>
             </View>
@@ -53,4 +59,4 @@ const Resetpasword = ({navigation}) => {
   );
 };
 
-export default Resetpasword;
+export default ChangePassword;

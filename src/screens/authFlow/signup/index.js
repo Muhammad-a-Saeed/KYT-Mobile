@@ -32,82 +32,82 @@ const SignupScreen = ({navigation}) => {
   ];
   return (
     <View style={[styles.container]}>
-      {/* <Background> */}
-      <StatusBar backgroundColor={colors.background} barStyle="dark-content" />
-      <Header mainLogo={true} />
-      <KeyboardAwareScrollView
-        keyboardShouldPersistTaps="always"
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={styles.fg1}>
-        <View style={[styles.wrapper]}>
-          <Text style={styles.title}>Sign Up</Text>
-          <Text style={[styles.title2]}>Create new account</Text>
+      <Background>
+        {/* <StatusBar backgroundColor={colors.black} barStyle="dark-content" /> */}
+        <Header mainLogo={true} />
+        <KeyboardAwareScrollView
+          keyboardShouldPersistTaps="always"
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={styles.fg1}>
+          <View style={[styles.wrapper]}>
+            <Text style={styles.title}>Sign Up</Text>
+            <Text style={[styles.title2]}>Create new account</Text>
 
-          <View style={styles.custominput}>
-            <CustomInput
-              errorText={nameValue}
-              onChangeText={text => setName(text)}
-              placeholder={'Full Name'}
-              leftIcon={appIcons.profileTab}
-            />
-            <CustomInput
-              onChangeText={text => setEmail(text)}
-              placeholder={'Email ID'}
-              leftIcon={appIcons.Message}
-            />
-            <CustomInput
-              placeholder={'New password'}
-              leftIcon={appIcons.Lock}
-              righteye={appIcons.hideeye}
-              onChangeText={text => setPassword(text)}
-            />
-            <CustomInput
-              placeholder={'Confirm Password'}
-              leftIcon={appIcons.Lock}
-              rightIcon={appIcons.Show}
-              onChangeText={text => setConfirmPassword(text)}
-            />
-            <CustomInput
-              placeholder={'Ref Code '}
-              leftIcon={appIcons.dollar}
-              // onChangeText={text => setConfirmPassword(text)}
-            />
-          </View>
-          <View style={styles.pv30}>
-            <Button onPress={() => navigation.navigate(routes.profilesetup)}>
-              CONTINUE
-            </Button>
-          </View>
-          <View style={styles.ormain}>
-            <View style={styles.line1}></View>
-            <View>
-              <Text style={styles.ortext}>OR LOGIN WITH</Text>
+            <View style={styles.custominput}>
+              <CustomInput
+                errorText={nameValue}
+                onChangeText={text => setName(text)}
+                placeholder={'Full Name'}
+                leftIcon={appIcons.profileTab}
+              />
+              <CustomInput
+                // onChangeText={text => setEmail(text)}
+                placeholder={'Email ID'}
+                leftIcon={appIcons.Message}
+              />
+              <CustomInput
+                placeholder={'New password'}
+                leftIcon={appIcons.Lock}
+                righteye={appIcons.hideeye}
+                // onChangeText={text => setPassword(text)}
+              />
+              <CustomInput
+                placeholder={'Confirm Password'}
+                leftIcon={appIcons.Lock}
+                rightIcon={appIcons.Show}
+                onChangeText={text => setConfirmPassword(text)}
+              />
+              <CustomInput
+                placeholder={'Ref Code '}
+                leftIcon={appIcons.dollar}
+                // onChangeText={text => setConfirmPassword(text)}
+              />
             </View>
-            <View style={styles.line1}></View>
-          </View>
+            <View style={styles.pv30}>
+              <Button onPress={() => navigation.navigate(routes.profilesetup)}>
+                CONTINUE
+              </Button>
+            </View>
+            <View style={styles.ormain}>
+              <View style={styles.line1}></View>
+              <View>
+                <Text style={styles.ortext}>OR LOGIN WITH</Text>
+              </View>
+              <View style={styles.line1}></View>
+            </View>
 
-          <View style={styles.rowEvenly}>
-            {socialArray.map((item, index) => (
-              <TouchableOpacity
-                onPress={item.onPress}
-                key={index}
-                style={styles.socialView}>
-                <Image source={item.icon} style={styles.socialIcon} />
-              </TouchableOpacity>
-            ))}
-          </View>
+            <View style={styles.rowEvenly}>
+              {socialArray.map((item, index) => (
+                <TouchableOpacity
+                  onPress={item.onPress}
+                  key={index}
+                  style={styles.socialView}>
+                  <Image source={item.icon} style={styles.socialIcon} />
+                </TouchableOpacity>
+              ))}
+            </View>
 
-          <View style={styles.texthead}>
-            <Text
-              onPress={() => navigation.navigate(routes.signin)}
-              style={styles.dontHaveText}>
-              Already have an account?{' '}
-              <Text style={styles.spanedit}>Sign In</Text>
-            </Text>
+            <View style={styles.texthead}>
+              <Text
+                onPress={() => navigation.navigate(routes.signin)}
+                style={styles.dontHaveText}>
+                Already have an account?{' '}
+                <Text style={styles.spanedit}>Sign In</Text>
+              </Text>
+            </View>
           </View>
-        </View>
-      </KeyboardAwareScrollView>
-      {/* </Background> */}
+        </KeyboardAwareScrollView>
+      </Background>
     </View>
   );
 };

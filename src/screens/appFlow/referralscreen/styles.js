@@ -47,6 +47,7 @@ export const styles = StyleSheet.create({
   },
   leftIndicator: {
     position: 'absolute',
+    zIndex: 1000,
     left: 25,
     top: '50%',
     transform: [{translateY: -50}],

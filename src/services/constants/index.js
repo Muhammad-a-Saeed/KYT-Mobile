@@ -41,6 +41,7 @@ export const routes = {
   appiconscreen: 'appiconscreen',
   profilesetup: 'profilesetup',
   locationscreen: 'locationscreen',
+  changepassword: 'changepassword',
 };
 
 export const loaderStyles = {

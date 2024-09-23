@@ -34,7 +34,12 @@ const Profile = ({navigation}) => {
       label: 'Account Balance',
       route: routes.accountbalance,
     },
-    {id: '5', icon: appIcons.chngepass, label: 'Change Password'},
+    {
+      id: '5',
+      icon: appIcons.chngepass,
+      label: 'Change Password',
+      route: routes.changepassword,
+    },
     {
       id: '6',
       icon: appIcons.pronotification,

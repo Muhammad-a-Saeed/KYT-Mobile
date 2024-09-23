@@ -8,6 +8,7 @@ const Custumredeemreward = ({
   rewardType,
   starIcon,
   shuffle,
+  backgroundColor = colors.white,
   starBackgroundColor,
   borderRadius = 16,
   elevation = 2,
@@ -18,7 +19,10 @@ const Custumredeemreward = ({
         style={[
           styles.starContainer,
           {flexDirection: shuffle ? 'row-reverse' : 'row'},
-          {backgroundColor: starBackgroundColor || colors.white},
+          {
+            backgroundColor:
+              starBackgroundColor || colors.white || colors.theme,
+          },
         ]}>
         <Text style={styles.starCount}>{starCount}</Text>
         <Image source={starIcon} style={styles.starIcon} />

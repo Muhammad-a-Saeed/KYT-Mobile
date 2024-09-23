@@ -18,7 +18,7 @@ import PrivacyPolicy from './privacypolicy';
 import AppIcon from './appiconscreen';
 import ProfileSetup from './profilesetup';
 import AddAddress from './addaddress';
-// import MapScreen from './mapscreen';
+import ChangePassword from './changepassword';
 
 import Report from './report';
 
@@ -43,6 +43,6 @@ export {
   AppIcon,
   ProfileSetup,
   AddAddress,
-  // MapScreen,
+  ChangePassword,
   // Report
 };

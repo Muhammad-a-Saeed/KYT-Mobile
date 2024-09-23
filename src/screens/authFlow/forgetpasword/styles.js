@@ -12,10 +12,13 @@ export const styles = StyleSheet.create({
     flexGrow: 1,
   },
   wrapper: {
+    zIndex: 1,
     flex: 1,
-    paddingBottom: heightPixel(20),
+    padding: heightPixel(20),
+    marginTop: 10,
+    // alignItems: 'center',
     // backgroundColor: colors.errorColor,
-    justifyContent: 'flex-end',
+    // justifyContent: 'flex-end',
   },
 
   etext: {
@@ -34,7 +37,7 @@ export const styles = StyleSheet.create({
   },
 
   pv30: {
-    // flex: 1,
+    alignItems: 'center',
     paddingVertical: heightPixel(180),
   },
 });

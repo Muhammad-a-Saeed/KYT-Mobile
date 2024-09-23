@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import {colors, routes, appIcons} from '../../../services';
 import {styles} from './styles';
-import {Header, Button} from '../../../components';
+import {Header, Button, Background} from '../../../components';
 import {CustomInput} from '../../../components/custominput';
 import 'react-native-gesture-handler';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
@@ -31,9 +31,10 @@ const Signin = ({navigation}) => {
     },
   ];
   return (
-    <SafeAreaView style={{flex: 1, backgroundColor: colors.white}}>
-      <View style={[styles.container]}>
-        <StatusBar backgroundColor={colors.white} barStyle="dark-content" />
+    // <SafeAreaView style={{flex: 1, backgroundColor: colors.white}}>
+    <View style={[styles.container]}>
+      <Background>
+        {/* <StatusBar backgroundColor={colors.white} barStyle="dark-content" /> */}
         <Header mainLogo={true} />
         <KeyboardAwareScrollView
           keyboardShouldPersistTaps="always"
@@ -74,7 +75,9 @@ const Signin = ({navigation}) => {
             </View>
 
             <View style={styles.pv30}>
-              <Button onPress={() => navigation.navigate()}>CONTINUE</Button>
+              <Button onPress={() => navigation.navigate(routes.homeScreen)}>
+                CONTINUE
+              </Button>
             </View>
 
             <View style={styles.ormain}>
@@ -106,8 +109,8 @@ const Signin = ({navigation}) => {
             </View>
           </View>
         </KeyboardAwareScrollView>
-      </View>
-    </SafeAreaView>
+      </Background>
+    </View>
   );
 };
 
