@@ -1,8 +1,8 @@
 import React from 'react';
 import {View, Text, StatusBar, ScrollView, Image, FlatList} from 'react-native';
 
-import {appIcons, colors} from '../../../services';
-import {Custumredeemreward, Header} from '../../../components';
+import {appIcons, colors, routes} from '../../../services';
+import {Button, Custumredeemreward, Header} from '../../../components';
 import {styles} from './styles';
 import NotificationList from '../../../components/custumlist';
 
@@ -38,24 +38,6 @@ const RedeemReward = ({navigation}) => {
       rewardType: 'Discount Coupon',
       starIcon: appIcons.staricon,
     },
-    {
-      id: '6',
-      starCount: 60,
-      rewardType: 'Discount Coupon',
-      starIcon: appIcons.staricon,
-    },
-    {
-      id: '7',
-      starCount: 60,
-      rewardType: 'Discount Coupon',
-      starIcon: appIcons.staricon,
-    },
-    {
-      id: '8',
-      starCount: 60,
-      rewardType: 'Discount Coupon',
-      starIcon: appIcons.staricon,
-    },
   ];
 
   const renderItem = ({item}) => (
@@ -87,6 +69,11 @@ const RedeemReward = ({navigation}) => {
             contentContainerStyle={styles.listContainer}
             showsVerticalScrollIndicator={false}
           />
+          <View style={styles.pv30}>
+            <Button onPress={() => navigation.navigate(routes.qrgenerator)}>
+              Redeem
+            </Button>
+          </View>
         </View>
       </View>
     </View>

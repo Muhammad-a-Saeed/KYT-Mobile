@@ -8,7 +8,7 @@ import {
   StatusBar,
 } from 'react-native';
 import {styles} from './styles';
-import {appIcons, colors, routes} from '../../../services';
+import {appIcons, colors, routes, widthPixel} from '../../../services';
 import {CustomInput} from '../../../components/custominput';
 import {CustomLinks} from '../../../components';
 
@@ -54,8 +54,9 @@ const InviteFriend = ({navigation}) => {
         onPress={() => navigation.navigate(routes.contactscreen)}>
         <CustomInput
           style={styles.inputField}
+          onPressIcon={() => navigation.navigate(routes.contactscreen)}
           placeholder="Search Contacts"
-          width={360}
+          width={widthPixel(340)}
           height={48}
           borderColor={colors.dividerColor}
           borderLeftWidth={1}

@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.white,
-    marginTop: StatusBar.currentHeight,
+    // marginTop: StatusBar.currentHeight,
   },
   wrapper: {
     // flex: 1,
@@ -206,8 +206,8 @@ export const styles = StyleSheet.create({
     marginBottom: 10,
   },
   getreward: {
-    backgroundColor: colors.white,
-    gap: -10,
+    // backgroundColor: colors.,
+    // gap: 30,
   },
   mainscanbar: {
     position: 'absolute',

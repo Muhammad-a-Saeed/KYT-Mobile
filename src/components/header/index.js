@@ -29,17 +29,18 @@ const Header = ({
   SearchBar,
   wellcome,
   Notification,
+  marginTop = 0,
 }) => {
   const navigation = useNavigation();
   return (
-    <View style={[styles.container]}>
+    <View style={{...styles.container, marginTop}}>
       <View>
         <View style={styles.rowCenter}>
           {leftIcon && (
-            <TouchableOpacity style={[styles.goBack]}>
-              <TouchableOpacity onPress={() => navigation.goBack()}>
-                <Image style={styles.iconStyle} source={appIcons.arrowback} />
-              </TouchableOpacity>
+            <TouchableOpacity
+              style={[styles.goBack]}
+              onPress={() => navigation.goBack()}>
+              <Image style={styles.iconStyle} source={appIcons.arrowback} />
             </TouchableOpacity>
           )}
         </View>
@@ -55,7 +56,7 @@ const Header = ({
           {hintLogo && <Image style={styles.logo} source={appIcons.hint} />}
         </View>
         <View>{title && <Text style={[styles.titleStyle]}>{title}</Text>}</View>
-        <View>
+        <View style={{marginTop}}>
           {titleleft && (
             <Text style={[styles.titleleftStyle]}>{titleleft}</Text>
           )}
@@ -153,8 +154,8 @@ const styles = StyleSheet.create({
     fontFamily: fontFamily.appTextSemiBold,
     marginHorizontal: 50,
     marginTop: -33,
-    // width: widthPixel(270),
-    // textAlign: 'left',
+    width: widthPixel(270),
+    textAlign: 'left',
     // backgroundColor: 'red',
   },
   wellcomemain: {

@@ -83,7 +83,8 @@ export const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   CustomInput: {
-    marginTop: 35,
+    marginTop: 25,
+    padding: 10,
     alignItems: 'center',
   },
   orContainer: {

@@ -60,7 +60,7 @@ const ProfileSetup = ({navigation, onCalendarPress}) => {
   return (
     <View style={[styles.container]}>
       <Background>
-        {/* <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} /> */}
+        {/* <StatusBar backgroundColor={colors.textRed} /> */}
         <Header title={'Setup Your Profile'} />
         <KeyboardAwareScrollView
           keyboardShouldPersistTaps="always"

@@ -12,11 +12,18 @@ import {
 } from 'react-native';
 import {colors, appIcons, routes} from '../../../services';
 import * as Progress from 'react-native-progress';
-import {Button, Header} from '../../../components';
+import {
+  Button,
+  Header,
+  HomescreenAlert,
+  ReferrelAlert,
+} from '../../../components';
 import {styles} from './styles';
 
 const ReferralScreen = ({navigation}) => {
+  const [Alert, setAlert] = useState(false);
   const [medalIndex, setMedalIndex] = useState(0);
+  const [currentMedal, setCurrentMedal] = useState('');
   const medals = [
     {name: 'Bronze', image: appIcons.bronze, referrals: '1/5'},
     {name: 'Silver', image: appIcons.silver, referrals: '3/5'},
@@ -25,23 +32,29 @@ const ReferralScreen = ({navigation}) => {
   const listRef = useRef(null);
 
   const handleNextMedal = () => {
-    console.log('loggggnext', handleNextMedal);
     if (medalIndex < medals.length - 1) {
       setMedalIndex(medalIndex + 1);
-      listRef.current.scrollToIndex({index: medalIndex + 1, animated: true});
+
+      // Show alert based on the next medal index
+      if (medalIndex + 1 === 1) {
+        // From Bronze to Silver
+        setCurrentMedal('Silver');
+        setAlert(true);
+      } else if (medalIndex + 1 === 2) {
+        // From Silver to Gold
+        setCurrentMedal('Gold');
+        setAlert(true);
+      }
     }
   };
 
   const handlePrevMedal = () => {
-    console.log('Current Medal Index (Prev):', handlePrevMedal);
+    console.log('qwertyu', handlePrevMedal);
     if (medalIndex > 0) {
-      setMedalIndex(prevIndex => {
-        const newIndex = prevIndex - 1;
-        listRef.current.scrollToIndex({index: newIndex, animated: true});
-        return newIndex;
-      });
+      setMedalIndex(medalIndex - 1);
     }
   };
+
   const renderItem = ({item}) => (
     <View style={styles.medalContainer}>
       <Image source={item.image} style={styles.medalImage} />
@@ -52,11 +65,43 @@ const ReferralScreen = ({navigation}) => {
     const newIndex = Math.round(event.nativeEvent.contentOffset.x / 350);
     setMedalIndex(newIndex);
   };
+  const showAlert = () => {
+    setAlert(true);
+  };
+  const alerthide = () => {
+    setAlert(false);
+    // navigation.navigate(routes.locationscreen);
+  };
 
   return (
     <View style={styles.head}>
       <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
       <Header leftIcon={true} titleleft={'Referrel'} />
+      {currentMedal === 'Silver' && (
+        <ReferrelAlert
+          visible={Alert}
+          onClose={alerthide}
+          backgroundImage={appIcons.localert}
+          icon={appIcons.silver}
+          descriptionText="You achieved the"
+          congratsText="Congratulations"
+          medalText="Silver"
+          onText={'Ok'}
+        />
+      )}
+
+      {currentMedal === 'Gold' && (
+        <HomescreenAlert
+          visible={Alert}
+          onClose={alerthide}
+          image={appIcons.goldcard}
+          starCount="50"
+          star={appIcons.dollar}
+          message="Congratulations! You've referred a friend and received a $50 gift card"
+          buttonText="OK"
+        />
+      )}
+
       <View style={styles.container}>
         <Text style={styles.medalTitle}>{medals[medalIndex].name}</Text>
         <Text style={styles.subText}>

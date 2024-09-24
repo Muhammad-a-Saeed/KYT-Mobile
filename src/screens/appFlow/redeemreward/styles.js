@@ -6,12 +6,14 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.white,
-    marginTop: StatusBar.currentHeight,
+
+    // marginTop: StatusBar.currentHeight,
   },
   centeredContent: {
     flex: 1,
     alignItems: 'center',
-    marginTop: 20,
+    marginTop: 10,
+    // backgroundColor: 'red',
   },
   starLevelText: {
     fontSize: responsiveFontSize(2.1),
@@ -47,6 +49,7 @@ export const styles = StyleSheet.create({
 
   frontdiv: {
     flex: 1,
+    paddingTop: 5,
     width: widthPixel(390),
     height: heightPixel(960),
     backgroundColor: colors.white,
@@ -60,5 +63,9 @@ export const styles = StyleSheet.create({
     marginTop: 20,
     padding: 5,
     gap: 20,
+  },
+  pv30: {
+    // marginTop: -40,
+    alignItems: 'center',
   },
 });

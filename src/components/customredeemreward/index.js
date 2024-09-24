@@ -14,7 +14,8 @@ const Custumredeemreward = ({
   elevation = 2,
 }) => {
   return (
-    <View style={{...styles.container, borderRadius, elevation}}>
+    <View
+      style={{...styles.container, borderRadius, elevation, backgroundColor}}>
       <View
         style={[
           styles.starContainer,
@@ -72,7 +73,7 @@ const styles = StyleSheet.create({
     flex: 5,
     fontSize: responsiveFontSize(1.6),
     marginLeft: 20,
-    color: colors.lightText,
+    color: colors.mediumblack,
     fontFamily: fontFamily.appTextRegular,
     textAlign: 'left',
   },

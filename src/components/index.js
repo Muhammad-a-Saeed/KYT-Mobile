@@ -22,6 +22,7 @@ import CustomLinks from './custumlinks';
 import ProfileList from './profilelist';
 import ReferralItem from './referrelcard';
 import Appicon from './appicon';
+import ReferrelAlert from './referrelalert';
 
 export {
   Button,
@@ -47,4 +48,5 @@ export {
   ProfileList,
   ReferralItem,
   Appicon,
+  ReferrelAlert,
 };

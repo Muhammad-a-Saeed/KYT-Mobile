@@ -13,6 +13,7 @@ import {
   FriendScreen,
   HomeScreen,
   InviteFriend,
+  LocationScreen,
   Notification,
   PrivacyPolicy,
   Profile,
@@ -33,7 +34,7 @@ export const MainNavigator = () => {
   return (
     <NavigationContainer>
       <MyStack.Navigator
-        initialRouteName={routes.signup}
+        initialRouteName={routes.homeScreen}
         screenOptions={{headerShown: false}}>
         <MyStack.Screen name={routes.auth} component={AuthNavigation} />
         <MyStack.Screen name={routes.homeScreen} component={HomeScreen} />
@@ -68,6 +69,10 @@ export const MainNavigator = () => {
         <MyStack.Screen name={routes.appiconscreen} component={AppIcon} />
         <MyStack.Screen name={routes.profilesetup} component={ProfileSetup} />
         <MyStack.Screen name={routes.addaddress} component={AddAddress} />
+        <MyStack.Screen
+          name={routes.locationscreen}
+          component={LocationScreen}
+        />
         <MyStack.Screen name={routes.mapscreen} component={MapScreen} />
         <MyStack.Screen
           name={routes.changepassword}

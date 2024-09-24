@@ -10,8 +10,10 @@ import {
 } from 'react-native';
 import {widthPixel, heightPixel, fontFamily, colors} from '../../services';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
+import {useNavigation} from '@react-navigation/native';
 
 const Head = ({backgroundImage, leftArrowIcon, logo, title}) => {
+  const navigation = useNavigation();
   return (
     <ImageBackground source={backgroundImage} style={styles.headerContainer}>
       <StatusBar
@@ -19,7 +21,9 @@ const Head = ({backgroundImage, leftArrowIcon, logo, title}) => {
         backgroundColor="transparent"
         barStyle={'dark-content'}
       />
-      <TouchableOpacity style={styles.leftArrow}>
+      <TouchableOpacity
+        style={styles.leftArrow}
+        onPress={() => navigation.goBack()}>
         <Image source={leftArrowIcon} style={styles.arrowIcon} />
       </TouchableOpacity>
 

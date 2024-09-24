@@ -40,7 +40,7 @@ const HomescreenAlert = ({
           </View>
           <Text style={styles.congratulationText}>{message}</Text>
           <TouchableOpacity style={styles.pv30} onPress={onClose}>
-            <Button onPress={onClose} width={widthPixel(280)} height={50}>
+            <Button onPress={onClose} width={widthPixel(280)} height={45}>
               {buttonText}
             </Button>
           </TouchableOpacity>
@@ -79,9 +79,9 @@ const styles = StyleSheet.create({
   },
   starText: {
     color: colors.mediumblack,
-    fontFamily: fontFamily.appTextItalic,
-    fontSize: responsiveFontSize(2.6),
-    paddingTop: 6,
+    fontFamily: fontFamily.appTextSemiBold,
+    fontSize: responsiveFontSize(2.9),
+    paddingTop: 4,
     marginRight: 3,
   },
   starIcon: {

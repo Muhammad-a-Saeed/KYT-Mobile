@@ -35,8 +35,8 @@ const RedeemCard = ({
         <View style={styles.button}>
           <Button
             onPress={onPress}
-            width={widthPixel(110)}
-            height={35}
+            width={widthPixel(100)}
+            height={38}
             backgroundColor={buttonBackgroundColor}
             labelColor={buttonLabelColor}
             borderRadius={14}

@@ -1,5 +1,6 @@
 export const colors = {
   theme: '#D1AA66',
+  theme1: '#f9b43c',
   themeSecondary: '#0081FF',
   statusBarLight: '#FDF9F2',
   lightBackground: '#f5f5f5',
@@ -13,13 +14,13 @@ export const colors = {
   grey5: '#FAFAFA',
   dividerColor: '#DADADA',
   dividerColor2: '#C7C7C7',
-  dividerColor3:'#F0E4D1',
+  dividerColor3: '#F0E4D1',
   green: '#4CC26C',
   greyLight: '#E9E9E9',
-  greyLight1:'#F4F3F3',
+  greyLight1: '#F4F3F3',
   errorColor: '#FF0000',
-  textRed: "#DA2828",
+  textRed: '#DA2828',
   placeholderColor: '#cccccc',
-  pinbackground:'#FDF2DF',
-  greendark:'#02464A',
-}
+  pinbackground: '#FDF2DF',
+  greendark: '#02464A',
+};

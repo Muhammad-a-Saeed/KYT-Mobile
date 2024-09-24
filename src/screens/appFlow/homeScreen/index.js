@@ -171,7 +171,7 @@ const HomeScreen = ({}) => {
             <View>
               <Progress.Bar
                 progress={0.4}
-                width={185}
+                width={widthPixel(175)}
                 borderColor={colors.theme}
                 borderWidth={1}
                 color={colors.theme}
@@ -273,7 +273,7 @@ const HomeScreen = ({}) => {
                     Detail
                   </Button>
                   <Button
-                    onPress={() => navigation.navigate(routes.qrgenerator)}
+                    onPress={() => navigation.navigate(routes.redeemreward)}
                     width={widthPixel(100)}
                     height={40}
                     backgroundColor={
@@ -289,57 +289,91 @@ const HomeScreen = ({}) => {
                 </View>
 
                 {showRewards && (
-                  <View style={styles.getreward}>
+                  <View
+                  // style={[styles.getreward, {backgroundColor: colors.gold}]}
+                  >
                     <Text style={styles.topText}>
                       Reward you can get with stars
                     </Text>
                     {/* List of rewards */}
                     <Custumredeemreward
                       starCount={60}
-                      // backgroundColor={colors.theme}
+                      backgroundColor={colors.theme1}
+                      starBackgroundColor={colors.theme1}
+                      shuffle={true}
                       rewardType="Reward description"
+                      borderRadius={0}
+                      elevation={0}
                       starIcon={appIcons.staricon}
                     />
                     <Custumredeemreward
                       starCount={60}
+                      shuffle={true}
+                      backgroundColor={colors.theme1}
+                      starBackgroundColor={colors.theme1}
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.staricon}
+                      borderRadius={0}
                       elevation={0}
                     />
                     <Custumredeemreward
                       starCount={60}
+                      shuffle={true}
+                      backgroundColor={colors.theme1}
+                      starBackgroundColor={colors.theme1}
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.staricon}
+                      borderRadius={0}
                       elevation={0}
                     />
                     <Custumredeemreward
                       starCount={400}
+                      shuffle={true}
+                      backgroundColor={colors.theme1}
+                      starBackgroundColor={colors.theme1}
                       rewardType="In-Office Whitening, Invisalign Whitening Tray, or Retainers."
                       starIcon={appIcons.staricon}
+                      borderRadius={0}
                       elevation={0}
                     />
                     <Custumredeemreward
                       starCount={60}
+                      shuffle={true}
+                      backgroundColor={colors.theme1}
+                      starBackgroundColor={colors.theme1}
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.staricon}
+                      borderRadius={0}
                       elevation={0}
                     />
                     <Custumredeemreward
                       starCount={60}
+                      shuffle={true}
+                      backgroundColor={colors.theme1}
+                      starBackgroundColor={colors.theme1}
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.staricon}
+                      borderRadius={0}
                       elevation={0}
                     />
                     <Custumredeemreward
                       starCount={60}
+                      shuffle={true}
+                      backgroundColor={colors.theme1}
+                      starBackgroundColor={colors.theme1}
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.staricon}
+                      borderRadius={0}
                       elevation={0}
                     />
                     <Custumredeemreward
                       starCount={1000}
+                      shuffle={true}
+                      backgroundColor={colors.theme1}
+                      starBackgroundColor={colors.theme1}
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.staricon}
+                      borderRadius={0}
                       elevation={0}
                     />
                     {/* Add more Custumredeemreward components as needed */}
@@ -464,7 +498,7 @@ const HomeScreen = ({}) => {
                     Detail
                   </Button>
                   <Button
-                    onPress={() => navigation.navigate(routes.qrgenerator)}
+                    onPress={() => navigation.navigate(routes.redeemreward)}
                     width={widthPixel(100)}
                     height={40}
                     backgroundColor={
@@ -487,49 +521,66 @@ const HomeScreen = ({}) => {
                     {/* List of rewards */}
                     <Custumredeemreward
                       starCount={60}
-                      rewardType="Reward description 1"
+                      elevation={0}
+                      shuffle={true}
+                      rewardType="Reward description"
+                      borderRadius={0}
                       starIcon={appIcons.staricon}
                     />
                     <Custumredeemreward
                       starCount={60}
+                      shuffle={true}
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.staricon}
+                      borderRadius={0}
                       elevation={0}
                     />
                     <Custumredeemreward
                       starCount={60}
+                      shuffle={true}
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.staricon}
+                      borderRadius={0}
                       elevation={0}
                     />
                     <Custumredeemreward
                       starCount={400}
+                      shuffle={true}
                       rewardType="In-Office Whitening, Invisalign Whitening Tray, or Retainers."
                       starIcon={appIcons.staricon}
+                      borderRadius={0}
                       elevation={0}
                     />
                     <Custumredeemreward
                       starCount={60}
+                      shuffle={true}
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.staricon}
+                      borderRadius={0}
                       elevation={0}
                     />
                     <Custumredeemreward
                       starCount={60}
+                      shuffle={true}
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.staricon}
+                      borderRadius={0}
                       elevation={0}
                     />
                     <Custumredeemreward
                       starCount={60}
+                      shuffle={true}
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.staricon}
+                      borderRadius={0}
                       elevation={0}
                     />
                     <Custumredeemreward
                       starCount={1000}
+                      shuffle={true}
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.staricon}
+                      borderRadius={0}
                       elevation={0}
                     />
                     {/* Add more Custumredeemreward components as needed */}
@@ -576,6 +627,7 @@ const HomeScreen = ({}) => {
                   descriptionColor={colors.lightBlack}
                   buttonLabelColor={colors.white}
                   buttonText={'Invite now'}
+                  onPress={() => navigation.navigate(routes.invitefriend)}
                   buttonBackgroundColor={['#E9BD5A', '#E9BD5A']}
                 />
                 {/* Add more RedeemCard components as needed */}
