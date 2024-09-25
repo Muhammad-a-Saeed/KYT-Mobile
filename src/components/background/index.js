@@ -1,26 +1,22 @@
 import React from 'react';
-import {View, StyleSheet, StatusBar} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import {colors} from '../../services';
 
 const Background = ({children}) => {
   return (
     <View style={styles.container}>
-      {/* <StatusBar backgroundColor={colors.white} barStyle="dark-content" /> */}
-
       <LinearGradient
         colors={['rgba(216,184,135,0.7)', 'rgba(252,252,251,0)']}
-        locations={[0, 0.3]} // 70% stop similar to CSS
-        start={{x: 0.29, y: 0.1}} // Approximation of 128 degrees
+        locations={[0, 0.3]}
+        start={{x: 0.29, y: 0.1}}
         end={{x: 1.2, y: 1}}
         style={styles.gradientTopLeft}
       />
-
       {/* Bottom-Right Gradient */}
       <LinearGradient
         colors={['rgba(216,184,135,0.7)', 'rgba(252,252,251,0)']}
-        locations={[0, 0.7]} // 70% stop similar to CSS
-        start={{x: 1, y: 1.2}} // Approximates the opposite direction of 128 degrees
+        locations={[0, 0.7]}
+        start={{x: 1, y: 1.2}}
         end={{x: 0.2, y: 0.22}}
         style={styles.gradientBottomRight}
       />
@@ -33,7 +29,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#FFFFFF',
-    // White background
   },
   gradientTopLeft: {
     // zIndex: 1,
@@ -54,9 +49,6 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     flex: 1,
-    // justifyContent: 'center',
-    // alignItems: 'center',
-    // paddingHorizontal: 20,
   },
 });
 

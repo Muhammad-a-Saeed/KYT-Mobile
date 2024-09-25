@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import {View, Text, StatusBar, Image} from 'react-native';
+import {View} from 'react-native';
 
-import {appIcons, colors, routes} from '../../../services';
+import {routes} from '../../../services';
 import {
   AddButton,
   AddressCard,

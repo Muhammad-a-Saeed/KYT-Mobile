@@ -5,8 +5,17 @@ import {responsiveFontSize} from 'react-native-responsive-dimensions';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.white,
+    // backgroundColor: colors.white,
     alignContent: 'center',
+  },
+  Header: {},
+  mainlogo: {
+    marginTop: StatusBar.currentHeight + 49,
+    alignSelf: 'center',
+    width: widthPixel(100),
+    height: widthPixel(85),
+    resizeMode: 'contain',
+    // backgroundColor: 'red',
   },
   fg1: {
     flexGrow: 1,
@@ -56,7 +65,6 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-around',
     marginHorizontal: 90,
     marginTop: 35,
-    backgroundColor: colors.white,
   },
   socialView: {
     width: widthPixel(60),

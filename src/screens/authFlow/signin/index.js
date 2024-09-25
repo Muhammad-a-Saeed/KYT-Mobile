@@ -1,15 +1,8 @@
 import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  StatusBar,
-  Image,
-  TouchableOpacity,
-  SafeAreaView,
-} from 'react-native';
-import {colors, routes, appIcons} from '../../../services';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {routes, appIcons} from '../../../services';
 import {styles} from './styles';
-import {Header, Button, Background} from '../../../components';
+import {Button, Background} from '../../../components';
 import {CustomInput} from '../../../components/custominput';
 import 'react-native-gesture-handler';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
@@ -31,11 +24,11 @@ const Signin = ({navigation}) => {
     },
   ];
   return (
-    // <SafeAreaView style={{flex: 1, backgroundColor: colors.white}}>
     <View style={[styles.container]}>
       <Background>
-        {/* <StatusBar backgroundColor={colors.white} barStyle="dark-content" /> */}
-        <Header mainLogo={true} />
+        <View style={styles.Header}>
+          <Image style={styles.mainlogo} source={appIcons.mainlogo} />
+        </View>
         <KeyboardAwareScrollView
           keyboardShouldPersistTaps="always"
           showsVerticalScrollIndicator={false}

@@ -1,7 +1,6 @@
 import React from 'react';
-import {View, Text, StatusBar, ScrollView, FlatList} from 'react-native';
-
-import {appIcons, colors} from '../../../services';
+import {View, FlatList} from 'react-native';
+import {appIcons} from '../../../services';
 import {styles} from './styles';
 import {CustomRanking, Head} from '../../../components';
 
@@ -9,7 +8,7 @@ const ProfileRanking = ({navigation}) => {
   const profileData = [
     {
       id: '1',
-      profileImage: appIcons.p1, // Adjust this to your image source
+      profileImage: appIcons.p1,
       profileName: 'John Doe',
       starRating: 1750,
     },
@@ -21,7 +20,7 @@ const ProfileRanking = ({navigation}) => {
     },
     {
       id: '3',
-      profileImage: appIcons.p1, // Adjust this to your image source
+      profileImage: appIcons.p1,
       profileName: 'John Doe',
       starRating: 1000,
     },
@@ -33,7 +32,7 @@ const ProfileRanking = ({navigation}) => {
     },
     {
       id: '5',
-      profileImage: appIcons.p1, // Adjust this to your image source
+      profileImage: appIcons.p1,
       profileName: 'John Doe',
       starRating: 750,
     },
@@ -45,7 +44,7 @@ const ProfileRanking = ({navigation}) => {
     },
     {
       id: '7',
-      profileImage: appIcons.p1, // Adjust this to your image source
+      profileImage: appIcons.p1,
       profileName: 'John Doe',
       starRating: 450,
     },

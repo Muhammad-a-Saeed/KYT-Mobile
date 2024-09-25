@@ -4,10 +4,8 @@ import {
   Text,
   Image,
   Pressable,
-  StyleSheet,
   TouchableOpacity,
   FlatList,
-  Touchable,
   StatusBar,
 } from 'react-native';
 import {colors, appIcons, routes} from '../../../services';
@@ -35,13 +33,10 @@ const ReferralScreen = ({navigation}) => {
     if (medalIndex < medals.length - 1) {
       setMedalIndex(medalIndex + 1);
 
-      // Show alert based on the next medal index
       if (medalIndex + 1 === 1) {
-        // From Bronze to Silver
         setCurrentMedal('Silver');
         setAlert(true);
       } else if (medalIndex + 1 === 2) {
-        // From Silver to Gold
         setCurrentMedal('Gold');
         setAlert(true);
       }

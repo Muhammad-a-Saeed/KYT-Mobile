@@ -9,8 +9,7 @@ import {
   Pressable,
 } from 'react-native';
 import {styles} from './styles';
-import {colors, appIcons, routes} from '../../../services';
-import Button from '../../../components/button';
+import {appIcons, routes} from '../../../services';
 import {Header} from '../../../components';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 const {width} = Dimensions.get('window');
@@ -18,7 +17,6 @@ const Onboarding = ({navigation}) => {
   const [currentIndex, setcurrentIndex] = useState(0);
   const listRef = useRef(null);
   const [buttonImage, setButtonImage] = useState(appIcons.Button1);
- 
 
   const onboardingArray = [
     {
@@ -49,7 +47,7 @@ const Onboarding = ({navigation}) => {
 
     if (newIndex < onboardingArray.length) {
       setcurrentIndex(newIndex);
-      listRef.current.scrollToIndex({ index: newIndex,  });
+      listRef.current.scrollToIndex({index: newIndex});
 
       if (newIndex === 1) {
         setButtonImage(appIcons.Button2);
@@ -57,14 +55,12 @@ const Onboarding = ({navigation}) => {
         setButtonImage(appIcons.Button3);
       }
     } else {
-      navigation.navigate(routes.signup); 
+      navigation.navigate(routes.signup);
     }
   };
- 
 
   const renderItem = ({item}) => (
     <View style={styles.onboardingItem}>
-     
       <View style={styles.onboardimg}>
         {item.image2 ? (
           <Image source={item.image2} style={styles.onboardingImage2} />
@@ -88,20 +84,18 @@ const Onboarding = ({navigation}) => {
     } else if (newIndex === 2) {
       setButtonImage(appIcons.Button3);
     } else {
-      setButtonImage(appIcons.Button1); 
+      setButtonImage(appIcons.Button1);
     }
-
   };
 
   return (
     <View style={styles.container}>
-    
-        <StatusBar
-          translucent
-          backgroundColor="transparent"
-          barStyle="dark-content"
-        />
-         <Header Logo={true} />
+      <StatusBar
+        translucent
+        backgroundColor="transparent"
+        barStyle="dark-content"
+      />
+      <Header Logo={true} />
       <FlatList
         data={onboardingArray}
         renderItem={renderItem}
@@ -124,11 +118,11 @@ const Onboarding = ({navigation}) => {
         </TouchableOpacity>
 
         <View style={styles.progressContainer}>
-        <Pressable
-          onPress={handleProgressClick}
-          style={styles.progressWrapper}>
-          <Image source={buttonImage} style={styles.rightprogress} />
-        </Pressable>
+          <Pressable
+            onPress={handleProgressClick}
+            style={styles.progressWrapper}>
+            <Image source={buttonImage} style={styles.rightprogress} />
+          </Pressable>
         </View>
       </View>
     </View>

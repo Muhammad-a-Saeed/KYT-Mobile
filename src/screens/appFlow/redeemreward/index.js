@@ -1,10 +1,8 @@
 import React from 'react';
-import {View, Text, StatusBar, ScrollView, Image, FlatList} from 'react-native';
-
+import {View, Text, StatusBar, Image, FlatList} from 'react-native';
 import {appIcons, colors, routes} from '../../../services';
 import {Button, Custumredeemreward, Header} from '../../../components';
 import {styles} from './styles';
-import NotificationList from '../../../components/custumlist';
 
 const RedeemReward = ({navigation}) => {
   const rewardsData = [

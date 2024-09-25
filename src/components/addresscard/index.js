@@ -1,55 +1,53 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
-import {appIcons, colors, fontFamily, heightPixel, widthPixel,} from '../../services';
-import LinearGradient from 'react-native-linear-gradient';
-import { responsiveFontSize } from 'react-native-responsive-dimensions';
+import {
+  appIcons,
+  colors,
+  fontFamily,
+  heightPixel,
+  widthPixel,
+} from '../../services';
+import {responsiveFontSize} from 'react-native-responsive-dimensions';
 const AddressCard = props => {
-  const {Address,Addresstype, onPress} = props;
+  const {Address, Addresstype, onPress} = props;
   const [isMarked, setIsMarked] = useState(false);
 
   const handleMark = () => {
     setIsMarked(!isMarked);
   };
   return (
-<View Styel={styles.topcontainer}>
-            <View style={[styles.maincard, isMarked && styles.markedCard]}>
-                <View style={styles.innercard}>
-                    <View style={styles.stylesinnercard1}>
-                    <Image source={appIcons.homeicon} style={styles.homeicon}/>
-                    <Text style={styles.hometext}>{Addresstype}</Text>
-                    </View>
-                    <View style={styles.stylesinnercard2}>
-                    <TouchableOpacity onPress={handleMark}>
-            <Image
-              source={
-                isMarked
-                  ? appIcons.tickrectangle
-                  : appIcons.rectangle
-              }
-              style={styles.rectangle}
-            />
-          </TouchableOpacity>
-                    </View>
-                </View>
-                <View>
-                <Text style={styles.addresstext}>{Address}</Text>
-                </View>
-
-                <View  style={styles.viewmain}>
-                <Text style={styles.viewtext}>view on map</Text>
-                <TouchableOpacity onPress={onPress} >
-                <Image source={appIcons.More} style={styles.moreicon}/>
-                </TouchableOpacity>
-                </View>               
-            </View>
+    <View Styel={styles.topcontainer}>
+      <View style={[styles.maincard, isMarked && styles.markedCard]}>
+        <View style={styles.innercard}>
+          <View style={styles.stylesinnercard1}>
+            <Image source={appIcons.homeicon} style={styles.homeicon} />
+            <Text style={styles.hometext}>{Addresstype}</Text>
           </View>
-      
+          <View style={styles.stylesinnercard2}>
+            <TouchableOpacity onPress={handleMark}>
+              <Image
+                source={isMarked ? appIcons.tickrectangle : appIcons.rectangle}
+                style={styles.rectangle}
+              />
+            </TouchableOpacity>
+          </View>
+        </View>
+        <View>
+          <Text style={styles.addresstext}>{Address}</Text>
+        </View>
+
+        <View style={styles.viewmain}>
+          <Text style={styles.viewtext}>view on map</Text>
+          <TouchableOpacity onPress={onPress}>
+            <Image source={appIcons.More} style={styles.moreicon} />
+          </TouchableOpacity>
+        </View>
+      </View>
+    </View>
   );
 };
 const styles = StyleSheet.create({
-  topcontainer:{
- 
-  },
+  topcontainer: {},
   maincard: {
     width: widthPixel(350),
     minHeight: heightPixel(150),
@@ -58,11 +56,10 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     padding: 15,
   },
-  markedCard:{borderColor:colors.theme},
+  markedCard: {borderColor: colors.theme},
   innercard: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-
   },
   stylesinnercard1: {
     flexDirection: 'row',
@@ -74,7 +71,7 @@ const styles = StyleSheet.create({
     resizeMode: 'center',
   },
   hometext: {
-    width:'80%',
+    width: '80%',
     fontFamily: fontFamily.appTextItalic,
     fontSize: responsiveFontSize(2),
     color: colors.lightBlack,
@@ -86,19 +83,17 @@ const styles = StyleSheet.create({
     resizeMode: 'center',
   },
   addresstext: {
-    marginTop:10,
-    width:'90%',
+    marginTop: 10,
+    width: '90%',
     fontFamily: fontFamily.appTextRegular,
     fontSize: 15,
     color: colors.lightText,
   },
-  viewmain:{
-   width:'100%',
-  // backgroundColor:'red',
-    marginTop:25,
-   flexDirection: 'row',
+  viewmain: {
+    width: '100%',
+    marginTop: 25,
+    flexDirection: 'row',
     justifyContent: 'space-between',
-
   },
   viewtext: {
     fontFamily: fontFamily.appTextRegular,
@@ -109,7 +104,6 @@ const styles = StyleSheet.create({
     width: widthPixel(19),
     height: heightPixel(22),
     resizeMode: 'center',
-    // backgroundColor:'green'
   },
 });
 

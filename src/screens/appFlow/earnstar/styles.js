@@ -13,6 +13,7 @@ export const styles = StyleSheet.create({
     height: heightPixel(90),
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: 5,
   },
   overlay: {
     width: '100%',

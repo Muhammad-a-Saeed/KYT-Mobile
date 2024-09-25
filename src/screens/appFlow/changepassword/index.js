@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {View, Text, StatusBar} from 'react-native';
-import {colors, routes, appIcons} from '../../../services';
+import {View, Text} from 'react-native';
+import {routes, appIcons} from '../../../services';
 import {styles} from './styles';
 import {Header, Button, Background} from '../../../components';
 import {CustomInput} from '../../../components/custominput';
@@ -12,10 +12,6 @@ const ChangePassword = ({navigation}) => {
   return (
     <View style={[styles.container]}>
       <Background>
-        {/* <StatusBar
-          backgroundColor={colors.background}
-          barStyle="dark-content"
-        /> */}
         <Header leftIcon={true} mainLogo={true} />
         <KeyboardAwareScrollView
           keyboardShouldPersistTaps="always"

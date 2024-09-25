@@ -1,8 +1,8 @@
 import React from 'react';
-import {View, Text, StatusBar, ScrollView} from 'react-native';
+import {View, StatusBar, ScrollView} from 'react-native';
 
 import {appIcons, colors} from '../../../services';
-import {Customstarhistory, Head, Header} from '../../../components';
+import {Customstarhistory, Head} from '../../../components';
 import {styles} from './styles';
 
 const StarHistory = ({navigation}) => {

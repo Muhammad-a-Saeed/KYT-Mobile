@@ -1,9 +1,8 @@
 import React from 'react';
-import {View, Text, StatusBar, ScrollView, FlatList, Image} from 'react-native';
-
-import {appIcons, colors} from '../../../services';
+import {View, Text, Image} from 'react-native';
+import {appIcons} from '../../../services';
 import {styles} from './styles';
-import {CustomRanking, Head} from '../../../components';
+import {Head} from '../../../components';
 
 const QrGenerator = ({navigation}) => {
   return (

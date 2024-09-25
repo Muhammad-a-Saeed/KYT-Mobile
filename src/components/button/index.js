@@ -1,8 +1,7 @@
 import React from 'react';
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {colors, fontFamily, widthPixel} from '../../services';
 import LinearGradient from 'react-native-linear-gradient';
-import {Svg} from 'react-native-svg';
 const Button = props => {
   const {
     style,

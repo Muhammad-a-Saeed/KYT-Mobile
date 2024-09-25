@@ -1,14 +1,17 @@
 import React from 'react';
-import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
-import {appIcons, colors, fontFamily, heightPixel, widthPixel} from '../../services';
-import LinearGradient from 'react-native-linear-gradient';
+import {StyleSheet, Text, TouchableOpacity, Image} from 'react-native';
+import {
+  appIcons,
+  colors,
+  fontFamily,
+  heightPixel,
+  widthPixel,
+} from '../../services';
 const AddButton = props => {
   const {style, disable, onPress, children} = props;
   return (
-    <TouchableOpacity
-      style={[styles.topContainer]}
-      onPress={onPress}>
-      <TouchableOpacity style={styles.container}   onPress={onPress} >
+    <TouchableOpacity style={[styles.topContainer]} onPress={onPress}>
+      <TouchableOpacity style={styles.container} onPress={onPress}>
         <Image style={styles.addiconstyle} source={appIcons.addicon} />
         <Text style={styles.label}>{children}</Text>
       </TouchableOpacity>
@@ -23,28 +26,27 @@ const styles = StyleSheet.create({
     borderRadius: 18,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor:colors.black
+    backgroundColor: colors.black,
   },
   container: {
     // width:'90%',
-    flexDirection:'row',
+    flexDirection: 'row',
     height: 60,
     alignItems: 'center',
     alignSelf: 'center',
-    gap:10,
-    
+    gap: 10,
   },
   label: {
     color: colors.white,
     fontFamily: fontFamily.appTextItalic,
     fontSize: 16,
-    textAlign:'center',
+    textAlign: 'center',
   },
-  addiconstyle:{
+  addiconstyle: {
     width: widthPixel(22),
     height: heightPixel(20),
     resizeMode: 'contain',
-    marginTop:-3,
+    marginTop: -3,
   },
 });
 

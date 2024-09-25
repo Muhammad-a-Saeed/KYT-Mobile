@@ -1,10 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, StatusBar, Image} from 'react-native';
 import {appIcons, colors, routes} from '../../../services';
-import {Button} from '../../../components';
 import {styles} from './styles';
-import {CustomInput} from '../../../components/custominput';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 import GooglePlacesInput from '../../../components/googlePlacesInput';
 import {Marker} from 'react-native-maps';
 import GoogleMap from '../../../components/googleMap';

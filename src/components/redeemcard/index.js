@@ -9,7 +9,6 @@ import {
 } from '../../services';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
 import Button from '../button';
-import Rightarrow from 'react-native-svg';
 
 const RedeemCard = ({
   backgroundImage,
@@ -82,11 +81,7 @@ const RedeemCard = ({
 };
 
 const styles = StyleSheet.create({
-  topContainer: {
-    // Center the card if needed
-    // alignItems: 'center',
-    // justifyContent: 'center',
-  },
+  topContainer: {},
   cardMain: {
     width: widthPixel(355),
     minHeight: heightPixel(230),

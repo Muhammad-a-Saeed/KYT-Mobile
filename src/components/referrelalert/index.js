@@ -10,7 +10,6 @@ import {
   StatusBar,
 } from 'react-native';
 import {
-  appIcons,
   colors,
   fontFamily,
   widthPixel,

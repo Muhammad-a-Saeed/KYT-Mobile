@@ -20,7 +20,6 @@ import {
 import {
   Button,
   Custumredeemreward,
-  Header,
   HomescreenAlert,
   RedeemCard,
   RewardAlert,
@@ -31,7 +30,6 @@ import {styles} from './styles';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import * as Progress from 'react-native-progress';
 import {useNavigation} from '@react-navigation/native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 const HomeScreen = ({}) => {
   const navigation = useNavigation();
   const [isArrowUp, setIsArrowUp] = useState(false);
@@ -83,7 +81,6 @@ const HomeScreen = ({}) => {
   return (
     <View style={[styles.container]}>
       <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
-      {/* <Header wellcome={'Wellcome'} Notification={true} /> */}
 
       <View>
         <HomescreenAlert
@@ -202,22 +199,29 @@ const HomeScreen = ({}) => {
       </Pressable>
 
       {Isselected ? (
-        // Use ImageBackground when Isselected is true
         <ImageBackground
-          source={appIcons.background2} // Replace with the actual image
+          source={appIcons.background2}
           style={styles.backdiv}
-          imageStyle={{borderRadius: 10}}>
+          imageStyle={{borderRadius: 50}}>
           <ScrollView contentContainerStyle={styles.scrollContainer}>
             <ImageBackground
-              source={appIcons.background2} // Replace with the actual image
-              style={styles.frontdiv}>
+              source={appIcons.background2}
+              style={styles.frontdiv}
+              imageStyle={{marginTop: -3}}>
               <View>
                 <Pressable
                   onPress={toggleStarSelection}
                   style={styles.rewardoptmain}>
                   <View style={styles.starmain}>
-                    <Text style={styles.star}>300</Text>
-                    <Image source={appIcons.staricon} style={styles.staricon} />
+                    <Text style={styles.star}>
+                      {Isselected ? '1100' : '300'}
+                    </Text>
+                    <Image
+                      source={
+                        Isselected ? appIcons.stargreen : appIcons.staricon
+                      }
+                      style={styles.staricon}
+                    />
                   </View>
                   <View style={styles.rewardopt}>
                     <Text style={styles.rewardtext}>Reward Option</Text>
@@ -250,7 +254,7 @@ const HomeScreen = ({}) => {
                       separatorFinishedColor={
                         Isselected ? '#815A16' : colors.theme
                       }
-                      stepStrokeFinishedColor={
+                      setpStrokeFinishedColor={
                         Isselected ? '#815A16' : colors.theme
                       }
                     />
@@ -304,7 +308,7 @@ const HomeScreen = ({}) => {
                       rewardType="Reward description"
                       borderRadius={0}
                       elevation={0}
-                      starIcon={appIcons.staricon}
+                      starIcon={appIcons.stargreen}
                     />
                     <Custumredeemreward
                       starCount={60}
@@ -312,7 +316,7 @@ const HomeScreen = ({}) => {
                       backgroundColor={colors.theme1}
                       starBackgroundColor={colors.theme1}
                       rewardType="hey! biroo hoiw are youuuu."
-                      starIcon={appIcons.staricon}
+                      starIcon={appIcons.stargreen}
                       borderRadius={0}
                       elevation={0}
                     />
@@ -322,7 +326,7 @@ const HomeScreen = ({}) => {
                       backgroundColor={colors.theme1}
                       starBackgroundColor={colors.theme1}
                       rewardType="hey! biroo hoiw are youuuu."
-                      starIcon={appIcons.staricon}
+                      starIcon={appIcons.stargreen}
                       borderRadius={0}
                       elevation={0}
                     />
@@ -332,7 +336,7 @@ const HomeScreen = ({}) => {
                       backgroundColor={colors.theme1}
                       starBackgroundColor={colors.theme1}
                       rewardType="In-Office Whitening, Invisalign Whitening Tray, or Retainers."
-                      starIcon={appIcons.staricon}
+                      starIcon={appIcons.stargreen}
                       borderRadius={0}
                       elevation={0}
                     />
@@ -342,7 +346,7 @@ const HomeScreen = ({}) => {
                       backgroundColor={colors.theme1}
                       starBackgroundColor={colors.theme1}
                       rewardType="hey! biroo hoiw are youuuu."
-                      starIcon={appIcons.staricon}
+                      starIcon={appIcons.stargreen}
                       borderRadius={0}
                       elevation={0}
                     />
@@ -352,7 +356,7 @@ const HomeScreen = ({}) => {
                       backgroundColor={colors.theme1}
                       starBackgroundColor={colors.theme1}
                       rewardType="hey! biroo hoiw are youuuu."
-                      starIcon={appIcons.staricon}
+                      starIcon={appIcons.stargreen}
                       borderRadius={0}
                       elevation={0}
                     />
@@ -362,7 +366,7 @@ const HomeScreen = ({}) => {
                       backgroundColor={colors.theme1}
                       starBackgroundColor={colors.theme1}
                       rewardType="hey! biroo hoiw are youuuu."
-                      starIcon={appIcons.staricon}
+                      starIcon={appIcons.stargreen}
                       borderRadius={0}
                       elevation={0}
                     />
@@ -372,7 +376,7 @@ const HomeScreen = ({}) => {
                       backgroundColor={colors.theme1}
                       starBackgroundColor={colors.theme1}
                       rewardType="hey! biroo hoiw are youuuu."
-                      starIcon={appIcons.staricon}
+                      starIcon={appIcons.stargreen}
                       borderRadius={0}
                       elevation={0}
                     />

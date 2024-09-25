@@ -1,13 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {View, StatusBar, Image, ImageBackground} from 'react-native';
 import {styles} from './styles';
-import {
-  appIcons,
-  colors,
-  heightPixel,
-  routes,
-  widthPixel,
-} from '../../../services';
+import {appIcons, routes, widthPixel} from '../../../services';
 const Splash = ({navigation}) => {
   const [user, setUser] = useState(null);
   useEffect(() => {

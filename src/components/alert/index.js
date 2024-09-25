@@ -33,7 +33,6 @@ const Alert = ({
   const navigation = useNavigation();
 
   const handleContinuePress = () => {
-    // console.log('thisss');
     onClose();
     navigation.navigate(routes.homeScreen);
   };
@@ -95,7 +94,6 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    // backgroundColor: colors.,
   },
   main: {
     flex: 1,
@@ -106,7 +104,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   imageStyle: {
-    borderRadius: 10, // To match the border radius of the content
+    borderRadius: 10,
   },
   centerview: {
     flex: 1,

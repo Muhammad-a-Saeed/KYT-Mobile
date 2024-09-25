@@ -1,12 +1,5 @@
 import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  StatusBar,
-  ScrollView,
-  TouchableOpacity,
-  FlatList,
-} from 'react-native';
+import {View, Text, StatusBar, FlatList} from 'react-native';
 
 import {appIcons, colors, fontFamily, widthPixel} from '../../../services';
 import {Button, ContactItem, Header} from '../../../components';

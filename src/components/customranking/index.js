@@ -6,7 +6,6 @@ import {
   widthPixel,
   heightPixel,
   fontFamily,
-  wp,
 } from '../../services';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
 

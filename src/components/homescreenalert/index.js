@@ -8,7 +8,7 @@ import {
   StyleSheet,
   StatusBar,
 } from 'react-native';
-import {appIcons, colors, fontFamily, routes, widthPixel} from '../../services';
+import {colors, fontFamily, widthPixel} from '../../services';
 import Button from '../button';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
 
@@ -74,7 +74,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    // backgroundColor: 'red',
     // marginBottom: 10,
   },
   starText: {

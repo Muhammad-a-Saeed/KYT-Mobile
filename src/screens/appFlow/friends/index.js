@@ -2,9 +2,8 @@ import React from 'react';
 import {View, Text, StatusBar, ScrollView, Image, FlatList} from 'react-native';
 
 import {appIcons, colors, fontFamily, widthPixel} from '../../../services';
-import {Button, Custumredeemreward, Header} from '../../../components';
+import {Button, Header} from '../../../components';
 import {styles} from './styles';
-import NotificationList from '../../../components/custumlist';
 import ReferralItem from '../../../components/referrelcard';
 
 const FriendScreen = ({navigation}) => {

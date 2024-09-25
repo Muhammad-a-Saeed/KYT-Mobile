@@ -1,18 +1,21 @@
 import {StatusBar, StyleSheet} from 'react-native';
-import {colors, fontFamily, heightPixel, widthPixel} from '../../../services';
+import {
+  colors,
+  fontFamily,
+  heightPixel,
+  widthPixel,
+  wp,
+} from '../../../services';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.white,
-    // marginTop: StatusBar.currentHeight,
+    marginTop: StatusBar.currentHeight - 6,
   },
   wrapper: {
-    // flex: 1,
     padding: 15,
-    // marginTop: 10,
   },
 
   head: {
@@ -34,20 +37,21 @@ export const styles = StyleSheet.create({
   },
   main: {
     width: widthPixel(350),
-    height: heightPixel(40),
+    height: heightPixel(50),
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignSelf: 'center',
     marginTop: 10,
   },
   prousername: {
+    width: wp(60),
     flexDirection: 'row',
     alignItems: 'center',
     gap: 10,
   },
   profileStyle: {
     width: widthPixel(33),
-    height: heightPixel(33),
+    height: heightPixel(35),
     resizeMode: 'contain',
   },
   username: {

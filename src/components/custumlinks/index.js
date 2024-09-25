@@ -6,10 +6,7 @@ import {responsiveFontSize} from 'react-native-responsive-dimensions';
 const CustomLinks = ({icon, label}) => {
   return (
     <View style={styles.Container}>
-      <Image
-        source={icon} // Replace this with the actual WhatsApp icon path
-        style={styles.icon}
-      />
+      <Image source={icon} style={styles.icon} />
       <Text style={styles.iconText}>{label}</Text>
     </View>
   );

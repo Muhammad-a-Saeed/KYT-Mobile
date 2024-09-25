@@ -1,11 +1,9 @@
 import React, {useState} from 'react';
-import {View, Text, StatusBar, Image} from 'react-native';
-
-import {appIcons, colors, routes} from '../../../services';
+import {View} from 'react-native';
+import {routes} from '../../../services';
 import {
   AddButton,
   AddressCard,
-  Alert,
   Background,
   Button,
   Header,
@@ -17,7 +15,6 @@ const AddAddress = ({navigation}) => {
   const [showAlert, setShowAlert] = useState(false);
 
   const handleCloseAlert = () => {
-    setShowAlert(false);
     navigation.navigate(routes.homeScreen);
   };
 
@@ -25,7 +22,6 @@ const AddAddress = ({navigation}) => {
   return (
     <View style={[styles.container]}>
       <Background>
-        {/* <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} /> */}
         <Header leftIcon={true} titleleft={'Select Address'} />
         <KeyboardAwareScrollView
           keyboardShouldPersistTaps="always"
@@ -55,17 +51,6 @@ const AddAddress = ({navigation}) => {
               CONTINUE
             </Button>
           </View>
-          {/* <View style={styles.alertcontainer}>
-          <Alert
-            visible={showAlert}
-            leftIcon={true}
-            onClose={handleCloseAlert}
-            title="Your Profile has been updated successfully"
-            onPress={() => {
-              navigation.navigate(routes.homeScreen);
-            }}
-          />
-        </View> */}
         </KeyboardAwareScrollView>
       </Background>
     </View>

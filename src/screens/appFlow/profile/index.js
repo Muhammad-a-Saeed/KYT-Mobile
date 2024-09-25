@@ -66,7 +66,6 @@ const Profile = ({navigation}) => {
             source={appIcons.profilebackground}
             style={styles.profilePicture}
           />
-
           <TouchableOpacity
             style={styles.editIcon}
             onPress={() => navigation.navigate(routes.profilesetup)}>
@@ -85,7 +84,6 @@ const Profile = ({navigation}) => {
             </View>
           </View>
         </View>
-
         <View style={styles.flatlist}>
           <ScrollView contentContainerStyle={styles.listContainer}>
             {profilelist.map(item => (

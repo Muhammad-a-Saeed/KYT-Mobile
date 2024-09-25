@@ -2,8 +2,6 @@ import React, {useState} from 'react';
 import {
   View,
   Text,
-  StatusBar,
-  Touchable,
   Image,
   Modal,
   SafeAreaView,
@@ -60,7 +58,6 @@ const ProfileSetup = ({navigation, onCalendarPress}) => {
   return (
     <View style={[styles.container]}>
       <Background>
-        {/* <StatusBar backgroundColor={colors.textRed} /> */}
         <Header title={'Setup Your Profile'} />
         <KeyboardAwareScrollView
           keyboardShouldPersistTaps="always"
@@ -68,7 +65,6 @@ const ProfileSetup = ({navigation, onCalendarPress}) => {
           contentContainerStyle={styles.fg1}>
           <View style={[styles.wrapper]}>
             <View onPress={handleSelectImage} style={styles.avatarContainer}>
-              {/* <View> */}
               <Image
                 style={styles.avatarContainer1}
                 source={appIcons.profilepic}

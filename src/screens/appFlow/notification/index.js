@@ -1,6 +1,5 @@
 import React from 'react';
 import {View, Text, StatusBar, ScrollView} from 'react-native';
-
 import {appIcons, colors} from '../../../services';
 import {Header} from '../../../components';
 import {styles} from './styles';
@@ -29,9 +28,6 @@ const Notification = ({navigation}) => {
             title="80 Star Earned"
             description="Ref a friend at Bronze tier"
           />
-          {/* </ScrollView> */}
-
-          {/* <ScrollView contentContainerStyle={styles.wrapper}> */}
           <Text style={styles.Today}>Yestarday</Text>
           <NotificationList
             icon={appIcons.notificationicon}

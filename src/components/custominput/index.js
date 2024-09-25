@@ -4,14 +4,11 @@ import {
   StyleSheet,
   View,
   TextInput,
-  Platform,
   Image,
   TouchableOpacity,
-  TouchableWithoutFeedback,
 } from 'react-native';
 import {
   colors,
-  items,
   fontFamily,
   heightPixel,
   widthPixel,

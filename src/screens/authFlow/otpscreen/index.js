@@ -40,7 +40,6 @@ const Otpscreen = ({navigation}) => {
           keyboardShouldPersistTaps="always"
           showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.fg1}>
-          {/* <View style={styles.fg1}> */}
           <View style={[styles.wrapper]}>
             <View>
               <Text style={styles.etext}>Verify OTP</Text>
@@ -97,7 +96,6 @@ const Otpscreen = ({navigation}) => {
               </Button>
             </View>
           </View>
-          {/* </View> */}
         </KeyboardAwareScrollView>
       </Background>
     </View>

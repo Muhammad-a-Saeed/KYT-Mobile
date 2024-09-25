@@ -1,6 +1,5 @@
 import React from 'react';
-import MapView, {PROVIDER_GOOGLE, PROVIDER_DEFAULT} from 'react-native-maps';
-// import {hp, isIOS} from '../../helpers';
+import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 import {StyleSheet} from 'react-native';
 
 const GoogleMap = ({
@@ -30,7 +29,7 @@ const GoogleMap = ({
 const styles = StyleSheet.create({
   map: {
     ...StyleSheet.absoluteFillObject,
-    zIndex:0,
+    zIndex: 0,
   },
 });
 

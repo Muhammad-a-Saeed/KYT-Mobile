@@ -5,18 +5,11 @@ import {
   Text,
   Image,
   ImageBackground,
-  TouchableOpacity,
   StyleSheet,
   StatusBar,
 } from 'react-native';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
-import {
-  appIcons,
-  colors,
-  fontFamily,
-  widthPixel,
-  heightPixel,
-} from '../../services';
+import {colors, fontFamily, widthPixel, heightPixel} from '../../services';
 
 const Vipalert = ({visible, onClose, backgroundImage, icon, text1, text2}) => {
   if (!visible) return null;

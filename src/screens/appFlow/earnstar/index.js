@@ -8,11 +8,9 @@ import {
   FlatList,
   ImageBackground,
 } from 'react-native';
-
 import {appIcons, colors} from '../../../services';
 import {Custumredeemreward, Header} from '../../../components';
 import {styles} from './styles';
-import NotificationList from '../../../components/custumlist';
 
 const EarnStar = ({navigation}) => {
   const rewardsData = [
@@ -87,7 +85,7 @@ const EarnStar = ({navigation}) => {
       starCount={item.starCount}
       rewardType={item.rewardType}
       starIcon={item.starIcon}
-      shuffle={item.shuffle} // Pass the shuffle prop
+      shuffle={item.shuffle}
       starBackgroundColor={item.starBackgroundColor}
     />
   );

@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import {View, StyleSheet, ScrollView} from 'react-native';
 import StepIndicator from 'react-native-step-indicator'; // Import the StepIndicator
-import {colors, widthPixel} from '../../services';
-import {forHorizontalIOS} from '@react-navigation/stack/lib/typescript/src/TransitionConfigs/CardStyleInterpolators';
+import {colors} from '../../services';
 
 const StepIndicatorComponent = ({
   stepStrokeCurrentColor,

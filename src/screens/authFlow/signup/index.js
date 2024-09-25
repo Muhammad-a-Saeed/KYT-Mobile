@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import {View, Text, StatusBar, Image} from 'react-native';
-import {appIcons, colors, routes} from '../../../services';
-import {Header, Button, Background} from '../../../components';
+import {View, Text, Image} from 'react-native';
+import {appIcons, routes} from '../../../services';
+import {Button, Background} from '../../../components';
 import {CustomInput} from '../../../components/custominput';
 import {styles} from './styles';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
@@ -33,8 +33,9 @@ const SignupScreen = ({navigation}) => {
   return (
     <View style={[styles.container]}>
       <Background>
-        {/* <StatusBar backgroundColor={colors.black} barStyle="dark-content" /> */}
-        <Header mainLogo={true} />
+        <View style={styles.Header}>
+          <Image style={styles.mainlogo} source={appIcons.mainlogo} />
+        </View>
         <KeyboardAwareScrollView
           keyboardShouldPersistTaps="always"
           showsVerticalScrollIndicator={false}

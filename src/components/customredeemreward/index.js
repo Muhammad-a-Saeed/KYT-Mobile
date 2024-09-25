@@ -45,7 +45,6 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   starContainer: {
-    // flexDirection: 'row',
     alignItems: 'center',
     width: widthPixel(80),
     height: heightPixel(60),

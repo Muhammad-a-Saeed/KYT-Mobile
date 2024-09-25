@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View, Image} from 'react-native';
 import {
-  appIcons, // Assuming you have the star and notification icons here
+  appIcons,
   colors,
   fontFamily,
   heightPixel,

@@ -8,13 +8,21 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.white,
     alignContent: 'center',
   },
+  Header: {},
+  mainlogo: {
+    marginTop: StatusBar.currentHeight + 46,
+    alignSelf: 'center',
+    width: widthPixel(100),
+    height: widthPixel(85),
+    resizeMode: 'contain',
+    // backgroundColor: 'red',
+  },
   fg1: {
     flexGrow: 1,
     padding: 20,
   },
   wrapper: {
-    marginTop: StatusBar.currentHeight,
-    marginTop: 70,
+    marginTop: 30,
   },
 
   title: {
@@ -89,7 +97,6 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-around',
     marginHorizontal: 90,
     marginTop: 50,
-    backgroundColor: colors.white,
   },
   socialView: {
     width: widthPixel(60),

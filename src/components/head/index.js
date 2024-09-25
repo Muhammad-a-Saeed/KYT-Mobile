@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  View,
   Text,
   Image,
   ImageBackground,
@@ -40,7 +39,7 @@ const styles = StyleSheet.create({
     height: heightPixel(280),
     justifyContent: 'center',
     alignItems: 'center',
-    position: 'relative', // This helps with absolute positioning
+    position: 'relative',
   },
   leftArrow: {
     position: 'absolute',
@@ -57,7 +56,7 @@ const styles = StyleSheet.create({
     width: widthPixel(130),
     height: heightPixel(110),
     resizeMode: 'contain',
-    top: '19%', // Adjust this to align properly under the header
+    top: '19%',
   },
   title: {
     position: 'absolute',

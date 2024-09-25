@@ -34,7 +34,7 @@ const Header = ({
   const navigation = useNavigation();
   return (
     <View style={{...styles.container, marginTop}}>
-      <View>
+      <View style={styles.marginTop}>
         <View style={styles.rowCenter}>
           {leftIcon && (
             <TouchableOpacity
@@ -86,19 +86,21 @@ const Header = ({
 };
 
 const styles = StyleSheet.create({
+  marginTop: {
+    marginTop: StatusBar.currentHeight,
+  },
   rowCenter: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginTop: 10,
+    marginTop: StatusBar.currentHeight,
+    // marginTop: 30,
   },
   container: {
-    marginTop: StatusBar.currentHeight,
     minHeight: heightPixel(30),
     width: wp(100),
     alignContent: 'center',
     justifyContent: 'center',
-    // backgroundColor: 'red',
   },
   goBack: {
     height: heightPixel(28),
@@ -120,17 +122,16 @@ const styles = StyleSheet.create({
     zIndex: 1,
     alignSelf: 'center',
     width: widthPixel(100),
-    height: widthPixel(90),
+    height: widthPixel(80),
+    marginTop: -10,
     resizeMode: 'contain',
-    // position: 'absolute',
   },
   logo: {
     alignSelf: 'center',
     width: widthPixel(60),
     height: widthPixel(60),
-    marginTop: -15,
+    marginTop: 5,
     resizeMode: 'contain',
-    position: 'absolute',
   },
   textlogin: {
     color: colors.lightBlack,
@@ -138,7 +139,6 @@ const styles = StyleSheet.create({
     fontWeight: '800',
   },
   titleStyle: {
-    // backgroundColor: colors.white,
     fontSize: responsiveFontSize(2.5),
     color: colors.lightBlack,
     fontFamily: fontFamily.appTextSemiBold,
@@ -153,10 +153,9 @@ const styles = StyleSheet.create({
     color: colors.lightBlack,
     fontFamily: fontFamily.appTextSemiBold,
     marginHorizontal: 50,
-    marginTop: -33,
+    marginTop: -30,
     width: widthPixel(270),
     textAlign: 'left',
-    // backgroundColor: 'red',
   },
   wellcomemain: {
     flexDirection: 'row',

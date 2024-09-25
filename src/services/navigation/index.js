@@ -34,7 +34,7 @@ export const MainNavigator = () => {
   return (
     <NavigationContainer>
       <MyStack.Navigator
-        initialRouteName={routes.homeScreen}
+        initialRouteName={routes.splash}
         screenOptions={{headerShown: false}}>
         <MyStack.Screen name={routes.auth} component={AuthNavigation} />
         <MyStack.Screen name={routes.homeScreen} component={HomeScreen} />

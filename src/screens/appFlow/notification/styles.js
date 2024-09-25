@@ -5,7 +5,6 @@ import {responsiveFontSize} from 'react-native-responsive-dimensions';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: StatusBar.currentHeight,
     backgroundColor: colors.white,
   },
   maincontainer: {

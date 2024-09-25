@@ -10,7 +10,7 @@ export default function CustomCalendar(props) {
   //     selectedTextColor: colors.white,
 
   //   },
-  // };//this code specaillyy marked date
+  // };
 
   const todayDate = moment().format('YYYY-MM-DD');
   const marked = props.markedDates || {

@@ -6,7 +6,6 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    marginTop: StatusBar.currentHeight,
     backgroundColor: colors.white,
   },
   wrapper: {

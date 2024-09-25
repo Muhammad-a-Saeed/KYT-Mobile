@@ -10,7 +10,6 @@ import {
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
 
 const ProfileList = ({icon, label, onpress, color = colors.mediumblack}) => {
-  // const {color = colors.mediumblack} = props;
   return (
     <TouchableOpacity style={styles.container} onPress={onpress}>
       <View style={styles.innercontainer}>

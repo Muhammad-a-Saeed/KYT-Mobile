@@ -12,7 +12,6 @@ export const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    // marginTop: StatusBar.currentHeight,
   },
   onboardingImage: {
     resizeMode: 'contain',

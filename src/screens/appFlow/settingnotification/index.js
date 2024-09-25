@@ -1,10 +1,9 @@
 import React, {useState} from 'react';
-import {View, Text, StatusBar, ScrollView, Image, FlatList} from 'react-native';
+import {View, Text, StatusBar} from 'react-native';
 
 import {colors} from '../../../services';
 import {Header} from '../../../components';
 import {styles} from './styles';
-import NotificationList from '../../../components/custumlist';
 import ToggleSwitch from 'toggle-switch-react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
 

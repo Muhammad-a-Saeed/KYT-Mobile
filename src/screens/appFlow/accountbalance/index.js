@@ -1,10 +1,8 @@
 import React from 'react';
-import {View, Text, StatusBar, ScrollView, Image, FlatList} from 'react-native';
-
+import {View, Text, StatusBar, Image} from 'react-native';
 import {appIcons, colors} from '../../../services';
-import {Custumredeemreward, Header} from '../../../components';
+import {Header} from '../../../components';
 import {styles} from './styles';
-import NotificationList from '../../../components/custumlist';
 
 const AccountBalance = ({navigation}) => {
   return (
