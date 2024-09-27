@@ -12,7 +12,7 @@ const AccountBalance = ({navigation}) => {
       <View style={styles.wrapper}>
         <View style={styles.imageContainer}>
           <Image source={appIcons.circle} style={styles.circle} />
-          <Text style={styles.balanceText}>$500</Text>
+          <Text style={styles.balanceText}>$0</Text>
         </View>
       </View>
     </View>

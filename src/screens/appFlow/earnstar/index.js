@@ -17,23 +17,23 @@ const EarnStar = ({navigation}) => {
     {
       id: '1',
       starCount: 80,
-      rewardType: 'Come to your next teeth Cleaning Appointment',
+      rewardType: 'Leave us a 5-Star Google Review',
       starIcon: appIcons.staricon,
       shuffle: true,
       starBackgroundColor: colors.theme,
     },
     {
       id: '2',
-      starCount: 70,
-      rewardType: '$30 Gift Card',
+      starCount: 80,
+      rewardType: 'Leave us a 5-Star Yelp Review',
       starIcon: appIcons.staricon,
       shuffle: true,
       starBackgroundColor: colors.theme,
     },
     {
       id: '3',
-      starCount: 50,
-      rewardType: 'Free Coffee Mug',
+      starCount: 80,
+      rewardType: 'Come to your next teeth Cleaning Appointment',
       starIcon: appIcons.staricon,
       shuffle: true,
       starBackgroundColor: colors.theme,
@@ -41,39 +41,31 @@ const EarnStar = ({navigation}) => {
     {
       id: '4',
       starCount: 100,
-      rewardType: 'VIP Event Pass',
+      rewardType: 'Start your Invisalign Journey',
       starIcon: appIcons.staricon,
       shuffle: true,
       starBackgroundColor: colors.theme,
     },
     {
       id: '5',
-      starCount: 60,
-      rewardType: 'Discount Coupon',
+      starCount: 100,
+      rewardType: 'Start your Implant Journey',
       starIcon: appIcons.staricon,
       shuffle: true,
       starBackgroundColor: colors.theme,
     },
     {
       id: '6',
-      starCount: 60,
-      rewardType: 'Discount Coupon',
+      starCount: 200,
+      rewardType: 'Start your Cosmetic Dental Journey',
       starIcon: appIcons.staricon,
       shuffle: true,
       starBackgroundColor: colors.theme,
     },
     {
       id: '7',
-      starCount: 60,
-      rewardType: 'Discount Coupon',
-      starIcon: appIcons.staricon,
-      shuffle: true,
-      starBackgroundColor: colors.theme,
-    },
-    {
-      id: '8',
       starCount: 1000,
-      rewardType: 'Discount Coupon',
+      rewardType: 'Start your Full Mouth Reconstruction Journey',
       starIcon: appIcons.staricon,
       shuffle: true,
       starBackgroundColor: colors.theme,
@@ -93,13 +85,13 @@ const EarnStar = ({navigation}) => {
   return (
     <View style={[styles.container]}>
       <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
-      <Header leftIcon={true} titleleft={'Ways to earn star'} />
+      <Header leftIcon={true} titleleft={'Ways To Earn Star'} />
       <ImageBackground
         source={appIcons.head2}
         style={styles.centeredImageBackground}
         resizeMode="cover">
         <View style={styles.overlay}>
-          <Text style={styles.starLevelText}>My Stars</Text>
+          <Text style={styles.starLevelText}>Star level</Text>
           <View style={styles.ratingContainer}>
             <Text style={styles.ratingText}>300</Text>
           </View>

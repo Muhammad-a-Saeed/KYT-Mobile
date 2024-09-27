@@ -24,7 +24,7 @@ export default function CustomCalendar(props) {
   return (
     <Calendar
       initialDate={todayDate}
-      minDate="2000-12-01"
+      minDate="1990-12-01"
       maxDate="2026-01-30"
       disableAllTouchEventsForDisabledDays={true}
       selected={true}

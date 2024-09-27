@@ -22,7 +22,7 @@ const Onboarding = ({navigation}) => {
     {
       id: 1,
       image: appIcons.onboard1,
-      heading: 'Wellcome!',
+      heading: 'Welcome!',
       headingTwo:
         'Earn stars for visiting, referring friends, and leaving reviews.!',
     },

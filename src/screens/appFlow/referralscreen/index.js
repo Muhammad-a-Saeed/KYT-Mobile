@@ -24,8 +24,13 @@ const ReferralScreen = ({navigation}) => {
   const [currentMedal, setCurrentMedal] = useState('');
   const medals = [
     {name: 'Bronze', image: appIcons.bronze, referrals: '1/5', giftcard: '$50'},
-    {name: 'Silver', image: appIcons.silver, referrals: '3/5', giftcard: '$75'},
-    {name: 'Gold', image: appIcons.gold, referrals: '5/5', giftcard: '$100'},
+    {
+      name: 'Silver',
+      image: appIcons.silver,
+      referrals: '1/10',
+      giftcard: '$75',
+    },
+    {name: 'Gold', image: appIcons.gold, referrals: '11+', giftcard: '$100'},
   ];
   const listRef = useRef(null);
 

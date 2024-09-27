@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     height: heightPixel(90),
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 5,
+    marginTop: 10,
   },
   overlay: {
     width: '100%',
@@ -37,7 +37,6 @@ export const styles = StyleSheet.create({
     fontSize: responsiveFontSize(4.2),
     fontFamily: fontFamily.appTextSemiBold,
     color: colors.white,
-    marginRight: 5,
   },
   iconTextContainer: {
     // flex: 1,
@@ -60,18 +59,19 @@ export const styles = StyleSheet.create({
   },
 
   backdiv: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    flex: 1,
+    alignSelf: 'center',
     width: widthPixel(400),
-    height: heightPixel(590),
-    marginHorizontal: -12,
+    // height: heightPixel(800),
     backgroundColor: colors.white,
+    // marginBottom: 10,
   },
   listContainer: {
     flexGrow: 1,
     alignItems: 'center',
     marginTop: 10,
     padding: 5,
+    paddingBottom: 20,
     gap: 15,
   },
 });

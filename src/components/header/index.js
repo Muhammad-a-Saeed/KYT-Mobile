@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
     color: colors.lightBlack,
     fontFamily: fontFamily.appTextSemiBold,
     marginHorizontal: 50,
-    marginTop: -31,
+    marginTop: -32,
     width: widthPixel(270),
     textAlign: 'left',
   },

@@ -27,15 +27,15 @@ const StarHistory = ({navigation}) => {
           />
           <Customstarhistory
             icon={appIcons.redeem2}
-            starIcon={appIcons.star}
-            points={80}
+            starIcon={appIcons.staricon}
+            points={200}
             starType="Earned"
             description="Start your Invisalign Journey"
             date="14-7-24"
           />
           <Customstarhistory
             icon={appIcons.redeem1}
-            starIcon={appIcons.star}
+            starIcon={appIcons.staricon}
             points={80}
             starType="Redeem"
             description="You have earned this reward!"
@@ -43,7 +43,7 @@ const StarHistory = ({navigation}) => {
           />
           <Customstarhistory
             icon={appIcons.redeem2}
-            starIcon={appIcons.star}
+            starIcon={appIcons.staricon}
             points={80}
             starType="Earned"
             description="Start your Invisalign Journey"
@@ -51,7 +51,7 @@ const StarHistory = ({navigation}) => {
           />
           <Customstarhistory
             icon={appIcons.redeem1}
-            starIcon={appIcons.star}
+            starIcon={appIcons.staricon}
             points={80}
             starType="Redeem"
             description="You have earned this reward!"
@@ -59,15 +59,15 @@ const StarHistory = ({navigation}) => {
           />
           <Customstarhistory
             icon={appIcons.redeem2}
-            starIcon={appIcons.star}
+            starIcon={appIcons.staricon}
             points={80}
             starType="Earned"
             description="Start your Invisalign Journey"
             date="14-7-24"
           />
-          <Customstarhistory
+          {/* <Customstarhistory
             icon={appIcons.redeem1}
-            starIcon={appIcons.star}
+            starIcon={appIcons.staricon}
             points={80}
             starType="Redeem"
             description="You have earned this reward!"
@@ -75,7 +75,7 @@ const StarHistory = ({navigation}) => {
           />
           <Customstarhistory
             icon={appIcons.redeem2}
-            starIcon={appIcons.star}
+            starIcon={appIcons.staricon}
             points={80}
             starType="Earned"
             description="Start your Invisalign Journey"
@@ -83,12 +83,12 @@ const StarHistory = ({navigation}) => {
           />
           <Customstarhistory
             icon={appIcons.redeem1}
-            starIcon={appIcons.star}
+            starIcon={appIcons.staricon}
             points={80}
             starType="Redeem"
             description="You have earned this reward!"
             date="14-7-24"
-          />
+          /> */}
         </ScrollView>
       </View>
     </View>

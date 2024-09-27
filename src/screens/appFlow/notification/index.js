@@ -16,9 +16,9 @@ const Notification = ({navigation}) => {
           <NotificationList
             icon={appIcons.notificationicon}
             title="$50 Earned"
-            description="Ref a friend at Bronze tierRef a friend at Bronze tierRef a friend at Bronze tierRef a friend at Bronze tier"
+            description="Ref a friend at Bronze tier"
           />
-          <NotificationList
+          {/* <NotificationList
             icon={appIcons.notificationicon}
             title="$50 Earned"
             description="Ref a friend at Bronze tier"
@@ -27,7 +27,7 @@ const Notification = ({navigation}) => {
             icon={appIcons.notificationicon}
             title="80 Star Earned"
             description="Ref a friend at Bronze tier"
-          />
+          /> */}
           <Text style={styles.Today}>Yesterday</Text>
           <NotificationList
             icon={appIcons.notificationicon}
@@ -39,11 +39,11 @@ const Notification = ({navigation}) => {
             title="$50 Earned"
             description="Ref a friend at Bronze tier"
           />
-          <NotificationList
+          {/* <NotificationList
             icon={appIcons.notificationicon}
             title="80 Star Earned"
             description="Ref a friend at Bronze tier"
-          />
+          /> */}
           <Text style={styles.Today}>Recent</Text>
           <NotificationList
             icon={appIcons.notificationicon}
@@ -55,11 +55,11 @@ const Notification = ({navigation}) => {
             title="$50 Earned"
             description="Ref a friend at Bronze tier"
           />
-          <NotificationList
+          {/* <NotificationList
             icon={appIcons.notificationicon}
             title="80 Star Earned"
             description="Ref a friend at Bronze tier"
-          />
+          /> */}
         </ScrollView>
       </View>
     </View>

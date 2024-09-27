@@ -130,7 +130,7 @@ const HomeScreen = ({}) => {
 
       <View style={[styles.wrapper, {backgroundColor: colors.white}]}>
         <View style={styles.head}>
-          <Text style={styles.wellcome}>Wellcome</Text>
+          <Text style={styles.wellcome}>Welcome</Text>
           <TouchableOpacity
             onPress={() => navigation.navigate(routes.notification)}>
             <Image source={appIcons.wellcomebell} style={styles.imageStyle} />

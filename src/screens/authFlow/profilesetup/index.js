@@ -76,11 +76,11 @@ const ProfileSetup = ({navigation, onCalendarPress}) => {
                 </TouchableOpacity>
               </View>
             </View>
-            {!isOnState ? (
-              <Text style={[styles.title2]}>Sarah Mantize</Text>
-            ) : (
+            {/* {!isOnState ? ( */}
+            <Text style={[styles.title2]}>Sarah Mantize</Text>
+            {/* ) : (
               <Text style={[styles.title2]}>Anonymize User</Text>
-            )}
+            )} */}
             <View style={styles.custominput} onPress={onCalendarPress}>
               <CustomInput
                 onChangeText={text => setDate(text)}
@@ -183,7 +183,8 @@ const ProfileSetup = ({navigation, onCalendarPress}) => {
             animationType="slide"
             transparent={true}
             visible={isCalendarVisible}
-            onRequestClose={closeCalendar}>
+            // onRequestClose={closeCalendar}
+          >
             <TouchableOpacity
               onPress={closeCalendar}
               style={styles.centeredView}>
