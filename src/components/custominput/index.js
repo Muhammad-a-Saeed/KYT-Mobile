@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   Text,
   StyleSheet,
@@ -45,6 +45,11 @@ export const CustomInput = ({
   onChangeText,
   onCalendarPress,
 }) => {
+  const [isShow, setIsShow] = useState(false);
+
+  const handleEye = () => {
+    setIsShow(!isShow);
+  };
   return (
     <View
       style={{
@@ -88,8 +93,11 @@ export const CustomInput = ({
           />
         </TouchableOpacity>
         {rightIcon && (
-          <TouchableOpacity>
-            <Image source={appIcons.Show} style={styles.eyeshow} />
+          <TouchableOpacity onPress={handleEye}>
+            <Image
+              source={isShow ? appIcons.hideeye : appIcons.Show}
+              style={styles.eyeshow}
+            />
           </TouchableOpacity>
         )}
         {rightsearchbar && (
@@ -98,8 +106,11 @@ export const CustomInput = ({
           </TouchableOpacity>
         )}
         {righteye && (
-          <TouchableOpacity>
-            <Image source={righteye} style={styles.eyeshow} />
+          <TouchableOpacity onPress={handleEye}>
+            <Image
+              source={isShow ? appIcons.hideeye : appIcons.Show}
+              style={styles.eyeshow}
+            />
           </TouchableOpacity>
         )}
         {rightloc && (

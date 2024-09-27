@@ -27,7 +27,6 @@ const NotificationList = ({icon, title, description}) => {
 const styles = StyleSheet.create({
   notificationCard: {
     width: widthPixel(350),
-    height: heightPixel(70),
     flexDirection: 'row',
     alignItems: 'center',
     padding: 10,

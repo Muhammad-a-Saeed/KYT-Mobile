@@ -16,7 +16,7 @@ const Notification = ({navigation}) => {
           <NotificationList
             icon={appIcons.notificationicon}
             title="$50 Earned"
-            description="Ref a friend at Bronze tier"
+            description="Ref a friend at Bronze tierRef a friend at Bronze tierRef a friend at Bronze tierRef a friend at Bronze tier"
           />
           <NotificationList
             icon={appIcons.notificationicon}
@@ -28,7 +28,7 @@ const Notification = ({navigation}) => {
             title="80 Star Earned"
             description="Ref a friend at Bronze tier"
           />
-          <Text style={styles.Today}>Yestarday</Text>
+          <Text style={styles.Today}>Yesterday</Text>
           <NotificationList
             icon={appIcons.notificationicon}
             title="$50 Earned"

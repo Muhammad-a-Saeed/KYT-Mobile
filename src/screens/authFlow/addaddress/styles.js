@@ -22,4 +22,5 @@ export const styles = StyleSheet.create({
     marginTop: 10,
     gap: 15,
   },
+  alertcontainer: {},
 });

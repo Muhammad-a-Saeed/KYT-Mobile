@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {View, Text, Image, TouchableOpacity, Pressable} from 'react-native';
 import {routes, appIcons} from '../../../services';
 import {styles} from './styles';
 import {Button, Background} from '../../../components';
@@ -10,6 +10,11 @@ const Signin = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [isMarked, setIsMarked] = useState(false);
+
+  const handleMark = () => {
+    setIsMarked(!isMarked);
+  };
 
   const socialArray = [
     {
@@ -54,10 +59,15 @@ const Signin = ({navigation}) => {
             </View>
 
             <View style={styles.forgetcontainer}>
-              <View style={styles.rightmain}>
-                <Image source={appIcons.rectangle} style={styles.rectangle} />
+              <Pressable style={styles.rightmain} onPress={handleMark}>
+                <Image
+                  source={
+                    isMarked ? appIcons.tickrectangle : appIcons.rectangle
+                  }
+                  style={styles.rectangle}
+                />
                 <Text style={styles.remtext}>Remember me</Text>
-              </View>
+              </Pressable>
               <View style={styles.forget}>
                 <Text
                   style={styles.forgetText}

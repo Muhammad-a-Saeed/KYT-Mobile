@@ -15,6 +15,7 @@ const AddAddress = ({navigation}) => {
   const [showAlert, setShowAlert] = useState(false);
 
   const handleCloseAlert = () => {
+    setShowAlert(false);
     navigation.navigate(routes.homeScreen);
   };
 

@@ -13,9 +13,8 @@ export const styles = StyleSheet.create({
     flex: 1,
     padding: 10,
     gap: 14,
-    // marginVertical: -10,
     alignItems: 'center',
     flexDirection: 'row',
-    flexWrap: 'wrap', // justifyContent: 'center',
+    flexWrap: 'wrap',
   },
 });

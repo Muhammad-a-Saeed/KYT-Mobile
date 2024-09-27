@@ -23,20 +23,23 @@ const ReferralScreen = ({navigation}) => {
   const [medalIndex, setMedalIndex] = useState(0);
   const [currentMedal, setCurrentMedal] = useState('');
   const medals = [
-    {name: 'Bronze', image: appIcons.bronze, referrals: '1/5'},
-    {name: 'Silver', image: appIcons.silver, referrals: '3/5'},
-    {name: 'Gold', image: appIcons.gold, referrals: '5/5'},
+    {name: 'Bronze', image: appIcons.bronze, referrals: '1/5', giftcard: '$50'},
+    {name: 'Silver', image: appIcons.silver, referrals: '3/5', giftcard: '$75'},
+    {name: 'Gold', image: appIcons.gold, referrals: '5/5', giftcard: '$100'},
   ];
   const listRef = useRef(null);
 
   const handleNextMedal = () => {
     if (medalIndex < medals.length - 1) {
-      setMedalIndex(medalIndex + 1);
+      const newIndex = medalIndex + 1;
+      if (listRef.current) {
+        listRef.current.scrollToIndex({index: newIndex, animated: true});
+      }
 
-      if (medalIndex + 1 === 1) {
+      if (newIndex === 1) {
         setCurrentMedal('Silver');
         setAlert(true);
-      } else if (medalIndex + 1 === 2) {
+      } else if (newIndex === 2) {
         setCurrentMedal('Gold');
         setAlert(true);
       }
@@ -44,9 +47,9 @@ const ReferralScreen = ({navigation}) => {
   };
 
   const handlePrevMedal = () => {
-    console.log('qwertyu', handlePrevMedal);
     if (medalIndex > 0) {
-      setMedalIndex(medalIndex - 1);
+      const newIndex = medalIndex - 1;
+      listRef.current?.scrollToIndex({index: newIndex, animated: true});
     }
   };
 
@@ -65,13 +68,12 @@ const ReferralScreen = ({navigation}) => {
   };
   const alerthide = () => {
     setAlert(false);
-    // navigation.navigate(routes.locationscreen);
   };
 
   return (
     <View style={styles.head}>
       <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
-      <Header leftIcon={true} titleleft={'Referrel'} />
+      <Header leftIcon={true} titleleft={'Referral'} />
       {currentMedal === 'Silver' && (
         <ReferrelAlert
           visible={Alert}
@@ -100,15 +102,18 @@ const ReferralScreen = ({navigation}) => {
       <View style={styles.container}>
         <Text style={styles.medalTitle}>{medals[medalIndex].name}</Text>
         <Text style={styles.subText}>
-          Each Referral Earns You a $50 Gift Card
+          Each Referral Earns You a {medals[medalIndex].giftcard} Gift Card
         </Text>
 
         <View style={styles.imageWrapper}>
           <TouchableOpacity
             style={styles.leftIndicator}
-            onPress={handlePrevMedal}>
+            onPress={handlePrevMedal}
+            disabled={medalIndex === 0}>
             <Image
-              source={appIcons.rightmedal}
+              source={
+                medalIndex === 0 ? appIcons.leftmedalgreen : appIcons.leftmedal
+              }
               style={styles.indicatorleftIcon}
             />
           </TouchableOpacity>
@@ -124,8 +129,18 @@ const ReferralScreen = ({navigation}) => {
             onScroll={onScroll}
           />
 
-          <Pressable style={styles.rightIndicator} onPress={handleNextMedal}>
-            <Image source={appIcons.leftmedal} style={styles.indicatorIcon} />
+          <Pressable
+            style={styles.rightIndicator}
+            onPress={handleNextMedal}
+            disabled={medalIndex === medals.length - 1}>
+            <Image
+              source={
+                medalIndex === medals.length - 1
+                  ? appIcons.rightmedalgreen
+                  : appIcons.rightmedal
+              }
+              style={[styles.indicatorIcon]}
+            />
           </Pressable>
         </View>
 

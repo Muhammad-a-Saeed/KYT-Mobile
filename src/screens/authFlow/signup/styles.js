@@ -73,11 +73,11 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,
-    elevation: 2,
+    elevation: 3,
   },
   socialIcon: {
-    width: widthPixel(32),
-    height: widthPixel(32),
+    width: widthPixel(26),
+    height: widthPixel(26),
   },
   texthead: {
     alignItems: 'center',

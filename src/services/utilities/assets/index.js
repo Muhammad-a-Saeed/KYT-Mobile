@@ -124,6 +124,8 @@ const appIcons = {
   appicon12: require(`${iconUrl}/appicon12.png`),
   goldcard: require(`${iconUrl}/goldcard.png`),
   stargreen: require(`${iconUrl}/stargreen.png`),
+  rightmedalgreen: require(`${iconUrl}/rightmedalgreen.png`),
+  leftmedalgreen: require(`${iconUrl}/leftmedalgreen.png`),
 };
 
 export {appImages, appIcons};

@@ -85,6 +85,7 @@ const styles = StyleSheet.create({
   cardMain: {
     width: widthPixel(355),
     minHeight: heightPixel(230),
+    resizeMode: 'stretch',
     borderRadius: 16,
     overflow: 'hidden',
   },

@@ -587,7 +587,6 @@ const HomeScreen = ({}) => {
                       borderRadius={0}
                       elevation={0}
                     />
-                    {/* Add more Custumredeemreward components as needed */}
                   </View>
                 )}
               </View>
@@ -597,6 +596,7 @@ const HomeScreen = ({}) => {
                   alignItems: 'center',
                   gap: 20,
                   marginTop: 10,
+                  paddingHorizontal: 20,
                 }}>
                 <RedeemCard
                   backgroundImage={appIcons.card1}
@@ -634,9 +634,7 @@ const HomeScreen = ({}) => {
                   onPress={() => navigation.navigate(routes.invitefriend)}
                   buttonBackgroundColor={['#E9BD5A', '#E9BD5A']}
                 />
-                {/* Add more RedeemCard components as needed */}
               </View>
-              {/* Copy other sections of content here as in the ImageBackground */}
             </View>
           </ScrollView>
         </View>

@@ -46,6 +46,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: widthPixel(335),
+    marginTop: 5,
   },
   rightmain: {
     flexDirection: 'row',
@@ -59,7 +60,8 @@ export const styles = StyleSheet.create({
   },
   remtext: {
     color: colors.lightText,
-    fontSize: responsiveFontSize(1.6),
+    fontFamily: fontFamily.appTextRegular,
+    fontSize: responsiveFontSize(1.5),
     marginLeft: 5,
   },
   forget: {
@@ -67,7 +69,8 @@ export const styles = StyleSheet.create({
   },
   forgetText: {
     color: colors.theme,
-    fontSize: responsiveFontSize(1.6),
+    fontFamily: fontFamily.appTextRegular,
+    fontSize: responsiveFontSize(1.5),
   },
   pv30: {
     marginVertical: 50,
@@ -105,11 +108,11 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,
-    elevation: 2,
+    elevation: 3,
   },
   socialIcon: {
-    width: widthPixel(32),
-    height: widthPixel(32),
+    width: widthPixel(26),
+    height: widthPixel(26),
   },
   texthead: {
     alignItems: 'center',

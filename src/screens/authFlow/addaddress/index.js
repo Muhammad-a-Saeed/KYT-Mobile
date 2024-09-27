@@ -26,7 +26,7 @@ const AddAddress = ({navigation}) => {
     <View style={[styles.container]}>
       <Background>
         {/* <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} /> */}
-        <Header leftIcon={true} titleleft={'Select Address'} />
+        <Hea der leftIcon={true} titleleft={'Select Address'} />
         <KeyboardAwareScrollView
           keyboardShouldPersistTaps="always"
           showsVerticalScrollIndicator={false}

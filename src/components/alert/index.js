@@ -39,7 +39,7 @@ const Alert = ({
   return (
     <Modal transparent={true} animationType="slide" visible={visible}>
       <StatusBar
-        backgroundColor={colors.transperant}
+        backgroundColor="rgba(0, 0, 0, 0.5)"
         barStyle="light-content"
       />
       <View style={styles.maincontainer}>
@@ -89,6 +89,7 @@ const Alert = ({
 
 const styles = StyleSheet.create({
   maincontainer: {
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
     position: 'absolute',
     top: 0,
     bottom: 0,
