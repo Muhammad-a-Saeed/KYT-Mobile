@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
   },
   Header: {},
   mainlogo: {
-    marginTop: StatusBar.currentHeight + 49,
+    marginTop: StatusBar.currentHeight + 46,
     alignSelf: 'center',
     width: widthPixel(100),
     height: widthPixel(85),
@@ -73,6 +73,13 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.17,
+    shadowRadius: 2.54,
     elevation: 3,
   },
   socialIcon: {

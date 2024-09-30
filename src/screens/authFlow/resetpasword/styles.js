@@ -7,6 +7,15 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.white,
     // alignItems: 'center',
   },
+  Header: {},
+  mainlogo: {
+    marginTop: StatusBar.currentHeight + 46,
+    alignSelf: 'center',
+    width: widthPixel(100),
+    height: widthPixel(85),
+    resizeMode: 'contain',
+    // backgroundColor: 'red',
+  },
   fg1: {
     flexGrow: 1,
     padding: 20,

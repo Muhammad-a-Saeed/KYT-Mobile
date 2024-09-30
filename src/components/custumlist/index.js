@@ -31,8 +31,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 10,
     borderRadius: 16,
-    elevation: 2,
     backgroundColor: colors.white,
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.16,
+    shadowRadius: 1.51,
+    elevation: 2,
   },
   notificationIcon: {
     width: widthPixel(40),

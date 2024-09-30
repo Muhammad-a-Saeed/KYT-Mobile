@@ -43,6 +43,7 @@ const RedeemReward = ({navigation}) => {
       starCount={item.starCount}
       rewardType={item.rewardType}
       starIcon={item.starIcon}
+      elevation="2"
     />
   );
 

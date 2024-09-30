@@ -7,6 +7,7 @@ import {
   ScrollView,
   Pressable,
   ImageBackground,
+  StyleSheet,
 } from 'react-native';
 
 import {
@@ -307,7 +308,7 @@ const HomeScreen = ({}) => {
                       shuffle={true}
                       rewardType="Reward description"
                       borderRadius={0}
-                      elevation={0}
+                      elevation={false}
                       starIcon={appIcons.stargreen}
                     />
                     <Custumredeemreward
@@ -318,7 +319,7 @@ const HomeScreen = ({}) => {
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.stargreen}
                       borderRadius={0}
-                      elevation={0}
+                      elevation={false}
                     />
                     <Custumredeemreward
                       starCount={60}
@@ -328,7 +329,7 @@ const HomeScreen = ({}) => {
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.stargreen}
                       borderRadius={0}
-                      elevation={0}
+                      elevation={false}
                     />
                     <Custumredeemreward
                       starCount={400}
@@ -338,7 +339,7 @@ const HomeScreen = ({}) => {
                       rewardType="In-Office Whitening, Invisalign Whitening Tray, or Retainers."
                       starIcon={appIcons.stargreen}
                       borderRadius={0}
-                      elevation={0}
+                      elevation={false}
                     />
                     <Custumredeemreward
                       starCount={60}
@@ -348,7 +349,7 @@ const HomeScreen = ({}) => {
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.stargreen}
                       borderRadius={0}
-                      elevation={0}
+                      elevation={false}
                     />
                     <Custumredeemreward
                       starCount={60}
@@ -358,7 +359,7 @@ const HomeScreen = ({}) => {
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.stargreen}
                       borderRadius={0}
-                      elevation={0}
+                      elevation={false}
                     />
                     <Custumredeemreward
                       starCount={60}
@@ -368,7 +369,7 @@ const HomeScreen = ({}) => {
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.stargreen}
                       borderRadius={0}
-                      elevation={0}
+                      elevation={false}
                     />
                     <Custumredeemreward
                       starCount={1000}
@@ -378,7 +379,7 @@ const HomeScreen = ({}) => {
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.stargreen}
                       borderRadius={0}
-                      elevation={0}
+                      elevation={false}
                     />
                     {/* Add more Custumredeemreward components as needed */}
                   </View>
@@ -525,11 +526,10 @@ const HomeScreen = ({}) => {
                     {/* List of rewards */}
                     <Custumredeemreward
                       starCount={60}
-                      elevation={0}
                       shuffle={true}
                       rewardType="Reward description"
-                      borderRadius={0}
                       starIcon={appIcons.staricon}
+                      elevation={false}
                     />
                     <Custumredeemreward
                       starCount={60}
@@ -537,7 +537,7 @@ const HomeScreen = ({}) => {
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.staricon}
                       borderRadius={0}
-                      elevation={0}
+                      elevation={false}
                     />
                     <Custumredeemreward
                       starCount={60}
@@ -545,7 +545,7 @@ const HomeScreen = ({}) => {
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.staricon}
                       borderRadius={0}
-                      elevation={0}
+                      elevation={false}
                     />
                     <Custumredeemreward
                       starCount={400}
@@ -553,7 +553,7 @@ const HomeScreen = ({}) => {
                       rewardType="In-Office Whitening, Invisalign Whitening Tray, or Retainers."
                       starIcon={appIcons.staricon}
                       borderRadius={0}
-                      elevation={0}
+                      elevation={false}
                     />
                     <Custumredeemreward
                       starCount={60}
@@ -561,7 +561,7 @@ const HomeScreen = ({}) => {
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.staricon}
                       borderRadius={0}
-                      elevation={0}
+                      elevation={false}
                     />
                     <Custumredeemreward
                       starCount={60}
@@ -569,7 +569,7 @@ const HomeScreen = ({}) => {
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.staricon}
                       borderRadius={0}
-                      elevation={0}
+                      elevation={false}
                     />
                     <Custumredeemreward
                       starCount={60}
@@ -577,7 +577,7 @@ const HomeScreen = ({}) => {
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.staricon}
                       borderRadius={0}
-                      elevation={0}
+                      elevation={false}
                     />
                     <Custumredeemreward
                       starCount={1000}
@@ -585,7 +585,7 @@ const HomeScreen = ({}) => {
                       rewardType="hey! biroo hoiw are youuuu."
                       starIcon={appIcons.staricon}
                       borderRadius={0}
-                      elevation={0}
+                      elevation={false}
                     />
                   </View>
                 )}

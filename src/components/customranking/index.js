@@ -37,6 +37,13 @@ const styles = StyleSheet.create({
     height: heightPixel(72),
     borderRadius: 16,
     position: 'relative',
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.17,
+    shadowRadius: 2.54,
     elevation: 3,
   },
   backgroundImage: {

@@ -40,15 +40,16 @@ const Header = ({
             <TouchableOpacity
               style={[styles.goBack]}
               onPress={() => navigation.goBack()}>
-              <Image style={styles.iconStyle} source={appIcons.arrowback} />
+              <Image style={styles.iconStyle} source={appIcons.goback} />
             </TouchableOpacity>
           )}
+          <View style={{}}>
+            {titleleft && (
+              <Text style={[styles.titleleftStyle]}>{titleleft}</Text>
+            )}
+          </View>
         </View>
-        <View>
-          {mainLogo && (
-            <Image style={styles.mainlogo} source={appIcons.mainlogo} />
-          )}
-        </View>
+
         <View>
           {Logo && <Image style={styles.logo} source={appIcons.logo} />}
         </View>
@@ -56,20 +57,7 @@ const Header = ({
           {hintLogo && <Image style={styles.logo} source={appIcons.hint} />}
         </View>
         <View>{title && <Text style={[styles.titleStyle]}>{title}</Text>}</View>
-        <View style={{marginTop}}>
-          {titleleft && (
-            <Text style={[styles.titleleftStyle]}>{titleleft}</Text>
-          )}
-        </View>
-        <View style={styles.wellcomemain}>
-          {wellcome && <Text style={[styles.wellcomeStyle]}>{wellcome}</Text>}
-          <TouchableOpacity
-            onPress={() => navigation.navigate(routes.notification)}>
-            {Notification && (
-              <Image source={appIcons.wellcomebell} style={styles.imageStyle} />
-            )}
-          </TouchableOpacity>
-        </View>
+
         <View style={styles.SearchBar}>
           {SearchBar && (
             <CustomInput
@@ -94,38 +82,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginTop: StatusBar.currentHeight,
+    // backgroundColor: 'red',
     // marginTop: 30,
   },
   container: {
-    minHeight: heightPixel(30),
+    // height: heightPixel(160),
     width: wp(100),
     alignContent: 'center',
     justifyContent: 'center',
   },
-  goBack: {
-    height: heightPixel(28),
-    width: widthPixel(28),
-    backgroundColor: colors.white,
-    borderRadius: 100,
-    justifyContent: 'center',
-    alignContent: 'center',
-    marginHorizontal: 10,
-    elevation: 1,
-    // position: 'absolute',
-  },
+  goBack: {},
   iconStyle: {
-    width: widthPixel(25),
-    height: widthPixel(25),
-    resizeMode: 'contain',
+    width: widthPixel(55),
+    height: widthPixel(50),
   },
-  mainlogo: {
-    zIndex: 1,
-    alignSelf: 'center',
-    width: widthPixel(100),
-    height: widthPixel(80),
-    marginTop: -10,
-    resizeMode: 'contain',
-  },
+
   logo: {
     alignSelf: 'center',
     width: widthPixel(60),
@@ -139,6 +110,7 @@ const styles = StyleSheet.create({
     fontWeight: '800',
   },
   titleStyle: {
+    marginTop: StatusBar.currentHeight,
     fontSize: responsiveFontSize(2.5),
     color: colors.lightBlack,
     fontFamily: fontFamily.appTextSemiBold,
@@ -147,28 +119,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
+    // backgroundColor: 'green',
   },
   titleleftStyle: {
     fontSize: responsiveFontSize(2.5),
     color: colors.lightBlack,
     fontFamily: fontFamily.appTextSemiBold,
-    marginHorizontal: 50,
-    marginTop: -32,
-    width: widthPixel(270),
+    width: widthPixel(320),
     textAlign: 'left',
-  },
-  wellcomemain: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: -20,
-    padding: 10,
-  },
-  wellcomeStyle: {
-    fontSize: responsiveFontSize(2.8),
-    color: colors.mediumblack,
-    fontFamily: fontFamily.appTextSemiBold,
-    width: widthPixel(310),
+    paddingTop: 5,
   },
   imageStyle: {
     width: widthPixel(42),

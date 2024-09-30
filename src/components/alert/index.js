@@ -119,9 +119,16 @@ const styles = StyleSheet.create({
   content: {
     padding: 10,
     backgroundColor: colors.theme,
-    elevation: 5,
     borderRadius: 10,
     alignItems: 'center',
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.18,
+    shadowRadius: 4.59,
+    elevation: 5,
   },
   procompalert: {
     alignItems: 'center',

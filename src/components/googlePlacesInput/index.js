@@ -108,9 +108,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginHorizontal: 15,
-    elevation: 1,
     top: 17,
     position: 'absolute',
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.15,
+    shadowRadius: 1.0,
+    elevation: 1,
   },
   goBack1: {
     width: widthPixel(25),

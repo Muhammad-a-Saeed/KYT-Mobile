@@ -23,6 +23,7 @@ import ProfileList from './profilelist';
 import ReferralItem from './referrelcard';
 import Appicon from './appicon';
 import ReferrelAlert from './referrelalert';
+import AuthHead from './authHead';
 
 export {
   Button,
@@ -49,4 +50,5 @@ export {
   ReferralItem,
   Appicon,
   ReferrelAlert,
+  AuthHead,
 };

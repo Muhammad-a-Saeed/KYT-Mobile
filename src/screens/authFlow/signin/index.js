@@ -68,13 +68,13 @@ const Signin = ({navigation}) => {
                 />
                 <Text style={styles.remtext}>Remember me</Text>
               </Pressable>
-              <View style={styles.forget}>
-                <Text
-                  style={styles.forgetText}
-                  onPress={() => navigation.navigate(routes.forgetpasword)}>
-                  Forget Password?
-                </Text>
-              </View>
+              {/* <View style={styles.forget}> */}
+              <Text
+                style={styles.forgetText}
+                onPress={() => navigation.navigate(routes.forgetpasword)}>
+                Forget Password?
+              </Text>
+              {/* </View> */}
             </View>
 
             <View style={styles.pv30}>

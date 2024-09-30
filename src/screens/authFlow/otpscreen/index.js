@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {View, Text, StatusBar} from 'react-native';
 import {colors, routes} from '../../../services';
 import {styles} from './styles';
-import {Header, Button, Background} from '../../../components';
+import {Header, Button, Background, AuthHead} from '../../../components';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import OTPInputView from '@twotalltotems/react-native-otp-input';
 const Otpscreen = ({navigation}) => {
@@ -35,7 +35,7 @@ const Otpscreen = ({navigation}) => {
           backgroundColor={colors.background}
           barStyle="dark-content"
         /> */}
-        <Header leftIcon={true} mainLogo={true} />
+        <AuthHead leftIcon={true} mainLogo={true} />
         <KeyboardAwareScrollView
           keyboardShouldPersistTaps="always"
           showsVerticalScrollIndicator={false}

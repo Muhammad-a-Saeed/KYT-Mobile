@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {View, Text} from 'react-native';
 import {routes, appIcons} from '../../../services';
 import {styles} from './styles';
-import {Header, Button, Background} from '../../../components';
+import {Header, Button, Background, AuthHead} from '../../../components';
 import {CustomInput} from '../../../components/custominput';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 const ChangePassword = ({navigation}) => {
@@ -12,7 +12,7 @@ const ChangePassword = ({navigation}) => {
   return (
     <View style={[styles.container]}>
       <Background>
-        <Header leftIcon={true} mainLogo={true} />
+        <AuthHead leftIcon={true} mainLogo={true} />
         <KeyboardAwareScrollView
           keyboardShouldPersistTaps="always"
           showsVerticalScrollIndicator={false}

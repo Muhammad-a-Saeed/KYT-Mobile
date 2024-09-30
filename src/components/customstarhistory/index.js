@@ -40,6 +40,13 @@ const styles = StyleSheet.create({
     padding: 10,
     justifyContent: 'space-between',
     borderRadius: 16,
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.16,
+    shadowRadius: 1.51,
     elevation: 2,
   },
   notificationIcon: {

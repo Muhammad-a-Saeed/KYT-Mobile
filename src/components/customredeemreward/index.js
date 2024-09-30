@@ -11,11 +11,16 @@ const Custumredeemreward = ({
   backgroundColor = colors.white,
   starBackgroundColor,
   borderRadius = 16,
-  elevation = 2,
+  elevation = true,
 }) => {
   return (
     <View
-      style={{...styles.container, borderRadius, elevation, backgroundColor}}>
+      style={{
+        ...styles.container,
+        borderRadius,
+        ...(elevation ? styles.elevated : {}),
+        backgroundColor,
+      }}>
       <View
         style={[
           styles.starContainer,
@@ -42,7 +47,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: colors.white,
     borderRadius: 16,
-    elevation: 2,
+    // elevation: 2,
+    elevated: {
+      shadowColor: '#000000',
+      shadowOffset: {
+        width: 0,
+        height: 1,
+      },
+      shadowOpacity: 0.16,
+      shadowRadius: 1.51,
+      elevation: 2,
+    },
   },
   starContainer: {
     alignItems: 'center',
@@ -79,6 +94,26 @@ const styles = StyleSheet.create({
   twoLineText: {
     flexWrap: 'wrap',
   },
+  elevated: {
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.16,
+    shadowRadius: 1.51,
+    elevation: 2,
+  },
+  // shadow: {
+  //   shadowColor: '#000000',
+  //   shadowOffset: {
+  //     width: 0,
+  //     height: 2,
+  //   },
+  //   shadowOpacity: 0.17,
+  //   shadowRadius: 2.54,
+  //   elevation: 3,
+  // },
 });
 
 export default Custumredeemreward;

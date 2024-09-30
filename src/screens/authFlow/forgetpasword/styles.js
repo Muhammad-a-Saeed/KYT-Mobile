@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StatusBar, StyleSheet} from 'react-native';
 import {colors, fontFamily, heightPixel, widthPixel} from '../../../services';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
 export const styles = StyleSheet.create({
@@ -8,6 +8,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     // justifyContent: 'center',
   },
+
   fg1: {
     flexGrow: 1,
   },
@@ -18,7 +19,7 @@ export const styles = StyleSheet.create({
     marginTop: 10,
     // alignItems: 'center',
     // backgroundColor: colors.errorColor,
-    // justifyContent: 'flex-end',
+    justifyContent: 'center',
   },
 
   etext: {
