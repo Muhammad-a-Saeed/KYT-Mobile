@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
     marginTop: 20,
     flex: 1,
     alignItems: 'center',
+    padding: 10,
   },
   centeredText: {
     fontSize: 16,

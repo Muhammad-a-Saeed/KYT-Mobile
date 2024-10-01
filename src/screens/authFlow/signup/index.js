@@ -6,6 +6,7 @@ import {CustomInput} from '../../../components/custominput';
 import {styles} from './styles';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 const SignupScreen = ({navigation}) => {
   const [number, setNumber] = useState('');
   const [name, setName] = useState('');
@@ -30,11 +31,13 @@ const SignupScreen = ({navigation}) => {
       // onPress: () => appleLogin(),
     },
   ];
+  const insets = useSafeAreaInsets();
+
   return (
     <View style={[styles.container]}>
       <Background>
-        <View style={styles.Header}>
-          <Image style={styles.mainlogo} source={appIcons.mainlogo} />
+      <View style={[styles.Header, {marginTop: insets.top + 25}]}>
+      <Image style={styles.mainlogo} source={appIcons.mainlogo} />
         </View>
         <KeyboardAwareScrollView
           keyboardShouldPersistTaps="always"

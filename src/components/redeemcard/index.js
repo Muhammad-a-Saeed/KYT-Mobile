@@ -39,7 +39,7 @@ const RedeemCard = ({
             backgroundColor={buttonBackgroundColor}
             labelColor={buttonLabelColor}
             borderRadius={14}
-            fontSize={13}
+            fontSize={14}
             fontFamily={fontFamily.appTextSemiBold}>
             <View
               style={{
@@ -128,6 +128,7 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: colors.white,
     paddingHorizontal: 5,
+    paddingTop: 8,
   },
 });
 

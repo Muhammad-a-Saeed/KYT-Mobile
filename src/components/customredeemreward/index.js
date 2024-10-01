@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 16,
     borderBottomLeftRadius: 16,
     gap: 5,
-    paddingHorizontal: 5,
+    paddingHorizontal: 13,
     backgroundColor: colors.gold,
     justifyContent: 'flex-end',
   },
@@ -74,9 +74,11 @@ const styles = StyleSheet.create({
     width: widthPixel(16),
     height: heightPixel(16),
     resizeMode: 'contain',
+    marginTop: Platform.OS === 'ios' ? 5 : 0,
+
   },
   starCount: {
-    fontSize: responsiveFontSize(2.2),
+    fontSize: responsiveFontSize(2.3),
     color: colors.mediumblack,
     fontFamily: fontFamily.appTextSemiBold,
     paddingTop: 7,

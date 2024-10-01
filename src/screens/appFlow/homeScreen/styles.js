@@ -1,4 +1,4 @@
-import {StatusBar, StyleSheet} from 'react-native';
+import {Platform, StatusBar, StyleSheet} from 'react-native';
 import {
   colors,
   fontFamily,
@@ -12,7 +12,6 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.white,
-    marginTop: StatusBar.currentHeight - 6,
   },
   wrapper: {
     padding: 15,
@@ -144,27 +143,32 @@ export const styles = StyleSheet.create({
 
   rewardoptmain: {
     width: widthPixel(350),
-    height: heightPixel(35),
+    // height: heightPixel(40),
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    // backgroundColor: 'red',
   },
   starmain: {
     flexDirection: 'row',
     alignItems: 'center',
+    // backgroundColor: 'green',
     gap: 3,
-    marginTop: -10,
+    // marginTop: -6,
   },
   star: {
-    fontSize: responsiveFontSize(4),
+    fontSize: responsiveFontSize(4.1),
     color: colors.mediumblack,
     fontFamily: fontFamily.appTextSemiBold,
+    paddingTop: 5,
+    // alignItems: 'center',
   },
   staricon: {
     width: widthPixel(20),
     height: heightPixel(20),
     resizeMode: 'contain',
-    marginTop: 4,
+    marginBottom: Platform.OS === 'ios'? 0:7
+    // marginTop: 8,
   },
   rewardtext: {
     fontSize: responsiveFontSize(1.8),
@@ -176,15 +180,15 @@ export const styles = StyleSheet.create({
   },
 
   arrowdown: {
-    width: widthPixel(22),
-    height: heightPixel(22),
+    width: widthPixel(24),
+    height: heightPixel(24),
     resizeMode: 'contain',
   },
   starlvl: {},
   startxt: {
     width: widthPixel(350),
     marginHorizontal: 2,
-    marginTop: 5,
+    marginTop: Platform.OS === 'ios'? -2 : -15,
   },
   startxt1: {
     fontSize: responsiveFontSize(1.8),

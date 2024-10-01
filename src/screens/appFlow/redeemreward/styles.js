@@ -1,4 +1,4 @@
-import {StatusBar, StyleSheet} from 'react-native';
+import {Platform, StatusBar, StyleSheet} from 'react-native';
 import {colors, fontFamily, heightPixel, widthPixel} from '../../../services';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
 
@@ -26,15 +26,17 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   ratingText: {
-    fontSize: responsiveFontSize(4.2),
+    fontSize: responsiveFontSize(4),
     fontFamily: fontFamily.appTextSemiBold,
     color: colors.mediumblack,
-    marginRight: 5,
+    marginRight: 3,
   },
   starIcon: {
-    width: 24,
-    height: 24,
+    width: 20,
+    height: 20,
     resizeMode: 'contain',
+   marginBottom: Platform.OS === 'ios' ? 1 : -1,
+
   },
   backdiv: {
     flex: 6,
@@ -60,12 +62,12 @@ export const styles = StyleSheet.create({
     flexGrow: 1,
     minHeight: heightPixel(650),
     alignItems: 'center',
-    marginTop: 20,
+    marginTop: 10,
     padding: 5,
     gap: 20,
   },
   pv30: {
-    // marginTop: -40,
+    marginBottom: 20,
     alignItems: 'center',
   },
 });

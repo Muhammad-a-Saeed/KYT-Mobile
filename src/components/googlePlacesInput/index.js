@@ -9,6 +9,7 @@ import {
 } from '../../services';
 import {useNavigation} from '@react-navigation/native';
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 const GooglePlacesInput = ({
   leftIcon,
   SearchBar,
@@ -26,8 +27,10 @@ const GooglePlacesInput = ({
   ...otherProps
 }) => {
   const navigation = useNavigation();
+  const insets = useSafeAreaInsets();
+
   return (
-    <View style={[styles.container]}>
+    <View style={[styles.container, {marginTop: insets.top  }]}>
       <View style={styles.rowCenter}>
         {leftIcon && (
           <TouchableOpacity
@@ -95,7 +98,7 @@ const GooglePlacesInput = ({
 const styles = StyleSheet.create({
   container: {
     // flex:1,
-    height: heightPixel(70),
+    height: heightPixel(100),
     width: '100%',
     justifyContent: 'space-between',
     flexDirection: 'row',

@@ -6,6 +6,7 @@ import {Button, Background} from '../../../components';
 import {CustomInput} from '../../../components/custominput';
 import 'react-native-gesture-handler';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 const Signin = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -28,10 +29,11 @@ const Signin = ({navigation}) => {
       // onPress: () => appleLogin(),
     },
   ];
+  const insets = useSafeAreaInsets();
   return (
     <View style={[styles.container]}>
       <Background>
-        <View style={styles.Header}>
+        <View style={[styles.Header, {marginTop: insets.top + 25}]}>
           <Image style={styles.mainlogo} source={appIcons.mainlogo} />
         </View>
         <KeyboardAwareScrollView

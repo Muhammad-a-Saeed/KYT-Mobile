@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {View, Text, Image, StyleSheet, Platform} from 'react-native';
 import {
   appIcons,
   colors,
@@ -66,6 +66,7 @@ const styles = StyleSheet.create({
     height: 32,
     resizeMode: 'contain',
     marginRight: 5,
+
   },
   medalText: {
     fontSize: 14,
@@ -87,7 +88,7 @@ const styles = StyleSheet.create({
     width: 16,
     height: 16,
     resizeMode: 'contain',
-    marginTop: -8,
+    marginTop: Platform.OS === 'ios' ? -3 : -8,
   },
 });
 

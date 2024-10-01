@@ -6,6 +6,7 @@ import {
   View,
   TouchableOpacity,
   StatusBar,
+  Pressable,
 } from 'react-native';
 import {
   appIcons,
@@ -19,13 +20,15 @@ import {
 import {useNavigation} from '@react-navigation/native';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
 import {CustomInput} from '../custominput';
-const AuthHead = ({leftIcon, mainLogo, marginTop = 0}) => {
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+const AuthHead = ({leftIcon, mainLogo}) => {
   const navigation = useNavigation();
+  const insets = useSafeAreaInsets();
   return (
-    <View style={{...styles.container, marginTop}}>
-      <View style={styles.goBack}>
+    <View style={[styles.container ,{marginTop: insets.top - 3}]}>
+      <Pressable style={styles.goBack} onPress={() => navigation.goBack()}>
         <Image source={appIcons.goback} style={styles.iconStyle} />
-      </View>
+      </Pressable>
       <View style={styles.logo}>
         {mainLogo && (
           <Image style={styles.mainlogo} source={appIcons.mainlogo} />
@@ -36,13 +39,12 @@ const AuthHead = ({leftIcon, mainLogo, marginTop = 0}) => {
 };
 
 const styles = StyleSheet.create({
-  marginTop: {
-    marginTop: StatusBar.currentHeight,
-  },
+  // marginTop: {
+  //   marginTop: StatusBar.currentHeight,
+  // },
   rowCenter: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: StatusBar.currentHeight,
     backgroundColor: 'red',
     // marginTop: 30,
   },
@@ -53,7 +55,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     // backgroundColor: 'red',
   },
-  goBack: {position: 'absolute', top: 40},
+  goBack: {position: 'absolute', top: 10},
   iconStyle: {
     width: widthPixel(60),
     height: widthPixel(50),
@@ -69,7 +71,7 @@ const styles = StyleSheet.create({
   logo: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
   },
 });
 export default AuthHead;

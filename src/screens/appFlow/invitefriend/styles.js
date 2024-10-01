@@ -104,7 +104,7 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.dividerColor,
   },
   links: {
-    flex: 1,
+    // flex: 1,
     gap: 15,
     padding: 15,
     flexDirection: 'row',

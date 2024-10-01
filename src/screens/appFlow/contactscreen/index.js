@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, StatusBar, FlatList} from 'react-native';
 
-import {appIcons, colors, fontFamily, widthPixel} from '../../../services';
+import {appIcons, colors, fontFamily, routes, widthPixel} from '../../../services';
 import {Button, ContactItem, Header} from '../../../components';
 import {styles} from './styles';
 import {CustomInput} from '../../../components/custominput';
@@ -68,7 +68,7 @@ const ContactScreen = ({navigation}) => {
           <CustomInput
             style={styles.inputField}
             placeholder="Search Contacts"
-            width={290}
+            width={widthPixel(270)}
             height={48}
             borderLeftWidth={1}
             borderRightWidth={1}
@@ -76,7 +76,7 @@ const ContactScreen = ({navigation}) => {
             marginHorizontal={-30}
           />
           <Button
-            // onPress={() => navigation.navigate(routes.profileranking)}
+            onPress={() => navigation.navigate(routes.referralscreen)}
             width={widthPixel(80)}
             height={45}
             fontSize={16}

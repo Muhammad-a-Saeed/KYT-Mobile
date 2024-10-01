@@ -10,12 +10,10 @@ export const styles = StyleSheet.create({
   },
   Header: {},
   mainlogo: {
-    marginTop: StatusBar.currentHeight + 46,
     alignSelf: 'center',
     width: widthPixel(100),
     height: widthPixel(85),
     resizeMode: 'contain',
-    // backgroundColor: 'red',
   },
   fg1: {
     flexGrow: 1,

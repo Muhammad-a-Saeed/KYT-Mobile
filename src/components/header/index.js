@@ -6,6 +6,7 @@ import {
   View,
   TouchableOpacity,
   StatusBar,
+  Platform,
 } from 'react-native';
 import {
   appIcons,
@@ -19,6 +20,7 @@ import {
 import {useNavigation} from '@react-navigation/native';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
 import {CustomInput} from '../custominput';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 const Header = ({
   title,
   leftIcon,
@@ -32,8 +34,9 @@ const Header = ({
   marginTop = 0,
 }) => {
   const navigation = useNavigation();
+  const insets = useSafeAreaInsets();
   return (
-    <View style={{...styles.container, marginTop}}>
+    <View style={[ styles.container, {marginTop:Platform.OS === 'ios' ? insets.top  : insets.top + 8}]}>
       <View style={styles.marginTop}>
         <View style={styles.rowCenter}>
           {leftIcon && (
@@ -75,13 +78,13 @@ const Header = ({
 
 const styles = StyleSheet.create({
   marginTop: {
-    marginTop: StatusBar.currentHeight,
+    // marginTop: StatusBar.currentHeight,
   },
   rowCenter: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginTop: StatusBar.currentHeight,
+    // marginTop: StatusBar.currentHeight,
     // backgroundColor: 'red',
     // marginTop: 30,
   },
@@ -90,10 +93,11 @@ const styles = StyleSheet.create({
     width: wp(100),
     alignContent: 'center',
     justifyContent: 'center',
+    // backgroundColor:'red'
   },
-  goBack: {},
+  goBack: { },
   iconStyle: {
-    width: widthPixel(55),
+    width: widthPixel(50),
     height: widthPixel(50),
   },
 
@@ -103,6 +107,7 @@ const styles = StyleSheet.create({
     height: widthPixel(60),
     marginTop: 5,
     resizeMode: 'contain',
+    // marginTop:Platform.OS==='ios'? 80:20
   },
   textlogin: {
     color: colors.lightBlack,
@@ -110,7 +115,6 @@ const styles = StyleSheet.create({
     fontWeight: '800',
   },
   titleStyle: {
-    marginTop: StatusBar.currentHeight,
     fontSize: responsiveFontSize(2.5),
     color: colors.lightBlack,
     fontFamily: fontFamily.appTextSemiBold,
@@ -125,9 +129,11 @@ const styles = StyleSheet.create({
     fontSize: responsiveFontSize(2.5),
     color: colors.lightBlack,
     fontFamily: fontFamily.appTextSemiBold,
-    width: widthPixel(320),
+    width: widthPixel(325),
     textAlign: 'left',
-    paddingTop: 5,
+    paddingTop: Platform.OS === 'ios' ? 0 : 4,
+        // backgroundColor: 'green'
+
   },
   imageStyle: {
     width: widthPixel(42),

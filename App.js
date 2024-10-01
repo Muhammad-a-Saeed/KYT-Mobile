@@ -4,13 +4,13 @@ import {Platform, SafeAreaView, Text, View} from 'react-native';
 import {Provider} from 'react-redux';
 import {store} from './src/redux/store';
 const App = () => {
-  const Wrapper = Platform.OS === 'ios' ? SafeAreaView : View;
+  // const Wrapper = Platform.OS === 'ios' ? SafeAreaView : View;
   return (
-    <Wrapper style={{flex: 1}}>
+    <View style={{flex: 1}}>
       <Provider store={store}>
         <MainNavigator />
       </Provider>
-    </Wrapper>
+    </View>
   );
 };
 

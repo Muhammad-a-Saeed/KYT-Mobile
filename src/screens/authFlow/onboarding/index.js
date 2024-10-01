@@ -7,6 +7,7 @@ import {
   Image,
   Dimensions,
   Pressable,
+  Platform,
 } from 'react-native';
 import {styles} from './styles';
 import {appIcons, routes} from '../../../services';
@@ -77,7 +78,7 @@ const Onboarding = ({navigation}) => {
   );
 
   const onScroll = event => {
-    newIndex = Math.round(event.nativeEvent.contentOffset.x / 360);
+    newIndex = Math.round(event.nativeEvent.contentOffset.x / width);
     setcurrentIndex(newIndex);
     if (newIndex === 1) {
       setButtonImage(appIcons.Button2);
@@ -95,7 +96,7 @@ const Onboarding = ({navigation}) => {
         backgroundColor="transparent"
         barStyle="dark-content"
       />
-      <Header Logo={true} />
+      <Header containerStyle={{ paddingTop: 200}} Logo={true} />
       <FlatList
         data={onboardingArray}
         renderItem={renderItem}

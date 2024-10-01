@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    // backgroundColor:'red'
   },
   onboardingImage: {
     resizeMode: 'contain',
@@ -21,7 +22,7 @@ export const styles = StyleSheet.create({
   onboardingImage2: {
     // backgroundColor:'red',
     resizeMode: 'stretch',
-    width: 430,
+    width: wp(100),
     height: 306,
   },
   onboardingItem: {

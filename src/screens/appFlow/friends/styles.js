@@ -1,4 +1,4 @@
-import {StatusBar, StyleSheet} from 'react-native';
+import {Platform, StatusBar, StyleSheet} from 'react-native';
 import {colors, fontFamily, heightPixel, widthPixel} from '../../../services';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
 
@@ -33,7 +33,7 @@ export const styles = StyleSheet.create({
     height: 20,
     resizeMode: 'contain',
     marginLeft: 5,
-    marginTop: -5,
+    marginTop:Platform.OS === 'ios'? 0 : -5,
   },
   card: {
     marginTop: 30,

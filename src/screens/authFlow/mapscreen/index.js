@@ -8,6 +8,7 @@ import {TouchableOpacity} from 'react-native-gesture-handler';
 import GooglePlacesInput from '../../../components/googlePlacesInput';
 import {Marker} from 'react-native-maps';
 import GoogleMap from '../../../components/googleMap';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 const MapScreen = ({navigation}) => {
   const [titleaddres, setTitleAddress] = useState('Fountain Valley');
   const [compaddress, setCompAddress] = useState(

@@ -31,6 +31,7 @@ import {styles} from './styles';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import * as Progress from 'react-native-progress';
 import {useNavigation} from '@react-navigation/native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 const HomeScreen = ({}) => {
   const navigation = useNavigation();
   const [isArrowUp, setIsArrowUp] = useState(false);
@@ -78,9 +79,9 @@ const HomeScreen = ({}) => {
     setlocAlert(false);
     navigation.navigate(routes.locationscreen);
   };
-
+const insets = useSafeAreaInsets();
   return (
-    <View style={[styles.container]}>
+    <View style={[styles.container, {marginTop: insets.top}]}>
       <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
 
       <View>
@@ -381,7 +382,6 @@ const HomeScreen = ({}) => {
                       borderRadius={0}
                       elevation={false}
                     />
-                    {/* Add more Custumredeemreward components as needed */}
                   </View>
                 )}
               </View>
@@ -523,7 +523,6 @@ const HomeScreen = ({}) => {
                     <Text style={styles.topText}>
                       Reward you can get with stars
                     </Text>
-                    {/* List of rewards */}
                     <Custumredeemreward
                       starCount={60}
                       shuffle={true}

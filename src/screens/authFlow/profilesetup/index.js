@@ -55,6 +55,7 @@ const ProfileSetup = ({navigation, onCalendarPress}) => {
   const SelectprofileOption = profile => {
     setProfileOption(profile);
   };
+  
   return (
     <View style={[styles.container]}>
       <Background>
