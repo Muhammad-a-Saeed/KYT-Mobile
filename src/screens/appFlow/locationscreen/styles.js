@@ -5,7 +5,6 @@ import {responsiveFontSize} from 'react-native-responsive-dimensions';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: StatusBar.currentHeight - 5,
     backgroundColor: colors.white,
   },
   overlayContainer: {

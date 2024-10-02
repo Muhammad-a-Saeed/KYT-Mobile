@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   rectangle: {
     width: widthPixel(20),
     height: heightPixel(20),
-    resizeMode: 'center',
+    resizeMode: 'contain',
   },
   addresstext: {
     marginTop: 10,
@@ -101,9 +101,9 @@ const styles = StyleSheet.create({
     color: colors.theme,
   },
   moreicon: {
-    width: widthPixel(19),
+    width: widthPixel(20),
     height: heightPixel(22),
-    resizeMode: 'center',
+    resizeMode: 'contain',
   },
 });
 

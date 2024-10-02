@@ -12,9 +12,9 @@ export const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
     padding: 10,
-    gap: 14,
-    alignItems: 'center',
+    gap: 20,
     flexDirection: 'row',
     flexWrap: 'wrap',
+    justifyContent: 'center',
   },
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Image, StyleSheet} from 'react-native';
-import {colors, fontFamily, heightPixel, widthPixel} from '../../services';
+import {colors, fontFamily, heightPixel, widthPixel, wp} from '../../services';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
 
 const Appicon = ({icon}) => {
@@ -18,8 +18,8 @@ const styles = StyleSheet.create({
     marginVertical: 5,
   },
   icon: {
-    width: widthPixel(110),
-    height: heightPixel(110),
+    width: wp(25),
+    height: wp(25),
     resizeMode: 'contain',
   },
   iconText: {

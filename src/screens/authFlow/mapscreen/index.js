@@ -35,7 +35,7 @@ const MapScreen = ({navigation}) => {
   return (
     <View style={[styles.container]}>
       {/* <Background> */}
-      <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
+      {/* <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} /> */}
       <GoogleMap>
         <Marker
           coordinate={markerPosition}

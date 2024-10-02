@@ -6,6 +6,7 @@ import {
   fontFamily,
   heightPixel,
   widthPixel,
+  wp,
 } from '../../services';
 import {useNavigation} from '@react-navigation/native';
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
@@ -30,7 +31,7 @@ const GooglePlacesInput = ({
   const insets = useSafeAreaInsets();
 
   return (
-    <View style={[styles.container, {marginTop: insets.top  }]}>
+    <View style={[styles.container, {marginTop: insets.top}]}>
       <View style={styles.rowCenter}>
         {leftIcon && (
           <TouchableOpacity
@@ -148,9 +149,10 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 3,
   },
-  textInputContainer: {alignItems: 'center', height: 50},
+  textInputContainer: {alignItems: 'center', height: 50,},
   textInput: {
     width: '95%',
+    height:wp(12),
     paddingLeft: 40,
     backgroundColor: colors.grey2,
     borderWidth: 1,

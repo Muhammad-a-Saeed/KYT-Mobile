@@ -31,7 +31,6 @@ const Header = ({
   SearchBar,
   wellcome,
   Notification,
-  marginTop = 0,
 }) => {
   const navigation = useNavigation();
   const insets = useSafeAreaInsets();
@@ -77,23 +76,16 @@ const Header = ({
 };
 
 const styles = StyleSheet.create({
-  marginTop: {
-    // marginTop: StatusBar.currentHeight,
-  },
+  marginTop: {},
   rowCenter: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    // marginTop: StatusBar.currentHeight,
-    // backgroundColor: 'red',
-    // marginTop: 30,
   },
   container: {
-    // height: heightPixel(160),
     width: wp(100),
     alignContent: 'center',
     justifyContent: 'center',
-    // backgroundColor:'red'
   },
   goBack: { },
   iconStyle: {
@@ -107,7 +99,6 @@ const styles = StyleSheet.create({
     height: widthPixel(60),
     marginTop: 5,
     resizeMode: 'contain',
-    // marginTop:Platform.OS==='ios'? 80:20
   },
   textlogin: {
     color: colors.lightBlack,

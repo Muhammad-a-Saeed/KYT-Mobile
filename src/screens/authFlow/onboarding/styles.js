@@ -1,4 +1,4 @@
-import {StatusBar, StyleSheet} from 'react-native';
+import {Platform, StatusBar, StyleSheet} from 'react-native';
 import {
   colors,
   fontFamily,
@@ -74,6 +74,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 10,
+    marginBottom: Platform.OS ==='ios' ? 15 : 5 ,
   },
   skiptxt: {
     alignItems: 'center',
@@ -82,7 +83,7 @@ export const styles = StyleSheet.create({
   skiptext: {
     fontFamily: fontFamily.appTextItalic,
     color: colors.theme,
-    fontSize: responsiveFontSize(1.9),
+    fontSize: Platform.OS === 'ios' ? responsiveFontSize(2.1) : responsiveFontSize(1.9),
     textDecorationLine: 'underline',
   },
   progressContainer: {
@@ -92,7 +93,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   progressWrapper: {
-    marginTop: -8,
+    marginTop: -5,
     justifyContent: 'center',
     alignItems: 'center',
   },

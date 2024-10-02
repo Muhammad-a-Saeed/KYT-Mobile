@@ -34,8 +34,8 @@ const RedeemCard = ({
         <View style={styles.button}>
           <Button
             onPress={onPress}
-            width={widthPixel(100)}
-            height={38}
+            width={widthPixel(90)}
+            height={heightPixel(35)}
             backgroundColor={buttonBackgroundColor}
             labelColor={buttonLabelColor}
             borderRadius={14}
@@ -46,6 +46,7 @@ const RedeemCard = ({
                 flexDirection: 'row',
                 alignItems: 'center',
                 justifyContent: 'center',
+                paddingTop: 5,
               }}>
               <Text
                 style={[
@@ -64,7 +65,7 @@ const RedeemCard = ({
                   width: 15,
                   height: 12,
                   marginLeft: 5,
-                  marginTop: -4,
+                  marginTop: -1,
                 }}
                 resizeMode="contain"
               />

@@ -42,10 +42,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    padding:20,
+    
   },
   backgroundImage: {
     width: widthPixel(350),
-    height: heightPixel(350),
+    height: heightPixel(320),
     justifyContent: 'center',
     alignItems: 'center',
   },
