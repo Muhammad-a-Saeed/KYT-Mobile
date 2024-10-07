@@ -73,7 +73,7 @@ const Alert = ({
                     <Button
                       onPress={onClose}
                       width={widthPixel(280)}
-                      height={50}>
+                      height={40}>
                       CONTINUE
                     </Button>
                   </TouchableOpacity>

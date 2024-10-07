@@ -8,6 +8,7 @@ import {
   Pressable,
   ImageBackground,
   StyleSheet,
+  Platform,
 } from 'react-native';
 
 import {
@@ -591,7 +592,7 @@ const insets = useSafeAreaInsets();
               </View>
               <View
                 style={{
-                  height: heightPixel(910),
+                  height: Platform.OS ==='ios' ? heightPixel(925) : heightPixel(910),
                   alignItems: 'center',
                   gap: 20,
                   marginTop: 10,

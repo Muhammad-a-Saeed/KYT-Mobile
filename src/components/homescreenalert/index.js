@@ -8,7 +8,7 @@ import {
   StyleSheet,
   StatusBar,
 } from 'react-native';
-import {colors, fontFamily, widthPixel} from '../../services';
+import {colors, fontFamily, heightPixel, widthPixel} from '../../services';
 import Button from '../button';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
 
@@ -40,7 +40,7 @@ const HomescreenAlert = ({
           </View>
           <Text style={styles.congratulationText}>{message}</Text>
           <TouchableOpacity style={styles.pv30} onPress={onClose}>
-            <Button onPress={onClose} width={widthPixel(280)} height={45}>
+            <Button onPress={onClose} width={widthPixel(280)} height={heightPixel(40)}>
               {buttonText}
             </Button>
           </TouchableOpacity>

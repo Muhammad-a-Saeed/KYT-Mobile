@@ -1,4 +1,4 @@
-import {StyleSheet, StatusBar} from 'react-native';
+import {StyleSheet, StatusBar, Platform} from 'react-native';
 import {colors, fontFamily, heightPixel, widthPixel} from '../../../services';
 import {responsiveFontSize} from 'react-native-responsive-dimensions';
 
@@ -47,6 +47,8 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     width: widthPixel(335),
     marginTop: 5,
+
+
   },
   rightmain: {
     flexDirection: 'row',
@@ -63,6 +65,7 @@ export const styles = StyleSheet.create({
     fontFamily: fontFamily.appTextRegular,
     fontSize: responsiveFontSize(1.5),
     marginLeft: 5,
+    paddingTop: Platform.OS === 'ios' ? 0 : 3,
   },
 
   forgetText: {
@@ -70,6 +73,8 @@ export const styles = StyleSheet.create({
     fontFamily: fontFamily.appTextRegular,
     fontSize: responsiveFontSize(1.5),
     paddingHorizontal: 5,
+    paddingTop: Platform.OS === 'ios' ? 0 : 3,
+
   },
   pv30: {
     marginVertical: 50,

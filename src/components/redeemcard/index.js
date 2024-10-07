@@ -64,8 +64,8 @@ const RedeemCard = ({
                 style={{
                   width: 15,
                   height: 12,
-                  marginLeft: 5,
-                  marginTop: -1,
+                  marginLeft: 1,
+                  marginTop: -3,
                 }}
                 resizeMode="contain"
               />

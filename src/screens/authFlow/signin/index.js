@@ -68,7 +68,7 @@ const Signin = ({navigation}) => {
                   }
                   style={styles.rectangle}
                 />
-                <Text style={styles.remtext}>Remember me</Text>
+                <Text  style={styles.remtext} >Remember me</Text>
               </Pressable>
               {/* <View style={styles.forget}> */}
               <Text
