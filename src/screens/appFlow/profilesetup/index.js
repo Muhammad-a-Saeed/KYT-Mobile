@@ -137,7 +137,7 @@ const ProfileSetup = ({navigation, onCalendarPress}) => {
             </View>
             <View style={styles.line1}></View>
 
-            <View style={styles.anonymizename}>
+            {/* <View style={styles.anonymizename}>
               <Text style={styles.textname}>Anonymize Name</Text>
               <ToggleSwitch
                 isOn={isOnState}
@@ -146,7 +146,7 @@ const ProfileSetup = ({navigation, onCalendarPress}) => {
                 size="small"
                 onToggle={setisOnState}
               />
-            </View>
+            </View> */}
             <View>
               <Text style={[styles.seeprofiletext]}>
                 Who can see your profile picture
