@@ -13,6 +13,7 @@ import {styles} from './styles';
 import {appIcons, routes} from '../../../services';
 import {Header} from '../../../components';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 const {width} = Dimensions.get('window');
 const Onboarding = ({navigation}) => {
   const [currentIndex, setcurrentIndex] = useState(0);
@@ -25,19 +26,19 @@ const Onboarding = ({navigation}) => {
       image: appIcons.onboard1,
       heading: 'Welcome!',
       headingTwo:
-        'Earn stars for visiting, referring friends, and leaving reviews.!',
+        'Collect Stars with each cleaning appointment and when you refer friends and family!',
     },
     {
       id: 2,
       image2: appIcons.onboard2,
-      heading: 'Get Started with KYT!',
+      heading: 'Get Started with KYT Rewards!',
       headingTwo:
         'Earn stars with each visit and referral. Explore rewards in our digital store!',
     },
     {
       id: 3,
       image: appIcons.onboard3,
-      heading: 'Start Earning!',
+      heading: 'Earn Stars with each visit and referral!',
       headingTwo:
         'Visit your dentist, refer friends, and leave reviews to unlock exciting rewards!',
     },
@@ -61,6 +62,7 @@ const Onboarding = ({navigation}) => {
   };
 
   const renderItem = ({item}) => (
+    <>
     <View style={styles.onboardingItem}>
       <View style={styles.onboardimg}>
         {item.image2 ? (
@@ -69,12 +71,15 @@ const Onboarding = ({navigation}) => {
           <Image source={item.image} style={styles.onboardingImage} />
         )}
       </View>
-
+      
+      <>
       <View style={styles.maintextstyle}>
         <Text style={styles.onboardingHeading}>{item.heading}</Text>
         <Text style={styles.onboardingHeadingTwo}>{item.headingTwo}</Text>
       </View>
-    </View>
+      </>
+      </View>
+      </>
   );
 
   const onScroll = event => {
@@ -88,6 +93,7 @@ const Onboarding = ({navigation}) => {
       setButtonImage(appIcons.Button1);
     }
   };
+  const insets = useSafeAreaInsets();
 
   return (
     <View style={styles.container}>
@@ -96,7 +102,7 @@ const Onboarding = ({navigation}) => {
         backgroundColor="transparent"
         barStyle="dark-content"
       />
-      <Header containerStyle={{ paddingTop: 200}} Logo={true} />
+      {/* <Header containerStyle={{ paddingTop: 200}} Logo={true} /> */}
       <FlatList
         data={onboardingArray}
         renderItem={renderItem}

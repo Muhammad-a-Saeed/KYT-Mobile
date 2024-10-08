@@ -15,33 +15,36 @@ export const styles = StyleSheet.create({
     // backgroundColor:'red'
   },
   onboardingImage: {
+    // backgroundColor:'red',
     resizeMode: 'contain',
-    width: 300,
-    height: 306,
+    width:widthPixel(300),
+    height: heightPixel(300),
   },
   onboardingImage2: {
     // backgroundColor:'red',
     resizeMode: 'stretch',
     width: wp(100),
-    height: 306,
+    height: 300,
   },
   onboardingItem: {
-    flex: 1,
+    // flex: 1,
+    
     alignItems: 'center',
     justifyContent: 'space-between',
     width: wp(100),
     paddingVertical: 20,
   },
   onboardimg: {
-    flex: 3,
+    flex: 1,
     width: 410,
-    height: 340,
+    height: 300,
     alignItems: 'center',
     justifyContent: 'center',
-    // resizeMode:'contain'
+    // backgroundColor:'red'
   },
   maintextstyle: {
-    flex: 1,
+    flex: 0.2,
+    // backgroundColor:"red",
     width: '90%',
     alignItems: 'center',
     marginTop: 20,
@@ -55,6 +58,7 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     lineHeight: 26,
     maxHeight: 25 * 2.3,
+    // backgroundColor:'red'
   },
   onboardingHeadingTwo: {
     width: '95%',
@@ -74,7 +78,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 10,
-    marginBottom: Platform.OS ==='ios' ? 15 : 5 ,
+    marginBottom: Platform.OS ==='ios' ? 25: 15 ,
   },
   skiptxt: {
     alignItems: 'center',

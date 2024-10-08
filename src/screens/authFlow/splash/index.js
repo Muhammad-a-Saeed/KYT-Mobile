@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {View, StatusBar, Image, ImageBackground} from 'react-native';
 import {styles} from './styles';
-import {appIcons, routes, widthPixel} from '../../../services';
+import {appIcons, heightPixel, routes, widthPixel} from '../../../services';
 const Splash = ({navigation}) => {
   const [user, setUser] = useState(null);
   useEffect(() => {
@@ -31,7 +31,7 @@ const Splash = ({navigation}) => {
         }}
         resizeMode="stretch">
         <View style={styles.splash}>
-          <Image source={appIcons.splash} style={{width: 220, height: 220}} />
+          <Image source={appIcons.logo} style={{width: widthPixel(220), height: heightPixel(220)}} />
         </View>
       </ImageBackground>
     </View>

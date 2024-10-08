@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
   },
   wrapper: {
     flex: 1,
-    marginTop: -30,
+    marginTop: -20,
     alignContent: 'center',
   },
   cameraIcon: {
@@ -96,7 +96,7 @@ export const styles = StyleSheet.create({
     // opacity:0.5,
     borderColor: colors.dividerColor2,
     marginHorizontal: -20,
-    marginTop: 30,
+    marginTop: 40,
   },
   anonymizename: {
     flexDirection: 'row',
@@ -157,7 +157,7 @@ export const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   pv30: {
-    marginTop: 80,
+    marginTop: 90,
     alignItems: 'center',
   },
 });
